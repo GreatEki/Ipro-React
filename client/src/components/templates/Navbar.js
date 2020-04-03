@@ -11,14 +11,14 @@ const Navbar = () => {
 					data-target='#mainNavBar'>
 					<span className='navbar-toggler-icon'></span>
 				</button>
-				<a href='' className='navbar-brand m-md-0'>
+				<a href='/' className='navbar-brand m-md-0'>
 					<span className='ipro text-dark ml-5'>Ipro-Signature</span>
 				</a>
 
 				<div className='collapse navbar-collapse'></div>
 				<div className='collapse navbar-collapse' id='mainNavBar'>
 					<div className='navbar-nav'>
-						<a href='/' className='nav-item nav-link active'>
+						<a href='/' className='nav-item nav-link'>
 							Home
 						</a>
 						<a href='/about' className='nav-item nav-link '>

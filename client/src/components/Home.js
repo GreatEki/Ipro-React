@@ -1,10 +1,11 @@
 import React from 'react';
 import Navbar from './templates/Navbar';
 import { Link } from 'react-router-dom';
+import Footer from './templates/Footer';
 
 const Home = () => {
 	return (
-		<>
+		<div className='m-0 p-0 bg-home container-fluid'>
 			<div
 				id='carouselExampleSlidesOnly'
 				className='carousel slide'
@@ -39,14 +40,14 @@ const Home = () => {
 			<main className='container-fluid mt-5'>
 				{/* ============================== Casual Wears Section ================================*/}
 				<section className='card mx-lg-5 my-5 mx-md-0'>
-					<h1 className=' card-title p-4'>Casual English Wears Women</h1>
+					<h1 className=' card-title p-4'>Everyday Wears</h1>
 					<hr />
 					<div className='row p-lg-4 card-body'>
 						<div className='col-lg-2 col-12 mb-3'>
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
-									src={'/images/bbh-singapore-1414045-unsplash.jpg'}
+									src={'/images/shirt-jeans-casual-women-1.jpg'}
 									alt=''
 								/>
 							</Link>
@@ -56,7 +57,7 @@ const Home = () => {
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
-									src={'/images/english-wear-ladies-1.jpg'}
+									src={'/images/shirt-jeans-men-1.jpg'}
 									alt=''
 								/>
 							</Link>
@@ -66,7 +67,7 @@ const Home = () => {
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
-									src={'/images/ian-dooley-pinkwall-347962-unsplash.jpg'}
+									src={'/images/shirt-jeans-casual-women-4.jpg'}
 									alt=''
 								/>
 							</Link>
@@ -76,17 +77,7 @@ const Home = () => {
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
-									src={'/images/malaysia.jpg'}
-									alt=''
-								/>
-							</Link>
-						</div>
-
-						<div className='col-lg-2 col-12 mb-3'>
-							<Link to='/'>
-								<img
-									className='front-img img-fluid'
-									src={'/images/gown-pink.jpg'}
+									src={'/images/shirt-jeans-men-2.jpg'}
 									alt=''
 								/>
 							</Link>
@@ -101,18 +92,98 @@ const Home = () => {
 								/>
 							</Link>
 						</div>
+
+						<div className='col-lg-2 col-12 mb-3'>
+							<Link to='/'>
+								<img
+									className='front-img img-fluid'
+									src={'/images/shirt-jeans-men-black-1.jpg'}
+									alt=''
+								/>
+							</Link>
+						</div>
 					</div>
 				</section>
 
-				{/* Men's Section */}
+				{/* =================================== End of Casual Wears =============================================*/}
+
+				{/*================================== Business and Corporate Section ======================================*/}
 				<section className='card mx-lg-5 my-5 mx-md-0'>
-					<h1 className='card-title p-4'>Casual English Wears Men</h1>
+					<h1 className='card-title p-4'>Business and Coporate</h1>
+					<hr />
+					<div className='row card-body'>
+						<div className='col-lg-2 col-12 mb-3'>
+							<Link to='/'>
+								<img
+									className='front-img img-fluid'
+									src={'/images/javier-reyes.jpg'}
+									alt=''
+								/>
+							</Link>
+						</div>
+
+						<div className='col-lg-2 col-12 mb-3'>
+							<Link to='/'>
+								<img
+									className='front-img img-fluid'
+									src={'/images/women-business-1.jpg'}
+									alt=''
+								/>
+							</Link>
+						</div>
+
+						<div className='col-lg-2 col-12 mb-3'>
+							<Link to='/'>
+								<img
+									className='front-img'
+									src={'/images/men-corporate-suit-1.jpg'}
+									alt=''
+								/>
+							</Link>
+						</div>
+
+						<div className='col-lg-2 col-12 mb-3'>
+							<Link to='/'>
+								<img
+									className='front-img'
+									src={'/images/women-business-4.jpg'}
+									alt=''
+								/>
+							</Link>
+						</div>
+
+						<div className='col-lg-2 col-12 mb-3'>
+							<Link to='/'>
+								<img
+									className='front-img'
+									src={'/images/men-corporate-suit-2.jpg'}
+									alt=''
+								/>
+							</Link>
+						</div>
+
+						<div className='col-lg-2 col-12 mb-3'>
+							<Link to='/'>
+								<img
+									className='front-img'
+									src={'/images/women-corporate-gown-green.jpg'}
+									alt=''
+								/>
+							</Link>
+						</div>
+					</div>
+				</section>
+				{/*=================================== End of Business and Corporate =======================================*/}
+
+				{/* ================================== Nativity and Culture ================================================ */}
+				<section className='card mx-lg-5 my-5 mx-md-0'>
+					<h1 className='card-title p-4'>Nativity and Culture</h1>
 					<hr />
 					<div className='row card-body'>
 						<div className='col-lg-2 col-12 mb-3'>
 							<img
 								className='front-img img-fluid'
-								src={'/images/mean-shadows-685613-unsplash.jpg'}
+								src={'/images/sleeveless-woman.jpg'}
 								alt=''
 							/>
 						</div>
@@ -120,7 +191,7 @@ const Home = () => {
 						<div className='col-lg-2 col-12 mb-3'>
 							<img
 								className='front-img img-fluid'
-								src={'/images/tyler-nix-594397-unsplash.jpg'}
+								src={'/images/tight-fitted-ankara.jpg'}
 								alt=''
 							/>
 						</div>
@@ -128,7 +199,7 @@ const Home = () => {
 						<div className='col-lg-2 col-12 mb-3'>
 							<img
 								className='front-img'
-								src={'/images/levi-alvarez-485070-unsplash.jpg'}
+								src={'/images/yellow-woman-ankara.jpg'}
 								alt=''
 							/>
 						</div>
@@ -144,7 +215,7 @@ const Home = () => {
 						<div className='col-lg-2 col-12 mb-3'>
 							<img
 								className='front-img'
-								src={'/images/dark-mixed-blue-ankara.jpg'}
+								src={'/images/native-women-fabulous.jpg'}
 								alt=''
 							/>
 						</div>
@@ -154,65 +225,42 @@ const Home = () => {
 						</div>
 					</div>
 				</section>
-				{/* =================================== End of Casual Wears =============================================*/}
+				{/* ==================================== End of Nativity and Culture =====================================*/}
 
-				{/*================================== Business and Corporate Section ======================================*/}
-				<section className='card mx-lg-5 my-5 mx-md-0'>
-					<h1 className='card-title p-4'>Business and Coporate</h1>
-					<hr />
-					<div className='row card-body'>
-						<div className='col-lg-2 col-12 mb-3'>
-							<img
-								className='front-img img-fluid'
-								src={'/images/javier-reyes.jpg'}
-								alt=''
-							/>
+				{/*=================================== Advert Card Section  =============================================*/}
+
+				<section className='mx-lg-5 mx-md-5'>
+					<div className='row'>
+						{/*1st Card*/}
+						<div className='col-lg-6 col-md-12'>
+							<div className='card'>
+								<img src={'/images/help-support.jpg'} />
+							</div>
 						</div>
 
-						<div className='col-lg-2 col-12 mb-3'>
-							<img
-								className='front-img img-fluid'
-								src={'/images/women-business-1.jpg'}
-								alt=''
-							/>
-						</div>
-
-						<div className='col-lg-2 col-12 mb-3'>
-							<img
-								className='front-img'
-								src={'/images/men-corporate-suit-1.jpg'}
-								alt=''
-							/>
-						</div>
-
-						<div className='col-lg-2 col-12 mb-3'>
-							<img
-								className='front-img'
-								src={'/images/women-business-4.jpg'}
-								alt=''
-							/>
-						</div>
-
-						<div className='col-lg-2 col-12 mb-3'>
-							<img
-								className='front-img'
-								src={'/images/men-corporate-suit-2.jpg'}
-								alt=''
-							/>
-						</div>
-
-						<div className='col-lg-2 col-12 mb-3'>
-							<img
-								className='front-img'
-								src={'/images/women-corporate-gown-green.jpg'}
-								alt=''
-							/>
+						{/*2nd Card*/}
+						<div className='col-lg-6 col-md-12 support'>
+							<div className='text-center mt-lg-5 mt-md-2'>
+								<span className='site-ad-text'>
+									Need Help Placing Orders????
+								</span>
+								<br />
+								<span className='site-ad-text'>
+									{' '}
+									Call <span className='text-warning'>08100548455 now</span>
+								</span>
+								<br />
+								<span className='small-ad-text'>Let us Assist you. </span>
+							</div>
 						</div>
 					</div>
 				</section>
-				{/*=================================== End of Business and Corporate =======================================*/}
+
+				{/*=================================== End of Advert Card Section  =============================================*/}
 			</main>
-		</>
+
+			<Footer />
+		</div>
 	);
 };
 

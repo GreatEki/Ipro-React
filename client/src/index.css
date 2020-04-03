@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Germania+One|Pacifico|Anton|Cinzel|Shadows+Into+Light|Righteous');
+@import url('https://fonts.googleapis.com/css?family=Germania+One|Pacifico|Anton|Cinzel|Shadows+Into+Light|Righteous|Roboto|Oswald');
+
+:root {
+	--ad-text: Roboto;
+	--ad-minor-text: Oswald;
+}
 
 body {
 	margin: 0;
@@ -7,7 +12,7 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: darkgrey;
+	overflow-x: hidden;
 }
 
 code {
@@ -17,6 +22,8 @@ code {
 
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 html {
@@ -25,6 +32,9 @@ html {
 
 p {
 	color: black;
+}
+.bg-home {
+	background-color: darkgrey;
 }
 
 .logo {
@@ -63,49 +73,34 @@ p {
 .display-6 {
 	margin-top: 100px;
 }
-
-footer.footer {
-	background-color: lightgrey;
-	height: 250px;
-	width: 100%;
-	margin-top: 50px;
+.support {
+	background-color: blue;
 }
 
-footer .footer-list {
-	margin-top: 100px;
-}
-
-footer .nav-list {
-	display: flex;
-	flex-flow: row;
-	margin: 60px 20px 20px 20px;
-	justify-content: space-evenly;
-	list-style: none;
-}
-footer .nav-list li {
+.site-ad-text {
 	color: white;
-	font-size: 1.1rem;
-	text-align: center;
-	margin-top: 15px;
-	padding: 10px 30px;
-	border-right: black 1px solid;
+	font-family: var(--ad-text);
+	font-size: 24px;
+	letter-spacing: 2px;
+	font-weight: bolder;
+	line-height: 1.5rem;
+	margin-top: 20%;
+	margin-bottom: 20%;
+	padding: 20px 0 20px 0;
 }
-footer .nav-list .last-li {
-	border-right: none;
-}
-
-footer .footer-icons {
-	margin-left: 43%;
-	margin-top: 15px;
-}
-
-footer .copyrights {
-	margin-left: 45%;
+.small-ad-text {
+	color: white;
+	font-family: var(--ad-minor-text);
+	font-size: 18px;
+	letter-spacing: 2px;
+	margin-top: 20%;
+	margin-bottom: 20%;
+	padding: 20px 0 20px 0;
 }
 
 /* Men and Women Page Shared Classes Page Stling*/
 .section-1.men {
-	background-image: url('/public/images/man-pose-beside-water-store-unsplash.jpg');
+	background-image: url('/images/man-pose-beside-water-store-unsplash.jpg');
 	background-size: cover;
 	background-position: center;
 }
@@ -149,7 +144,7 @@ footer .copyrights {
 }
 
 .section-1.women {
-	background-image: url('/public/images/shamim-nakhaei-69202-unsplash.jpg');
+	background-image: url('/images/eloise-ambursley.jpg');
 	background-size: cover;
 	height: 100%;
 }
@@ -288,11 +283,9 @@ footer .copyrights {
 	html {
 		overflow-x: hidden;
 	}
-	footer .footer-list {
-		visibility: hidden;
-	}
-	footer .footer-icons {
-		margin-left: 30%;
+
+	.ipro {
+		font-size: 26px;
 	}
 	/* Men Page Styling */
 	.section-1.men h1 {
@@ -326,7 +319,11 @@ footer .copyrights {
 		margin-left: 1%;
 		padding: 5px 5px;
 	}
-	[data-aos] {
+
+	.footer-content .footer-nav {
 		visibility: hidden;
+	}
+	[data-aos] {
+		visibility: visible;
 	}
 }
