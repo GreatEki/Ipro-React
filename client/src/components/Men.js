@@ -1,11 +1,14 @@
 import React from 'react';
 import Navbar from './templates/Navbar';
 import Footer from './templates/Footer';
+import Navmen from './templates/Navmen';
+import { Link } from 'react-router-dom';
 
 const Men = () => {
 	return (
 		<div className='container-fluid m-0 p-0'>
 			<Navbar />
+			<Navmen />
 			<section>
 				<div
 					className='container-fluid m-0 p-0'
@@ -18,7 +21,7 @@ const Men = () => {
 								<h1>
 									Men's<span>Place</span>
 								</h1>
-								<a href=''>Magnificent | Stylish Men</a>
+								<Link to=''>Magnificent | Stylish Men</Link>
 							</div>
 						</div>
 					</div>
@@ -40,9 +43,9 @@ const Men = () => {
 							<div className='card-body'>
 								<h4 className='cat-title'>Everyday Wears</h4>
 								<p className='cat-desc'>Casual, Active, Work, Smart</p>
-								<a className='btn-shop' href='#'>
+								<Link className='btn-shop' to='/everyday/men'>
 									Shop Now
-								</a>
+								</Link>
 							</div>
 						</div>
 					</section>
@@ -59,11 +62,11 @@ const Men = () => {
 								className='cat-images'
 							/>
 							<div className='card-body'>
-								<h4 className='cat-title'>Bus-Pro</h4>
+								<h4 className='cat-title'>Business and Corporate</h4>
 								<p className='cat-desc'>Executive, Business</p>
-								<a className='btn-shop' href='#'>
+								<Link className='btn-shop' to='/business/men'>
 									Shop Now
-								</a>
+								</Link>
 							</div>
 						</div>
 					</section>
@@ -80,11 +83,11 @@ const Men = () => {
 								className='cat-images'
 							/>
 							<div className='card-body'>
-								<h4 className='cat-title'>Elegant</h4>
+								<h4 className='cat-title'>Cultural Wears</h4>
 								<p className='cat-desc'>Occassion, Nuptial</p>
-								<a className='btn-shop' href='#'>
+								<Link className='btn-shop' to='/culture/men'>
 									Shop Now
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -100,11 +103,11 @@ const Men = () => {
 								className='cat-images'
 							/>
 							<div className='card-body'>
-								<h4 className='cat-title'>Vacation</h4>
+								<h4 className='cat-title'>Leisure and Vacation</h4>
 								<p className='cat-desc'>Holidays, Trips, Leisure</p>
-								<a className='btn-shop' href='#'>
+								<Link className='btn-shop' to='/leisure/men'>
 									Shop Now
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>

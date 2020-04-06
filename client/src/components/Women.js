@@ -1,11 +1,13 @@
 import React from 'react';
 import Navbar from './templates/Navbar';
 import Footer from './templates/Footer';
-
+import Navwomen from './templates/Navwomen';
+import { Link } from 'react-router-dom';
 const Women = () => {
 	return (
 		<div>
 			<Navbar />
+			<Navwomen />
 			<main>
 				<div className='container-fluid m-0 p-0'>
 					<div className='section-1 women'>
@@ -14,7 +16,7 @@ const Women = () => {
 								<h1>
 									Women's<span>Place</span>
 								</h1>
-								<a href=''>Elegance | Classy</a>
+								<Link href=''>Elegance | Classy</Link>
 							</div>
 						</div>
 					</div>
@@ -31,9 +33,9 @@ const Women = () => {
 								<div className='card-body'>
 									<h4 className='cat-title'>Business and Office</h4>
 									<p className='cat-desc'>Executive Active, Work, Smart</p>
-									<a className='btn-shop' href='#'>
+									<Link className='btn-shop' href='#'>
 										Shop Now
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -52,9 +54,9 @@ const Women = () => {
 								<div className='card-body'>
 									<h4 className='cat-title'>Everyday Wears</h4>
 									<p className='cat-desc'>Casual, Active, Work, Smart</p>
-									<a className='btn-shop' href='#'>
+									<Link className='btn-shop' href='#'>
 										Shop Now
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -104,9 +106,9 @@ const Women = () => {
 								<div className='card-body'>
 									<h4 className='cat-title'>Culture</h4>
 									<p className='cat-desc'>Unique, Exquisite, Sophisticated</p>
-									<a className='btn-shop' href='#'>
+									<Link className='btn-shop' href='#'>
 										Shop Now
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -125,9 +127,9 @@ const Women = () => {
 								<div className='card-body'>
 									<h4 className='cat-title'>Vacation</h4>
 									<p className='cat-desc'>Leisure, Recreation, Sporty</p>
-									<a className='btn-shop' href='#'>
+									<Link className='btn-shop' href='#'>
 										Shop Now
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>

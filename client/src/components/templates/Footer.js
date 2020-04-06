@@ -50,7 +50,7 @@ const Footer = () => {
 				<section className='footer-section Contact-Us'>
 					<p className='text-center'>
 						<i class='fas fa-envelope'></i>{' '}
-						<span className='site-font'> contact-us@bullock247.com</span>
+						<span className='site-font'> contact-us@ipro-signatures.com</span>
 					</p>
 					<p className='text-center'>
 						<i class='fas fa-phone'></i>{' '}

@@ -1,9 +1,9 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const Navbar = () => {
 	return (
 		<div className='container-fluid m-0 p-0'>
-			<nav className='navbar navbar-expand-lg navbar-light bg-white'>
+			<nav className='navbar navbar-expand-lg navbar-light bg-light'>
 				<button
 					className='navbar-toggler'
 					type='button'
@@ -11,40 +11,40 @@ const Navbar = () => {
 					data-target='#mainNavBar'>
 					<span className='navbar-toggler-icon'></span>
 				</button>
-				<a href='/' className='navbar-brand m-md-0'>
+				<Link to='/' className='navbar-brand m-md-0'>
 					<span className='ipro text-dark ml-5'>Ipro-Signature</span>
-				</a>
+				</Link>
 
 				<div className='collapse navbar-collapse'></div>
 				<div className='collapse navbar-collapse' id='mainNavBar'>
 					<div className='navbar-nav'>
-						<a href='/' className='nav-item nav-link'>
+						<Link to='/' className='nav-item nav-link'>
 							Home
-						</a>
-						<a href='/about' className='nav-item nav-link '>
+						</Link>
+						<Link to='/about' className='nav-item nav-link '>
 							About US
-						</a>
-						<a href='/men' className='nav-item nav-link'>
+						</Link>
+						<Link to='/men' className='nav-item nav-link'>
 							{' '}
 							MEN
-						</a>
-						<a href='/women' className='nav-item nav-link'>
+						</Link>
+						<Link to='/women' className='nav-item nav-link'>
 							WOMEN
-						</a>
-						<a href='/contact' className='nav-item nav-link'>
+						</Link>
+						<Link to='/contact' className='nav-item nav-link'>
 							Contact Us
-						</a>
+						</Link>
 					</div>
 
 					<div className='collapse navbar-collapse'></div>
 					<div className='navbar-nav'>
-						<a href='' className='nav-item nav-link'>
+						<Link to='/' className='nav-item nav-link'>
 							<i className='fas fa-heart'></i>
-						</a>
+						</Link>
 					</div>
 
 					<ul className='navbar-nav  dropdown mr-lg-5 m-md-0'>
-						<a
+						<Link
 							className='nav-link dropdown-toggle'
 							href='#'
 							id='navbarDropDown'
@@ -53,15 +53,15 @@ const Navbar = () => {
 							aria-haspopup='true'
 							aria-expanded='false'>
 							<i className='fas fa-user'></i>
-						</a>
+						</Link>
 
 						<div className='dropdown-menu' aria-labelledby='navbarDropDown'>
-							<a href='' className='dropdown-item'>
+							<Link href='' className='dropdown-item'>
 								Sign-In
-							</a>
-							<a href='' className='dropdown-item'>
+							</Link>
+							<Link href='' className='dropdown-item'>
 								Register
-							</a>
+							</Link>
 						</div>
 					</ul>
 				</div>

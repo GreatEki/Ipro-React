@@ -5,7 +5,7 @@ import Footer from './templates/Footer';
 
 const Home = () => {
 	return (
-		<div className='m-0 p-0 bg-home container-fluid'>
+		<div className='m-0 p-0 wrapper bg-home container-fluid'>
 			<div
 				id='carouselExampleSlidesOnly'
 				className='carousel slide'
@@ -15,7 +15,7 @@ const Home = () => {
 						<img
 							src={`/images/Ifedayo-Fashion.jpg`}
 							className='d-block w-100 j-image'
-							alt='...'
+							alt='carousel-img'
 						/>
 					</div>
 
@@ -23,14 +23,14 @@ const Home = () => {
 						<img
 							src={`/images/artem-bali.jpg`}
 							className='d-block w-100 j-image'
-							alt='...'
+							alt='carousel-img'
 						/>
 					</div>
 					<div className='carousel-item'>
 						<img
 							src={`/images/marcus-loke.jpg`}
 							className='d-block w-100 j-image'
-							alt='...'
+							alt='carousel-img'
 						/>
 					</div>
 				</div>
@@ -48,7 +48,7 @@ const Home = () => {
 								<img
 									className='front-img img-fluid'
 									src={'/images/shirt-jeans-casual-women-1.jpg'}
-									alt=''
+									alt='banner'
 								/>
 							</Link>
 						</div>
@@ -58,7 +58,7 @@ const Home = () => {
 								<img
 									className='front-img img-fluid'
 									src={'/images/shirt-jeans-men-1.jpg'}
-									alt=''
+									alt='banner'
 								/>
 							</Link>
 						</div>
@@ -68,7 +68,7 @@ const Home = () => {
 								<img
 									className='front-img img-fluid'
 									src={'/images/shirt-jeans-casual-women-4.jpg'}
-									alt=''
+									alt='banner'
 								/>
 							</Link>
 						</div>
@@ -78,7 +78,7 @@ const Home = () => {
 								<img
 									className='front-img img-fluid'
 									src={'/images/shirt-jeans-men-2.jpg'}
-									alt=''
+									alt='banner'
 								/>
 							</Link>
 						</div>
@@ -88,7 +88,7 @@ const Home = () => {
 								<img
 									className='front-img img-fluid'
 									src={'/images/jessica-castro-449555-unsplash.jpg'}
-									alt=''
+									alt='banner'
 								/>
 							</Link>
 						</div>
@@ -98,7 +98,7 @@ const Home = () => {
 								<img
 									className='front-img img-fluid'
 									src={'/images/shirt-jeans-men-black-1.jpg'}
-									alt=''
+									alt='banner'
 								/>
 							</Link>
 						</div>
@@ -117,7 +117,7 @@ const Home = () => {
 								<img
 									className='front-img img-fluid'
 									src={'/images/javier-reyes.jpg'}
-									alt=''
+									alt='banner'
 								/>
 							</Link>
 						</div>
@@ -127,7 +127,7 @@ const Home = () => {
 								<img
 									className='front-img img-fluid'
 									src={'/images/women-business-1.jpg'}
-									alt=''
+									alt='banner'
 								/>
 							</Link>
 						</div>
@@ -137,7 +137,7 @@ const Home = () => {
 								<img
 									className='front-img'
 									src={'/images/men-corporate-suit-1.jpg'}
-									alt=''
+									alt='banner'
 								/>
 							</Link>
 						</div>
@@ -147,7 +147,7 @@ const Home = () => {
 								<img
 									className='front-img'
 									src={'/images/women-business-4.jpg'}
-									alt=''
+									alt='banner'
 								/>
 							</Link>
 						</div>
@@ -157,7 +157,7 @@ const Home = () => {
 								<img
 									className='front-img'
 									src={'/images/men-corporate-suit-2.jpg'}
-									alt=''
+									alt='banner'
 								/>
 							</Link>
 						</div>
@@ -167,7 +167,7 @@ const Home = () => {
 								<img
 									className='front-img'
 									src={'/images/women-corporate-gown-green.jpg'}
-									alt=''
+									alt='banner'
 								/>
 							</Link>
 						</div>
@@ -184,7 +184,7 @@ const Home = () => {
 							<img
 								className='front-img img-fluid'
 								src={'/images/sleeveless-woman.jpg'}
-								alt=''
+								alt='banner'
 							/>
 						</div>
 
@@ -192,7 +192,7 @@ const Home = () => {
 							<img
 								className='front-img img-fluid'
 								src={'/images/tight-fitted-ankara.jpg'}
-								alt=''
+								alt='banner'
 							/>
 						</div>
 
@@ -200,7 +200,7 @@ const Home = () => {
 							<img
 								className='front-img'
 								src={'/images/yellow-woman-ankara.jpg'}
-								alt=''
+								alt='banner'
 							/>
 						</div>
 
@@ -208,7 +208,7 @@ const Home = () => {
 							<img
 								className='front-img'
 								src={'/images/ankara-shirt-men.jpg'}
-								alt=''
+								alt='banner'
 							/>
 						</div>
 
@@ -216,7 +216,7 @@ const Home = () => {
 							<img
 								className='front-img'
 								src={'/images/native-women-fabulous.jpg'}
-								alt=''
+								alt='banner'
 							/>
 						</div>
 
@@ -234,7 +234,7 @@ const Home = () => {
 						{/*1st Card*/}
 						<div className='col-lg-6 col-md-12'>
 							<div className='card'>
-								<img src={'/images/help-support.jpg'} />
+								<img src={'/images/help-support.jpg'} alt='banner' />
 							</div>
 						</div>
 
