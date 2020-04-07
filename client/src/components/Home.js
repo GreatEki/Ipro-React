@@ -6,6 +6,7 @@ import Footer from './templates/Footer';
 const Home = () => {
 	return (
 		<div className='m-0 p-0 wrapper bg-home container-fluid'>
+			<Navbar />
 			<div
 				id='carouselExampleSlidesOnly'
 				className='carousel slide'
@@ -35,7 +36,6 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-			<Navbar />
 
 			<main className='container-fluid mt-5'>
 				{/* ============================== Casual Wears Section ================================*/}

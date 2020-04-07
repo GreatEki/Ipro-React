@@ -32,8 +32,8 @@ const Women = () => {
 								<img src='/images/dina.jpg' alt='' className='cat-images' />
 								<div className='card-body'>
 									<h4 className='cat-title'>Business and Office</h4>
-									<p className='cat-desc'>Executive Active, Work, Smart</p>
-									<Link className='btn-shop' href='#'>
+									<p className='cat-desc'>Executive, Work, Smart</p>
+									<Link className='btn-shop' to='/business/women'>
 										Shop Now
 									</Link>
 								</div>
@@ -54,7 +54,7 @@ const Women = () => {
 								<div className='card-body'>
 									<h4 className='cat-title'>Everyday Wears</h4>
 									<p className='cat-desc'>Casual, Active, Work, Smart</p>
-									<Link className='btn-shop' href='#'>
+									<Link className='btn-shop' to='/everyday/women'>
 										Shop Now
 									</Link>
 								</div>
@@ -106,7 +106,7 @@ const Women = () => {
 								<div className='card-body'>
 									<h4 className='cat-title'>Culture</h4>
 									<p className='cat-desc'>Unique, Exquisite, Sophisticated</p>
-									<Link className='btn-shop' href='#'>
+									<Link className='btn-shop' to='/culture/women'>
 										Shop Now
 									</Link>
 								</div>
@@ -127,7 +127,7 @@ const Women = () => {
 								<div className='card-body'>
 									<h4 className='cat-title'>Vacation</h4>
 									<p className='cat-desc'>Leisure, Recreation, Sporty</p>
-									<Link className='btn-shop' href='#'>
+									<Link className='btn-shop' to='/leisure/women'>
 										Shop Now
 									</Link>
 								</div>

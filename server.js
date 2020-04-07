@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 
 	//Allow Access for the following request methods
 	if (req.method === 'OPTIONS') {
-		res.header('Access-Control-Allow-Methods', 'PUT< POST, PATHC, GET, DELETE');
+		res.header('Access-Control-Allow-Methods', 'PUT POST, PATHC, GET, DELETE');
 		return res.status(200).json({});
 	}
 });
