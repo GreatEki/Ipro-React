@@ -33,15 +33,22 @@ const Navwomen = () => {
 				<div className='container-fluid theme-bar m-0 p-0'>
 					<div className='nav '>
 						<form class='form-inline  justify-content-center p-2 my-2 my-lg-0'>
-							<input
-								className='form-control mr-sm-2 search-input'
-								type='search'
-								placeholder='Search by product name, brand, category'
-								aria-label='Search'
-							/>
-							<button className='btn btn-success my-2 my-sm-0' type='submit'>
-								Search
-							</button>
+							<div className='input-group search-input'>
+								<input
+									type='text'
+									className='form-control'
+									placeholder='Search for products, brands and categories'
+									aria-label='Input group example'
+									aria-describedby='btnGroupAddon2'
+								/>
+								<div className='input-group-prepend'>
+									<button
+										className='input-group-text bg-success text-white'
+										id='btnGroupAddon2'>
+										<i className='fas fa-search'></i>
+									</button>
+								</div>
+							</div>
 						</form>
 					</div>
 				</div>

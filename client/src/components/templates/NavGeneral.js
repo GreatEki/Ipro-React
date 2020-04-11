@@ -1,30 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const Navmen = () => {
+const NavGeneral = () => {
 	return (
 		<>
 			<div className='container-fluid nav-wrapper m-0 p-0'>
 				<ul className='nav nav-fill sm-nav m-0 p-0'>
 					<li className='nav-item'>
-						<Link to='/everyday/women' className='nav-link text-white'>
+						<Link to='/everyday/' className='nav-link text-white'>
 							{' '}
 							Everyday Wears
 						</Link>
 					</li>
 					<li className='nav-item'>
-						<Link to='/business/women' className='nav-link text-white'>
+						<Link to='/business/' className='nav-link text-white'>
 							{' '}
 							Business and Corporate
 						</Link>
 					</li>
 					<li className='nav-item'>
-						<Link to='/culture/women' className='nav-link text-white'>
+						<Link to='/culture/' className='nav-link text-white'>
 							{' '}
 							Nativity and Culture
 						</Link>
 					</li>
 					<li className='nav-item'>
-						<Link to='/leisure/women' className='nav-link text-white'>
+						<Link to='/leisure/' className='nav-link text-white'>
 							{' '}
 							Leisure{' '}
 						</Link>
@@ -32,7 +32,7 @@ const Navmen = () => {
 				</ul>
 				<div className='container-fluid theme-bar m-0 p-0'>
 					<div className='nav '>
-						<form class='form-inline  justify-content-center p-2 my-2 my-lg-0'>
+						<form className='form-inline input-group  justify-content-center p-2 my-2 my-lg-0'>
 							<div className='input-group search-input'>
 								<input
 									type='text'
@@ -57,4 +57,4 @@ const Navmen = () => {
 	);
 };
 
-export default Navmen;
+export default NavGeneral;

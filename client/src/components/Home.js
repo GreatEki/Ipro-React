@@ -2,11 +2,13 @@ import React from 'react';
 import Navbar from './templates/Navbar';
 import { Link } from 'react-router-dom';
 import Footer from './templates/Footer';
+import NavGeneral from './templates/NavGeneral';
 
 const Home = () => {
 	return (
 		<div className='m-0 p-0 wrapper bg-home container-fluid'>
 			<Navbar />
+			<NavGeneral />
 			<div
 				id='carouselExampleSlidesOnly'
 				className='carousel slide'

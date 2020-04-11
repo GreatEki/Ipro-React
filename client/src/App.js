@@ -11,6 +11,7 @@ import Businesswomen from './components/women/Businesswomen';
 import Everydaywomen from './components/women/Everydaywomen';
 import Culturewomen from './components/women/Culturewomen';
 import Leisurewomen from './components/women/Leisurewomen';
+import Product from './components/Product';
 
 function App() {
 	return (
@@ -18,6 +19,11 @@ function App() {
 			<BrowserRouter>
 				<Switch>
 					<Route exact path='/' component={Home} />
+					<Route exact path='/products' component={Product} />
+					<Route exact path='/business' component={Product} />
+					<Route exact path='/everyday' component={Product} />
+					<Route exact path='/culture' component={Product} />
+					<Route exact path='/leisure' component={Leisuremen} />
 					<Route exact path='/business/men' component={Businessmen} />
 					<Route exact path='/everyday/men' component={Everydaymen} />
 					<Route exact path='/culture/men' component={Culturemen} />
