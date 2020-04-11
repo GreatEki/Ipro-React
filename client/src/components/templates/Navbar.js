@@ -46,7 +46,7 @@ const Navbar = () => {
 					<ul className='navbar-nav  dropdown mr-lg-5 m-md-0'>
 						<Link
 							className='nav-link dropdown-toggle'
-							href='#'
+							to='#'
 							id='navbarDropDown'
 							role='button'
 							data-toggle='dropdown'
@@ -56,10 +56,10 @@ const Navbar = () => {
 						</Link>
 
 						<div className='dropdown-menu' aria-labelledby='navbarDropDown'>
-							<Link href='' className='dropdown-item'>
+							<Link to='' className='dropdown-item'>
 								Sign-In
 							</Link>
-							<Link href='' className='dropdown-item'>
+							<Link to='' className='dropdown-item'>
 								Register
 							</Link>
 						</div>

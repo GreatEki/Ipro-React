@@ -308,6 +308,15 @@ form.form-inline {
 	width: 100%;
 	height: 400px;
 }
+/* =============================== Product Page Styling ======================================== */
+
+/*=============================== CheckOut Page Styling =======================================*/
+
+.cart-pics {
+	width: 25%;
+	height: 50px;
+}
+
 @media screen and (min-width: 425px) and (max-width: 800px) {
 	* {
 		box-sizing: border-box;
