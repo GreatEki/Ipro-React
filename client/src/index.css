@@ -4,6 +4,7 @@
 	--ad-text: Roboto;
 	--ad-minor-text: Oswald;
 	--bg-grey: darkgrey;
+	--site-font: Anton;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
+	background-color: var(--bg-grey);
 }
 
 code {
@@ -33,6 +35,10 @@ html {
 
 p {
 	color: black;
+}
+
+.site-font {
+	font-family: var(--site-font);
 }
 /* ============== Wrapper Classes ==============*/
 .wrapper {
@@ -308,7 +314,7 @@ form.form-inline {
 	width: 100%;
 	height: 400px;
 }
-/* =============================== Product Page Styling ======================================== */
+/* =============================== End of Product Page Styling ======================================== */
 
 /*=============================== CheckOut Page Styling =======================================*/
 
@@ -316,7 +322,24 @@ form.form-inline {
 	width: 25%;
 	height: 50px;
 }
+/*===============================  End of CheckOut Page Styling =======================================*/
 
+/* ============================== SIGNUP and SIGNIN COMPONENT ===================================*/
+.auth-form-container:hover {
+	border: 5px groove green;
+	transition: 10s;
+	z-index: 5;
+}
+.auth-form {
+	width: 70%;
+}
+/* ============================== END OF  SIGNUP and SIGNIN COMPONENT ===================================*/
+
+/* ***************************************
+        **************************************
+        *************************************
+         MEDIUM SIZED SCREENs (Ipads and Tablets)
+    */
 @media screen and (min-width: 425px) and (max-width: 800px) {
 	* {
 		box-sizing: border-box;
@@ -388,6 +411,11 @@ form.form-inline {
 		font-size: 18px;
 		margin-left: 1%;
 		padding: 5px 5px;
+	}
+
+	/* SignUp and SignIn Component*/
+	.auth-form {
+		width: 100%;
 	}
 
 	.footer-content .footer-nav {

@@ -32,7 +32,7 @@ const Navwomen = () => {
 				</ul>
 				<div className='container-fluid theme-bar m-0 p-0'>
 					<div className='nav '>
-						<form class='form-inline  justify-content-center p-2 my-2 my-lg-0'>
+						<form className='form-inline  justify-content-center p-2 my-2 my-lg-0'>
 							<div className='input-group search-input'>
 								<input
 									type='text'
