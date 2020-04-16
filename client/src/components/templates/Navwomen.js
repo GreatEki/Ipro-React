@@ -6,25 +6,25 @@ const Navmen = () => {
 			<div className='container-fluid nav-wrapper m-0 p-0'>
 				<ul className='nav nav-fill sm-nav m-0 p-0'>
 					<li className='nav-item'>
-						<Link to='/everyday/women' className='nav-link text-white'>
+						<Link to='/everyday/women' className='nav-link text-white sm-link'>
 							{' '}
 							Everyday Wears
 						</Link>
 					</li>
 					<li className='nav-item'>
-						<Link to='/business/women' className='nav-link text-white'>
+						<Link to='/business/women' className='nav-link text-white sm-link'>
 							{' '}
 							Business and Corporate
 						</Link>
 					</li>
 					<li className='nav-item'>
-						<Link to='/culture/women' className='nav-link text-white'>
+						<Link to='/culture/women' className='nav-link text-white sm-link'>
 							{' '}
 							Nativity and Culture
 						</Link>
 					</li>
 					<li className='nav-item'>
-						<Link to='/leisure/women' className='nav-link text-white'>
+						<Link to='/leisure/women' className='nav-link text-white sm-link'>
 							{' '}
 							Leisure{' '}
 						</Link>

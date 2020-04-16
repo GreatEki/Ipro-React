@@ -100,8 +100,8 @@ const Product = () => {
 									</div>
 
 									<div className='col-lg-6 col-12'>
-										<div className='my-5 px-4 text-muted font-weight-bold'>
-											<i className='fas fa-heart '></i> Save for Later
+										<div className='my-5 px-4 text-muted font-weight-bold wish-btn role-btn'>
+											<i className='fas fa-heart'></i> Save for Later
 										</div>
 									</div>
 								</div>

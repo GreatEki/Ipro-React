@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../templates/Navbar';
 import NavGeneral from '../templates/NavGeneral';
 import { Link } from 'react-router-dom';
+
 const SignIn = () => {
 	return (
 		<>

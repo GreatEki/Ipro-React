@@ -56,11 +56,11 @@ const Navbar = () => {
 						</Link>
 
 						<div className='dropdown-menu' aria-labelledby='navbarDropDown'>
-							<Link to='' className='dropdown-item'>
+							<Link to='/users/signin' className='dropdown-item'>
 								Sign-In
 							</Link>
-							<Link to='' className='dropdown-item'>
-								Register
+							<Link to='/users/signup' className='dropdown-item'>
+								Join
 							</Link>
 						</div>
 					</ul>

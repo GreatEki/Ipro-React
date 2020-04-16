@@ -15,6 +15,7 @@ import Product from './components/Product';
 import CheckOut from './components/Checkout';
 import SignUp from './components/users/SignUp';
 import SignIn from './components/users/SignIn';
+import Dashboard from './components/users/Dashboard';
 function App() {
 	return (
 		<div className='App'>
@@ -25,7 +26,7 @@ function App() {
 					<Route exact path='/business' component={Product} />
 					<Route exact path='/everyday' component={Product} />
 					<Route exact path='/culture' component={Product} />
-					<Route exact path='/leisure' component={Leisuremen} />
+					<Route exact path='/leisure' component={Product} />
 					<Route exact path='/business/men' component={Businessmen} />
 					<Route exact path='/everyday/men' component={Everydaymen} />
 					<Route exact path='/culture/men' component={Culturemen} />
@@ -39,6 +40,7 @@ function App() {
 					<Route path='/checkout' component={CheckOut} />
 					<Route path='/users/signup' component={SignUp} />
 					<Route path='/users/signin' component={SignIn} />
+					<Route path='/users/dashboard' component={Dashboard} />
 				</Switch>
 			</BrowserRouter>
 		</div>
