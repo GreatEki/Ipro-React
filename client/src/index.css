@@ -330,11 +330,25 @@ form.form-inline {
 /* =============================== End of Product Page Styling ======================================== */
 
 /*=============================== Cart and CheckOut Page Styling =======================================*/
-.border.border-success.rounded:hover {
+.border.cart-btn:hover {
 	background-color: white !important;
 	color: black !important;
 }
 
+.cart-slot {
+	background-color: whitesmoke;
+}
+
+.cart-title-bar {
+	background-color: lightgray;
+	font-weight: bold;
+	font-size: 16x;
+	padding: 10px 0px;
+}
+
+.detail {
+	padding: 10px 0px;
+}
 .cart-image {
 	height: 100px;
 }
@@ -388,6 +402,11 @@ form.form-inline {
 		margin-bottom: 50%;
 		font-size: 18px;
 	}
+
+	/* Cart and Checkout Component Styling*/
+	.cart-title-bar {
+		visibility: hidden;
+	}
 }
 
 /* ***************************************
@@ -437,6 +456,11 @@ form.form-inline {
 		font-size: 18px;
 		margin-left: 1%;
 		padding: 5px 5px;
+	}
+
+	/* Cart and Checkout Component Styling*/
+	.cart-title-bar {
+		visibility: hidden;
 	}
 
 	/* SignUp and SignIn Component*/

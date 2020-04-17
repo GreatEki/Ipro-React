@@ -31,61 +31,61 @@ const Cart = () => {
 
 				<main className='container-fluid content-wrapper'>
 					<div className='container my-5'>
-						<div className='card m-0'>
-							<div className='card-header row m-0'>
-								<div className='col-3'>
-									<b>Product Detail</b>
-								</div>
-								<div className='col-3'>
-									<b className='text-center'>Quantity</b>
-								</div>
-
-								<div className='col-3'>
-									{' '}
-									<b className='text-center'>Item Price</b>
-								</div>
-
-								<div className='col-3 text-right'>
-									{' '}
-									<b>Action </b>
-								</div>
+						<div className='row cart-slot'>
+							<div className='col-6 col-lg-2 m-0 p-lg-0'>
+								<div className='cart-title-bar pl-lg-2'> Product</div>
+								<img
+									className='img-fluid cart-image detail'
+									src='/images/gown-pink.jpg'
+									alt='product-title'
+								/>
 							</div>
 
-							<section className='card-body row'>
-								<div className='col-3'>
-									<img
-										className='d-inline cart-image'
-										src='/images/gown-pink.jpg'
-										alt='product-title'
-									/>
+							<div className='col-6 col-lg-2 m-0 p-lg-0'>
+								<div className='cart-title-bar'> Details </div>
+								<p className='detail'>Classy Pink Gown</p>
+								<p>
+									<span>size: </span> mid
+								</p>
+							</div>
 
-									<p className='site-font-sm text-muted d-inline'>
-										{' '}
-										Pink Gown{' '}
-									</p>
-									<p className='site-font-sm text-muted pl-2'>mid </p>
-								</div>
+							<div className='col-6 col-lg-2 m-0 p-lg-0'>
+								<div className='cart-title-bar'> Quantity</div>
+								<p className='detail'>(2) qty </p>
+							</div>
 
-								<div className='col-3'>
-									<h3 className='site-font mx-4'> (2) </h3>
-								</div>
+							<div className='col-6 col-lg-2 m-0 p-lg-0'>
+								<div className='cart-title-bar'> Price</div>
+								<p className='detail'>
+									{' '}
+									<del className='del'>N</del> 11, 000
+								</p>
+							</div>
 
-								<div className='col-3'>
-									<h4 className='text-muted mx-4'>
-										{' '}
-										<del className='del'>N </del>
-										11, 000
-									</h4>
-								</div>
+							<div className='col-6 col-lg-2 m-0 p-lg-0'>
+								<div className='cart-title-bar'> Action</div>
+								<div className='text-info detail'> Save Item for Later</div>
+							</div>
 
-								<div className='col-3 text-right'>
-									<button className='text-danger btn btn-warning'>
-										{' '}
-										Remove Item{' '}
-									</button>
-								</div>
-							</section>
+							<div className='col-6 col-lg-2 m-0 p-lg-0'>
+								<div className='cart-title-bar'> Action</div>
+								<div className='text-danger detail'> Remove Item</div>
+							</div>
 						</div>
+
+						<section>
+							<h2 className='text-center mt-5'>
+								TOTAL PRICE: <del className='del'>N</del>
+								11, 000
+							</h2>
+
+							<div className='text-right mt-5'>
+								<Link className='btn btn-success ml-5 my-3' to='/cart/checkout'>
+									<i className='fas fa-long-arrow-alt-right'></i> Proceed TO
+									CheckOut
+								</Link>
+							</div>
+						</section>
 					</div>
 				</main>
 			</div>

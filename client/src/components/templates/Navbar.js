@@ -40,9 +40,9 @@ const Navbar = () => {
 					<div className='navbar-nav'>
 						<Link
 							to='/cart/overview'
-							className='nav-item nav-link border border-success rounded'
+							className='nav-item nav-link border cart-btn'
 							type='button'>
-							<span className='badge badge-success'> 1</span> Shopping Cart{' '}
+							<span className='badge badge-success p-2'> 1</span> Shopping Cart{' '}
 							<i className='fas fa-shopping-basket'></i>
 						</Link>
 					</div>
