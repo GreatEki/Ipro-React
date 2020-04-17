@@ -329,13 +329,21 @@ form.form-inline {
 }
 /* =============================== End of Product Page Styling ======================================== */
 
-/*=============================== CheckOut Page Styling =======================================*/
+/*=============================== Cart and CheckOut Page Styling =======================================*/
+.border.border-success.rounded:hover {
+	background-color: white !important;
+	color: black !important;
+}
+
+.cart-image {
+	height: 100px;
+}
 
 .cart-pics {
 	width: 25%;
 	height: 50px;
 }
-/*===============================  End of CheckOut Page Styling =======================================*/
+/*===============================  End of Cart and CheckOut Page Styling =======================================*/
 
 /* ============================== SIGNUP and SIGNIN COMPONENT ===================================*/
 .auth-form-container:hover {

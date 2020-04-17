@@ -38,6 +38,17 @@ const Navbar = () => {
 
 					<div className='collapse navbar-collapse'></div>
 					<div className='navbar-nav'>
+						<Link
+							to='/cart/overview'
+							className='nav-item nav-link border border-success rounded'
+							type='button'>
+							<span className='badge badge-success'> 1</span> Shopping Cart{' '}
+							<i className='fas fa-shopping-basket'></i>
+						</Link>
+					</div>
+
+					<div className='collapse navbar-collapse'></div>
+					<div className='navbar-nav'>
 						<Link to='/' className='nav-item nav-link'>
 							<i className='fas fa-heart'></i>
 						</Link>
