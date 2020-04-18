@@ -1,0 +1,661 @@
+{
+	"products": [
+		{
+			"id": 1,
+			"title": "Ankara Shirt for men",
+			"imagePath": "ankara-shirt-men.jpg",
+			"price": 3500,
+			"category": "cultural",
+			"brand": "ankara",
+			"gender": "male"
+		},
+		{
+			"id": 2,
+			"title": "Ankara Wing Top Ladies",
+			"imagePath": "anakara-top-and-trouser-women.jpg",
+			"price": 7000,
+			"category": "native",
+			"brand": "ankara",
+			"gender": "women"
+		},
+		{
+			"id": 3,
+			"title": "Singaporean Women Top",
+			"imagePath": "bbh-singapore-1414045-unsplash.jpg",
+			"price": 4000,
+			"category": "everyday",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 4,
+			"title": "Black Gown for Ladies",
+			"imagePath": "black-eng-gown.jpg",
+			"price": 5000,
+			"category": "corporate",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 5,
+			"title": "Purple Top",
+			"imagePath": "charisse-kenion-714752-unsplash.jpg",
+			"price": 3000,
+			"category": "everyday",
+			"brand": "unknown",
+			"gender": "unisex"
+		},
+		{
+			"id": 6,
+			"title": "Patterned Native wear men",
+			"imagePath": "dark-mixed-blue-ankara.jpg",
+			"price": 13000,
+			"category": "native",
+			"brand": "unknown",
+			"gender": "men"
+		},
+		{
+			"id": 7,
+			"title": "Corporate Yellow Gown",
+			"imagePath": "dina.jpg",
+			"price": 6000,
+			"category": "corporate",
+			"brand": "dina",
+			"gender": "women"
+		},
+		{
+			"id": 8,
+			"title": "Grey Top",
+			"imagePath": "emma-valerio-1421389-unsplash.jpg",
+			"price": 3000,
+			"category": "everyday",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 9,
+			"title": "Elegant White Floral Top Ladies ",
+			"imagePath": "english-wear-ladies-1.jpg",
+			"price": 10000,
+			"category": "business",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 10,
+			"title": "Long Native Gown ",
+			"imagePath": "fair-red.jpg",
+			"price": 6000,
+			"category": "native",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 11,
+			"title": "Majestic Pink Gown ",
+			"imagePath": "gown-pink.jpg",
+			"price": 15000,
+			"category": "corporate",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 12,
+			"title": "Black Top and Light Grey Jeans ",
+			"imagePath": "ian-dooley-347968-unsplash.jpg",
+			"price": 11000,
+			"category": "everyday",
+			"brand": "ian dooley",
+			"gender": "women"
+		},
+		{
+			"id": 13,
+			"title": "Black Top and Light Blue Jeans ",
+			"imagePath": "ian-dooley-pinkwall-347962-unsplash.jpg",
+			"price": 11000,
+			"category": "everyday",
+			"brand": "ian dooley",
+			"gender": "women"
+		},
+		{
+			"id": 14,
+			"title": "Royal White Native Wear Men",
+			"imagePath": "ipro-look-touch.jpg",
+			"price": 12000,
+			"category": "native",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 15,
+			"title": "2 in 1 Jump Suit",
+			"imagePath": "2-in-1-jump-suit-men-4500.jpg",
+			"price": 4500,
+			"category": "leisure",
+			"brand": "unknown",
+			"gender": "unisex"
+		},
+		{
+			"id": 16,
+			"title": "4 in 1 quality men polo shirt",
+			"imagePath": "4-in-1-quality-shirts.jpg",
+			"price": 10000,
+			"category": "everyday",
+			"brand": "ralph lauren",
+			"gender": "men"
+		},
+		{
+			"id": 17,
+			"title": "27 Polo Shirt and Cap Bundle",
+			"imagePath": "27-polo-cap-bundle-wine.jpg",
+			"price": 45000,
+			"category": "leisure",
+			"brand": "27",
+			"gender": "unisex"
+		},
+		{
+			"id": 18,
+			"title": "Black Casual T-Shirt",
+			"imagePath": "black-casual-tshirt.jpg",
+			"price": 2500,
+			"category": "everyday",
+			"brand": "unknown",
+			"gender": "unisex"
+		},
+		{
+			"id": 19,
+			"title": "Blue Jogggers",
+			"imagePath": "blue-joggers-3000.jpg",
+			"price": 3000,
+			"category": "leisure",
+			"brand": "unknown",
+			"gender": "unisex"
+		},
+		{
+			"id": 20,
+			"title": "Dark Blue Suit for Men",
+			"imagePath": "dark-blue-suit-15000.jpg",
+			"price": 15000,
+			"category": "business",
+			"brand": "unknown",
+			"gender": "men"
+		},
+		{
+			"id": 21,
+			"title": "Fearless Black T-Shirt",
+			"imagePath": "fearless-men-black-shirt-2500.jpg",
+			"price": 2500,
+			"category": "everyday",
+			"brand": "Fearless",
+			"gender": "unisex"
+		},
+		{
+			"id": 23,
+			"title": "Confirm Blue Suit",
+			"imagePath": "javier-reyes.jpg",
+			"price": 20000,
+			"category": "business",
+			"brand": "unknown",
+			"gender": "men"
+		},
+		{
+			"id": 24,
+			"title": "Okye White Shirt with light pink jacket",
+			"imagePath": "jessica-castro-449555-unsplash.jpg",
+			"price": 18000,
+			"category": "everyday",
+			"brand": "okye",
+			"gender": "women"
+		},
+		{
+			"id": 25,
+			"title": "Ankara Long Sleeve with green pants",
+			"imagePath": "jidenna.jpg",
+			"price": 11000,
+			"category": "native",
+			"brand": "unknown",
+			"gender": "men"
+		},
+		{
+			"id": 26,
+			"title": "Long Sleeve White Top Men",
+			"imagePath": "levi-alvarez-485070-unsplash.jpg",
+			"price": 5000,
+			"category": "leisure",
+			"brand": "unknown",
+			"gender": "men"
+		},
+		{
+			"id": 27,
+			"title": "Long Sleeve Native Shirt Men",
+			"imagePath": "long-sleeve-ankara.jpg",
+			"price": 3500,
+			"category": "native",
+			"brand": "unknown",
+			"gender": "men"
+		},
+		{
+			"id": 28,
+			"title": "Black and Grey Long Sleeve",
+			"imagePath": "long-sleeves-black-and-grey-2800.jpg",
+			"price": 2800,
+			"category": "leisure",
+			"brand": "unknown",
+			"gender": "unisex"
+		},
+		{
+			"id": 29,
+			"title": "Black and Yellow patterned dress",
+			"imagePath": "love-this.jpg",
+			"price": 8000,
+			"category": "business",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 30,
+			"title": "Malaysian Short Gown",
+			"imagePath": "malaysia.jpg",
+			"price": 6500,
+			"category": "leisure",
+			"brand": "malaysia",
+			"gender": "women"
+		},
+		{
+			"id": 31,
+			"title": "Marvel Venom Top",
+			"imagePath": "marvel-venom-print-2200.jpg",
+			"price": 2200,
+			"category": "everyday",
+			"brand": "marvel",
+			"gender": "unisex"
+		},
+		{
+			"id": 32,
+			"title": "Men Business Suit",
+			"imagePath": "men-corporate-suit-1.jpg",
+			"price": 17500,
+			"category": "business",
+			"brand": "unknown",
+			"gender": "men"
+		},
+		{
+			"id": 33,
+			"title": "Men Business Suit",
+			"imagePath": "men-corporate-suit-2.jpg",
+			"price": 18500,
+			"category": "business",
+			"brand": "unknown",
+			"gender": "men"
+		},
+		{
+			"id": 34,
+			"title": "Men Work Shirt and Pants",
+			"imagePath": "men-fashion-business-casual.jpg",
+			"price": 9000,
+			"category": "business",
+			"brand": "unknown",
+			"gender": "men"
+		},
+		{
+			"id": 35,
+			"title": "Men Fashion Suit",
+			"imagePath": "men-fashion-suit-1.jpg",
+			"price": 9000,
+			"category": "everyday",
+			"brand": "unknown",
+			"gender": "men"
+		},
+		{
+			"id": 36,
+			"title": "Men Chinos",
+			"imagePath": "mens-chinos-4000.jpg",
+			"price": 4000,
+			"category": "leisure",
+			"brand": "chinos",
+			"gender": "men"
+		},
+		{
+			"id": 37,
+			"title": "Men Long Sleeves White",
+			"imagePath": "men-white-long-sleeves-5300.jpg",
+			"price": 5300,
+			"category": "business",
+			"brand": "corporate",
+			"gender": "men"
+		},
+		{
+			"id": 38,
+			"title": "Men Long Sleeves White",
+			"imagePath": "men-white-long-sleeves-5300.jpg",
+			"price": 5300,
+			"category": "business",
+			"brand": "corporate",
+			"gender": "men"
+		},
+		{
+			"id": 39,
+			"title": "Fabulous Native Wear for Women",
+			"imagePath": "native-women-fabulous.jpg",
+			"price": 15000,
+			"category": "native",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 40,
+			"title": "Brown Native Wear Women",
+			"imagePath": "pregnant.jpg",
+			"price": 6500,
+			"category": "native",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 41,
+			"title": "Brown Native Wear Women",
+			"imagePath": "pregnant.jpg",
+			"price": 6500,
+			"category": "native",
+			"brand": "gown",
+			"gender": "women"
+		},
+		{
+			"id": 42,
+			"title": "Ralph Lauren White Polo",
+			"imagePath": "ralp-lauren-white-polo-shirt.jpg",
+			"price": 12700,
+			"category": "leisure",
+			"brand": "ralph lauren",
+			"gender": "unisex"
+		},
+		{
+			"id": 43,
+			"title": "Royal Red Suit",
+			"imagePath": "royal-red-suit-20000.jpg",
+			"price": 20000,
+			"category": "business",
+			"brand": "ralph lauren",
+			"gender": "men"
+		},
+		{
+			"id": 44,
+			"title": "Women Shirt and Jeans",
+			"imagePath": "shirt-jeans-casual-women-1.jpg",
+			"price": 11300,
+			"category": "everyday",
+			"brand": "shirt",
+			"gender": "women"
+		},
+		{
+			"id": 45,
+			"title": "Women Shirt and Jeans",
+			"imagePath": "shirt-jeans-casual-women-2.jpg",
+			"price": 7500,
+			"category": "everyday",
+			"brand": "jeans",
+			"gender": "women"
+		},
+		{
+			"id": 46,
+			"title": "Casual Women Shirt and Jeans",
+			"imagePath": "shirt-jeans-casual-women-3.jpg",
+			"price": 7500,
+			"category": "leisure",
+			"brand": "shirt",
+			"gender": "women"
+		},
+		{
+			"id": 47,
+			"title": "Casual Women Shirt and Jeans",
+			"imagePath": "shirt-jeans-casual-women-4.jpg",
+			"price": 7500,
+			"category": "leisure",
+			"brand": "shirt",
+			"gender": "women"
+		},
+		{
+			"id": 48,
+			"title": "Casual Men Top with Jeans",
+			"imagePath": "shirt-jeans-men-1.jpg",
+			"price": 12800,
+			"category": "everyday",
+			"brand": "jeans",
+			"gender": "men"
+		},
+		{
+			"id": 49,
+			"title": "Casual Men Wear with Jacket",
+			"imagePath": "shirt-jeans-men-2.jpg",
+			"price": 8000,
+			"category": "everyday",
+			"brand": "jacket",
+			"gender": "men"
+		},
+		{
+			"id": 50,
+			"title": "Casual Men Wear Top with Pants",
+			"imagePath": "shirt-jeans-men-black-1.jpg",
+			"price": 5500,
+			"category": "leisure",
+			"brand": "pants",
+			"gender": "men"
+		},
+		{
+			"id": 51,
+			"title": "Shoulderless Ladies Gown",
+			"imagePath": "shoulderless-ankara-women.jpg",
+			"price": 7000,
+			"category": "leisure",
+			"brand": "ankara",
+			"gender": "women"
+		},
+		{
+			"id": 52,
+			"title": "Sleeveless Ladies Dress",
+			"imagePath": "sleeveless-woman.jpg",
+			"price": 10200,
+			"category": "native",
+			"brand": "ankara",
+			"gender": "women"
+		},
+		{
+			"id": 53,
+			"title": "Men Special Dress",
+			"imagePath": "special-occassion-style.jpg",
+			"price": 10000,
+			"category": "native",
+			"brand": "ankara",
+			"gender": "men"
+		},
+		{
+			"id": 54,
+			"title": "Stock Ladies Jeans",
+			"imagePath": "stock-jeans-ladies-1.jpg",
+			"price": 9500,
+			"category": "leisure",
+			"brand": "trousers",
+			"gender": "women"
+		},
+		{
+			"id": 55,
+			"title": "High Waist Ladies Jeans",
+			"imagePath": "stock-jeans-ladies-3.jpg",
+			"price": 6500,
+			"category": "everyday",
+			"brand": "jeans",
+			"gender": "women"
+		},
+		{
+			"id": 56,
+			"title": "Ladies Jeans",
+			"imagePath": "stock-jeans-ladies-4.jpg",
+			"price": 6500,
+			"category": "everyday",
+			"brand": "jeans",
+			"gender": "women"
+		},
+		{
+			"id": 57,
+			"title": "Suit Styled Ankara",
+			"imagePath": "suit-styled-ankara.jpg",
+			"price": 13000,
+			"category": "native",
+			"brand": "suit",
+			"gender": "men"
+		},
+		{
+			"id": 58,
+			"title": "Suit Styled Ankara",
+			"imagePath": "suit-styled-ankara.jpg",
+			"price": 13000,
+			"category": "native",
+			"brand": "suit",
+			"gender": "men"
+		},
+		{
+			"id": 59,
+			"title": "Brown Men Wear",
+			"imagePath": "tight-fitted-ankara.jpg",
+			"price": 6000,
+			"category": "native",
+			"brand": "shirt",
+			"gender": "men"
+		},
+		{
+			"id": 60,
+			"title": "Up and Down wear for men",
+			"imagePath": "tobi-ankara.jpg",
+			"price": 12000,
+			"category": "everyday",
+			"brand": "trouser",
+			"gender": "men"
+		},
+		{
+			"id": 61,
+			"title": "Track Pants",
+			"imagePath": "track-pants-3000.jpg",
+			"price": 3000,
+			"category": "leisure",
+			"brand": "trouser",
+			"gender": "men"
+		},
+		{
+			"id": 62,
+			"title": "Women Corporate Wear",
+			"imagePath": "women-business-1.jpg",
+			"price": 9800,
+			"category": "corporate",
+			"brand": "gown",
+			"gender": "women"
+		},
+		{
+			"id": 63,
+			"title": "Women Corporate Wear",
+			"imagePath": "women-business-2.jpg",
+			"price": 9800,
+			"category": "business",
+			"brand": "gown",
+			"gender": "women"
+		},
+		{
+			"id": 64,
+			"title": "Corporate Executive Suit",
+			"imagePath": "women-business-3.jpg",
+			"price": 10000,
+			"category": "business",
+			"brand": "suit",
+			"gender": "women"
+		},
+		{
+			"id": 65,
+			"title": "Corporate Executive Suit Women",
+			"imagePath": "women-business-4.jpg",
+			"price": 10000,
+			"category": "business",
+			"brand": "suit",
+			"gender": "women"
+		},
+		{
+			"id": 66,
+			"title": "Red Suit pants women",
+			"imagePath": "women-bus-red-corporate.jpg",
+			"price": 7500,
+			"category": "business",
+			"brand": "pants",
+			"gender": "women"
+		},
+		{
+			"id": 67,
+			"title": "Yellow Top and Black wear",
+			"imagePath": "women-bus-yellow-and-black.jpg",
+			"price": 9000,
+			"category": "business",
+			"brand": "top",
+			"gender": "women"
+		},
+		{
+			"id": 68,
+			"title": "Women Corporate Gown",
+			"imagePath": "women-corporate-gown-1.jpg",
+			"price": 6500,
+			"category": "business",
+			"brand": "shirt",
+			"gender": "women"
+		},
+		{
+			"id": 70,
+			"title": "Dark Corporate Gown",
+			"imagePath": "women-corporate-gown-2.jpg",
+			"price": 8500,
+			"category": "business",
+			"brand": "gown",
+			"gender": "women"
+		},
+		{
+			"id": 71,
+			"title": "Sweet ladies dress",
+			"imagePath": "women-corporate-gown-3.jpg",
+			"price": 8000,
+			"category": "business",
+			"brand": "long dress",
+			"gender": "women"
+		},
+		{
+			"id": 72,
+			"title": "Short ladies dress gown",
+			"imagePath": "women-corporate-gown-4.jpg",
+			"price": 7500,
+			"category": "business",
+			"brand": "short dress",
+			"gender": "women"
+		},
+		{
+			"id": 73,
+			"title": "Ankara Top for Men",
+			"imagePath": "yellow-ankara-africa-men.jpg",
+			"price": 3800,
+			"category": "native",
+			"brand": "shirt",
+			"gender": "men"
+		},
+		{
+			"id": 74,
+			"title": "Multi colored patterned wear",
+			"imagePath": "yellow-mixed.jpg",
+			"price": 7000,
+			"category": "native",
+			"brand": "up and down",
+			"gender": "men"
+		},
+		{
+			"id": 74,
+			"title": "Peacock Flora Dress women",
+			"imagePath": "yellow-woman-ankara.jpg",
+			"price": 11400,
+			"category": "native",
+			"brand": "long dress",
+			"gender": "women"
+		}
+	]
+}

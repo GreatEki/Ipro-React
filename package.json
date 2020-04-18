@@ -4,6 +4,7 @@
 	"description": "Custom Clothing Store",
 	"main": "server.js",
 	"scripts": {
+		"json-server": "json-server --watch db.json --port 3004",
 		"start": "node server.js",
 		"server": "nodemon server.js",
 		"client": "cd client && npm start",

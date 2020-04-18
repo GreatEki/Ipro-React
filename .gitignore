@@ -1,1 +1,4 @@
 /node_modules
+
+config/config.js
+# This would add the database.js file to the staging areas for commit and ignore every other file in the folder.
