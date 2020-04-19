@@ -5,7 +5,7 @@
 			"title": "Ankara Shirt for men",
 			"imagePath": "ankara-shirt-men.jpg",
 			"price": 3500,
-			"category": "cultural",
+			"category": "native",
 			"brand": "ankara",
 			"gender": "men"
 		},
@@ -32,7 +32,7 @@
 			"title": "Black Gown for Ladies",
 			"imagePath": "black-eng-gown.jpg",
 			"price": 5000,
-			"category": "corporate",
+			"category": "business",
 			"brand": "unknown",
 			"gender": "women"
 		},
@@ -59,7 +59,7 @@
 			"title": "Corporate Yellow Gown",
 			"imagePath": "dina.jpg",
 			"price": 6000,
-			"category": "corporate",
+			"category": "business",
 			"brand": "dina",
 			"gender": "women"
 		},
@@ -95,7 +95,7 @@
 			"title": "Majestic Pink Gown ",
 			"imagePath": "gown-pink.jpg",
 			"price": 15000,
-			"category": "corporate",
+			"category": "business",
 			"brand": "unknown",
 			"gender": "women"
 		},
@@ -545,7 +545,7 @@
 			"title": "Women Corporate Wear",
 			"imagePath": "women-business-1.jpg",
 			"price": 9800,
-			"category": "corporate",
+			"category": "business",
 			"brand": "gown",
 			"gender": "women"
 		},
