@@ -17,32 +17,35 @@ import SignUp from './components/users/SignUp';
 import SignIn from './components/users/SignIn';
 import Dashboard from './components/users/Dashboard';
 import Cart from './components/Cart';
+import ProductsContextProvider from './contexts/ProductsContext';
 function App() {
 	return (
 		<div className='App'>
 			<BrowserRouter>
 				<Switch>
-					<Route exact path='/' component={Home} />
-					<Route exact path='/products' component={Product} />
-					<Route exact path='/business' component={Product} />
-					<Route exact path='/everyday' component={Product} />
-					<Route exact path='/culture' component={Product} />
-					<Route exact path='/leisure' component={Product} />
-					<Route exact path='/business/men' component={Businessmen} />
-					<Route exact path='/everyday/men' component={Everydaymen} />
-					<Route exact path='/culture/men' component={Culturemen} />
-					<Route exact path='/leisure/men' component={Leisuremen} />
-					<Route path='/men' component={Men} />
-					<Route exact path='/business/women' component={Businesswomen} />
-					<Route exact path='/everyday/women' component={Everydaywomen} />
-					<Route exact path='/culture/women' component={Culturewomen} />
-					<Route exact path='/leisure/women' component={Leisurewomen} />
-					<Route path='/women' component={Women} />
-					<Route path='/cart/overview' component={Cart} />
-					<Route path='/checkout' component={CheckOut} />
-					<Route path='/users/signup' component={SignUp} />
-					<Route path='/users/signin' component={SignIn} />
-					<Route path='/users/dashboard' component={Dashboard} />
+					<ProductsContextProvider>
+						<Route exact path='/' component={Home} />
+						<Route exact path='/products' component={Product} />
+						<Route exact path='/business' component={Product} />
+						<Route exact path='/everyday' component={Product} />
+						<Route exact path='/culture' component={Product} />
+						<Route exact path='/leisure' component={Product} />
+						<Route exact path='/business/men' component={Businessmen} />
+						<Route exact path='/everyday/men' component={Everydaymen} />
+						<Route exact path='/culture/men' component={Culturemen} />
+						<Route exact path='/leisure/men' component={Leisuremen} />
+						<Route path='/men' component={Men} />
+						<Route exact path='/business/women' component={Businesswomen} />
+						<Route exact path='/everyday/women' component={Everydaywomen} />
+						<Route exact path='/culture/women' component={Culturewomen} />
+						<Route exact path='/leisure/women' component={Leisurewomen} />
+						<Route path='/women' component={Women} />
+						<Route path='/cart/overview' component={Cart} />
+						<Route path='/checkout' component={CheckOut} />
+						<Route path='/users/signup' component={SignUp} />
+						<Route path='/users/signin' component={SignIn} />
+						<Route path='/users/dashboard' component={Dashboard} />
+					</ProductsContextProvider>
 				</Switch>
 			</BrowserRouter>
 		</div>

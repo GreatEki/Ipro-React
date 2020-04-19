@@ -49,7 +49,7 @@ const Home = () => {
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
-									src={'/images/shirt-jeans-casual-women-1.jpg'}
+									src={'/products/shirt-jeans-casual-women-1.jpg'}
 									alt='banner'
 								/>
 							</Link>
@@ -59,7 +59,7 @@ const Home = () => {
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
-									src={'/images/shirt-jeans-men-1.jpg'}
+									src={'/products/shirt-jeans-men-1.jpg'}
 									alt='banner'
 								/>
 							</Link>
@@ -69,7 +69,7 @@ const Home = () => {
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
-									src={'/images/shirt-jeans-casual-women-4.jpg'}
+									src={'/products/shirt-jeans-casual-women-4.jpg'}
 									alt='banner'
 								/>
 							</Link>
@@ -79,7 +79,7 @@ const Home = () => {
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
-									src={'/images/shirt-jeans-men-2.jpg'}
+									src={'/products/shirt-jeans-men-2.jpg'}
 									alt='banner'
 								/>
 							</Link>
@@ -89,7 +89,7 @@ const Home = () => {
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
-									src={'/images/jessica-castro-449555-unsplash.jpg'}
+									src={'/products/jessica-castro-449555-unsplash.jpg'}
 									alt='banner'
 								/>
 							</Link>
@@ -99,7 +99,7 @@ const Home = () => {
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
-									src={'/images/shirt-jeans-men-black-1.jpg'}
+									src={'/products/shirt-jeans-men-black-1.jpg'}
 									alt='banner'
 								/>
 							</Link>
@@ -118,7 +118,7 @@ const Home = () => {
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
-									src={'/images/javier-reyes.jpg'}
+									src={'/products/javier-reyes.jpg'}
 									alt='banner'
 								/>
 							</Link>
@@ -128,7 +128,7 @@ const Home = () => {
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
-									src={'/images/women-business-1.jpg'}
+									src={'/products/women-business-1.jpg'}
 									alt='banner'
 								/>
 							</Link>
@@ -138,7 +138,7 @@ const Home = () => {
 							<Link to='/'>
 								<img
 									className='front-img'
-									src={'/images/men-corporate-suit-1.jpg'}
+									src={'/products/men-corporate-suit-1.jpg'}
 									alt='banner'
 								/>
 							</Link>
@@ -148,7 +148,7 @@ const Home = () => {
 							<Link to='/'>
 								<img
 									className='front-img'
-									src={'/images/women-business-4.jpg'}
+									src={'/products/women-business-4.jpg'}
 									alt='banner'
 								/>
 							</Link>
@@ -158,7 +158,7 @@ const Home = () => {
 							<Link to='/'>
 								<img
 									className='front-img'
-									src={'/images/men-corporate-suit-2.jpg'}
+									src={'/products/men-corporate-suit-2.jpg'}
 									alt='banner'
 								/>
 							</Link>
@@ -168,7 +168,7 @@ const Home = () => {
 							<Link to='/'>
 								<img
 									className='front-img'
-									src={'/images/women-corporate-gown-green.jpg'}
+									src={'/products/women-corporate-gown-green.jpg'}
 									alt='banner'
 								/>
 							</Link>
@@ -185,7 +185,7 @@ const Home = () => {
 						<div className='col-lg-2 col-12 mb-3'>
 							<img
 								className='front-img img-fluid'
-								src={'/images/sleeveless-woman.jpg'}
+								src={'/products/sleeveless-woman.jpg'}
 								alt='banner'
 							/>
 						</div>
@@ -193,7 +193,7 @@ const Home = () => {
 						<div className='col-lg-2 col-12 mb-3'>
 							<img
 								className='front-img img-fluid'
-								src={'/images/tight-fitted-ankara.jpg'}
+								src={'/products/tight-fitted-ankara.jpg'}
 								alt='banner'
 							/>
 						</div>
@@ -201,7 +201,7 @@ const Home = () => {
 						<div className='col-lg-2 col-12 mb-3'>
 							<img
 								className='front-img'
-								src={'/images/yellow-woman-ankara.jpg'}
+								src={'/products/yellow-woman-ankara.jpg'}
 								alt='banner'
 							/>
 						</div>
@@ -209,7 +209,7 @@ const Home = () => {
 						<div className='col-lg-2 col-12 mb-3'>
 							<img
 								className='front-img'
-								src={'/images/ankara-shirt-men.jpg'}
+								src={'/products/ankara-shirt-men.jpg'}
 								alt='banner'
 							/>
 						</div>
@@ -217,7 +217,7 @@ const Home = () => {
 						<div className='col-lg-2 col-12 mb-3'>
 							<img
 								className='front-img'
-								src={'/images/native-women-fabulous.jpg'}
+								src={'/products/native-women-fabulous.jpg'}
 								alt='banner'
 							/>
 						</div>

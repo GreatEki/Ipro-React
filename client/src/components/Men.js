@@ -36,7 +36,7 @@ const Men = () => {
 						data-aos-easing='ease-in-sine'>
 						<div className='card'>
 							<img
-								src='images/mean-shadows-685613-unsplash.jpg'
+								src='products/mean-shadows-685613-unsplash.jpg'
 								alt=''
 								className='cat-images'
 							/>
@@ -57,7 +57,7 @@ const Men = () => {
 						data-aos-easing='ease-in-sine'>
 						<div className='card'>
 							<img
-								src='/images/javier-reyes.jpg'
+								src='/products/javier-reyes.jpg'
 								alt=''
 								className='cat-images'
 							/>
@@ -78,7 +78,7 @@ const Men = () => {
 					<div className='col-lg-6 col-md-6 my-5' data-aos='flip-up'>
 						<div className='card'>
 							<img
-								src='/images/special-occassion-style.jpg'
+								src='/products/special-occassion-style.jpg'
 								alt=''
 								className='cat-images'
 							/>
@@ -98,7 +98,7 @@ const Men = () => {
 						data-aos-delay='500'>
 						<div className='card'>
 							<img
-								src='images/tyler-nix-594397-unsplash.jpg'
+								src='products/tyler-nix-594397-unsplash.jpg'
 								alt=''
 								className='cat-images'
 							/>

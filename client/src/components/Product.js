@@ -34,7 +34,7 @@ const Product = () => {
 						<div className='row bg-white'>
 							<div className='col-lg-6 col-md-12 product-img mt-5'>
 								<img
-									src='/images/ankara-shirt-men.jpg'
+									src='/products/ankara-shirt-men.jpg'
 									alt='prod-img'
 									className='img-fluid'
 								/>

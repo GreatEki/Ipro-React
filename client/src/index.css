@@ -305,15 +305,21 @@ form.form-inline {
 
 /* ============ Categories Menu Page Styling ==========================*/
 .shop-gallery {
-	max-width: 300px;
+	max-width: 100%;
 }
+
 .item-card {
-	max-width: 400px;
+	max-width: 100%;
+}
+
+.item-card:hover {
+	border: 1px solid var(--bg-grey);
+	box-shadow: 5px 10px;
 }
 
 .card-img {
 	width: 100%;
-	height: 100%;
+	height: 250px !important;
 }
 
 /* =============================== End of Categories Menu Page Styling  ==========================*/
@@ -350,7 +356,7 @@ form.form-inline {
 	padding: 10px 0px;
 }
 .cart-image {
-	height: 100px;
+	height: 100px !important;
 }
 
 .cart-pics {

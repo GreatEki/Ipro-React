@@ -29,7 +29,7 @@ const Women = () => {
 							data-aos='fade-up'
 							data-aos-easing='ease-in-sine'>
 							<div className='card'>
-								<img src='/images/dina.jpg' alt='' className='cat-images' />
+								<img src='/products/dina.jpg' alt='' className='cat-images' />
 								<div className='card-body'>
 									<h4 className='cat-title'>Business and Office</h4>
 									<p className='cat-desc'>Executive, Work, Smart</p>
@@ -71,7 +71,7 @@ const Women = () => {
 						<div className='row'>
 							<div className='col-lg-4 col-md-4 mt-3'>
 								<img
-									src='/images/nordwood-themes-359015-unsplash.jpg'
+									src='/products/nordwood-themes-359015-unsplash.jpg'
 									alt=''
 									className='my-5 ml-5'
 								/>
@@ -99,7 +99,7 @@ const Women = () => {
 							data-aos-easing='ease-in-sine'>
 							<div className='card'>
 								<img
-									src='/images/emma-valerio-1421389-unsplash.jpg'
+									src='/products/emma-valerio-1421389-unsplash.jpg'
 									alt=''
 									className='cat-images'
 								/>
@@ -120,7 +120,7 @@ const Women = () => {
 							data-aos-delay='500'>
 							<div className='card'>
 								<img
-									src='/images/charisse-kenion-714752-unsplash.jpg'
+									src='/products/charisse-kenion-714752-unsplash.jpg'
 									alt=''
 									className='cat-images'
 								/>

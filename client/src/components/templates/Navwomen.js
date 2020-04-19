@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const Navmen = () => {
+const Navwomen = () => {
 	return (
 		<>
 			<div className='container-fluid nav-wrapper m-0 p-0'>
@@ -30,9 +30,9 @@ const Navmen = () => {
 						</Link>
 					</li>
 				</ul>
-				<div className='container-fluid theme-bar m-0 p-0'>
+				<div className='container-fluid search-bar m-0 p-0'>
 					<div className='nav '>
-						<form className='form-inline  justify-content-center p-2 my-2 my-lg-0'>
+						<form className='form-inline input-group  justify-content-center p-2 my-2 my-lg-0'>
 							<div className='input-group search-input'>
 								<input
 									type='text'
@@ -57,4 +57,4 @@ const Navmen = () => {
 	);
 };
 
-export default Navmen;
+export default Navwomen;

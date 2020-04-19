@@ -14,7 +14,7 @@ const Leisurewomen = () => {
 						<Link to='/' className='site-font text-decoration-none'>
 							Home >{' '}
 						</Link>{' '}
-						<Link to='/men' className='site-font text-decoration-none'>
+						<Link to='/women' className='site-font text-decoration-none'>
 							Women >{' '}
 						</Link>{' '}
 						<Link
@@ -35,7 +35,7 @@ const Leisurewomen = () => {
 								<div className='row no-gutters'>
 									<div className='col-md-4 col-lg-12'>
 										<img
-											src='/images/stock-jeans-ladies-3.jpg'
+											src='/products/stock-jeans-ladies-3.jpg'
 											className='card-img'
 											alt='product-name'
 										/>

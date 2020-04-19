@@ -31,12 +31,13 @@ const Cart = () => {
 
 				<main className='container-fluid content-wrapper'>
 					<div className='container my-5'>
+						{/*================= Cart Item Starts Here =======================*/}
 						<div className='row cart-slot'>
 							<div className='col-6 col-lg-2 m-0 p-lg-0'>
 								<div className='cart-title-bar pl-lg-2'> Product</div>
 								<img
 									className='img-fluid cart-image detail'
-									src='/images/gown-pink.jpg'
+									src='/products/gown-pink.jpg'
 									alt='product-title'
 								/>
 							</div>
@@ -72,6 +73,7 @@ const Cart = () => {
 								<div className='text-danger detail'> Remove Item</div>
 							</div>
 						</div>
+						{/*================= End of Cart Item Starts Here =======================*/}
 
 						<section>
 							<h2 className='text-center mt-5'>
