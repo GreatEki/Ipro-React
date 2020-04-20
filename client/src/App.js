@@ -17,6 +17,7 @@ import SignUp from './components/users/SignUp';
 import SignIn from './components/users/SignIn';
 import Dashboard from './components/users/Dashboard';
 import Cart from './components/Cart';
+import Shop from './components/Shop';
 import ProductsContextProvider from './contexts/ProductsContext';
 function App() {
 	return (
@@ -25,7 +26,8 @@ function App() {
 				<Switch>
 					<ProductsContextProvider>
 						<Route exact path='/' component={Home} />
-						<Route exact path='/products' component={Product} />
+						<Route path='/shop' component={Shop} />
+						<Route exact path='/product/:title/:id' component={Product} />
 						<Route exact path='/business' component={Product} />
 						<Route exact path='/everyday' component={Product} />
 						<Route exact path='/culture' component={Product} />

@@ -21,8 +21,8 @@ const Navbar = () => {
 						<Link to='/' className='nav-item nav-link'>
 							Home
 						</Link>
-						<Link to='/about' className='nav-item nav-link '>
-							About US
+						<Link to='/shop' className='nav-item nav-link '>
+							SHOP
 						</Link>
 						<Link to='/men' className='nav-item nav-link'>
 							{' '}

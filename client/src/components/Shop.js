@@ -1,49 +1,43 @@
 import React, { useContext, useEffect } from 'react';
-import Navbar from '../templates/Navbar';
-import Navmen from '../templates/Navmen';
+import Navbar from './templates/Navbar';
+import NavGeneral from './templates/NavGeneral';
+import { ProductsContext } from '../contexts/ProductsContext';
 import { Link } from 'react-router-dom';
-import { ProductsContext } from '../../contexts/ProductsContext';
 
-const Culturemen = () => {
-	const { getCultureMenProducts, cultureMen } = useContext(ProductsContext);
+const Shop = () => {
+	const { getAllProducts, shopProducts } = useContext(ProductsContext);
 
 	useEffect(() => {
-		getCultureMenProducts();
+		getAllProducts();
 
 		//eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (
 		<>
-			<div className='wrapper container-fluid m-0 p-0'>
+			<div className='wrapper'>
 				<Navbar />
-				<Navmen />
+				<NavGeneral />
 
 				<section className='container-fluid bg-white'>
 					<div className='py-3'>
 						<Link to='/' className='site-font text-decoration-none'>
 							Home >{' '}
 						</Link>{' '}
-						<Link to='/men' className='site-font text-decoration-none'>
-							Men >{' '}
+						<Link to='/shop' className='site-font text-decoration-none'>
+							SHOP >{' '}
 						</Link>{' '}
-						<Link
-							to='/cart/overview'
-							className='active site-font
-						text-decoration-none'>
-							{' '}
-							Nativity and Culture
-						</Link>
-						<h1 className='site-font my-4'>Nativity and Culture </h1>
+						<h1 className='site-font my-4'>SHOP </h1>
 					</div>
 				</section>
 
 				<main className='container-fluid content-wrapper justify-content-center px-lg-5 px-md-2'>
-					<div className='row mt-5 px-lg-5 px-md-2 pt-5'>
-						{/* ==========================Products Display Starts Here ====================*/}
-
-						{cultureMen.map((product) => {
+					<div className='row mt-5 px-lg-5 pt-5'>
+						{/*============================ Products Display Starts Here ==========================*/}
+						{shopProducts.map((product) => {
 							return (
-								<div className='col-lg-2 col-md-6 col-sm-12 shop-gallery'>
+								<div
+									className='col-md-6 col-sm-6 col-lg-2 shop-gallery'
+									key={product.id}>
 									<Link
 										to={`/product/${product.title}/${product.id}`}
 										className='card  item-card mb-3'>
@@ -77,7 +71,7 @@ const Culturemen = () => {
 							);
 						})}
 
-						{/* ========================== End of Products Display ===============================*/}
+						{/*============================== End of Products Display ===============================*/}
 					</div>
 				</main>
 			</div>
@@ -85,4 +79,4 @@ const Culturemen = () => {
 	);
 };
 
-export default Culturemen;
+export default Shop;

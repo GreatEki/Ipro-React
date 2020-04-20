@@ -13,6 +13,9 @@ const ProductsContextProvider = (props) => {
 	const [everyDayWomen, setEveryDayWomen] = useState([]);
 	const [leisureWomen, setLeisureWomen] = useState([]);
 
+	const [product, setProduct] = useState({});
+	const [shopProducts, setShopProducts] = useState([]);
+
 	//DESC: Fetches products for our EveryDayMen Component
 	//URL: /products?category=everyday&gender=men&gender=unisex
 	//REQUEST: GET
@@ -130,6 +133,29 @@ const ProductsContextProvider = (props) => {
 			console.log(err.message);
 		}
 	};
+
+	//DESC: This fecthes a particular product a customer selects for purchase and renders on the Product Component
+	//URL: /products/${id}
+	//REQUEST: GET
+	const getProduct = async (id) => {
+		try {
+			const res = await axios.get(`http://localhost:3004/products/${id}`);
+
+			setProduct(res.data);
+		} catch (err) {
+			console.log(err.message);
+		}
+	};
+
+	const getAllProducts = async () => {
+		try {
+			const res = await axios.get('http://localhost:3004/products');
+
+			setShopProducts(res.data);
+		} catch (err) {
+			console.log(err);
+		}
+	};
 	return (
 		<ProductsContext.Provider
 			value={{
@@ -149,6 +175,10 @@ const ProductsContextProvider = (props) => {
 				everyDayWomen,
 				getLeisureWomenProducts,
 				leisureWomen,
+				getProduct,
+				product,
+				getAllProducts,
+				shopProducts,
 			}}>
 			{props.children}
 		</ProductsContext.Provider>

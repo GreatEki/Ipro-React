@@ -47,7 +47,7 @@
 		},
 		{
 			"id": 6,
-			"title": "Patterned Native wear men",
+			"title": "Patterned Native for Men",
 			"imagePath": "dark-mixed-blue-ankara.jpg",
 			"price": 13000,
 			"category": "native",
@@ -74,7 +74,7 @@
 		},
 		{
 			"id": 9,
-			"title": "Elegant White Floral Top Ladies ",
+			"title": "Elegant Floral Top Ladies ",
 			"imagePath": "english-wear-ladies-1.jpg",
 			"price": 10000,
 			"category": "business",
@@ -101,7 +101,7 @@
 		},
 		{
 			"id": 12,
-			"title": "Black Top and Light Grey Jeans ",
+			"title": "Black Top and Grey Jeans ",
 			"imagePath": "ian-dooley-347968-unsplash.jpg",
 			"price": 11000,
 			"category": "everyday",
@@ -110,7 +110,7 @@
 		},
 		{
 			"id": 13,
-			"title": "Black Top and Light Blue Jeans ",
+			"title": "Black Top and Blue Jeans ",
 			"imagePath": "ian-dooley-pinkwall-347962-unsplash.jpg",
 			"price": 11000,
 			"category": "everyday",
@@ -119,12 +119,12 @@
 		},
 		{
 			"id": 14,
-			"title": "Royal White Native Wear Men",
+			"title": "Royal White Native Wear",
 			"imagePath": "ipro-look-touch.jpg",
 			"price": 12000,
 			"category": "native",
 			"brand": "unknown",
-			"gender": "women"
+			"gender": "men"
 		},
 		{
 			"id": 15,
@@ -137,7 +137,7 @@
 		},
 		{
 			"id": 16,
-			"title": "4 in 1 quality men polo shirt",
+			"title": "4 in 1 men polo shirt",
 			"imagePath": "4-in-1-quality-shirts.jpg",
 			"price": 10000,
 			"category": "everyday",
@@ -146,7 +146,7 @@
 		},
 		{
 			"id": 17,
-			"title": "27 Polo Shirt and Cap Bundle",
+			"title": "27 Polo and Cap Bundle",
 			"imagePath": "27-polo-cap-bundle-wine.jpg",
 			"price": 45000,
 			"category": "leisure",
@@ -200,7 +200,7 @@
 		},
 		{
 			"id": 24,
-			"title": "Okye White Shirt with light pink jacket",
+			"title": "Okye Shirt with pink jacket",
 			"imagePath": "jessica-castro-449555-unsplash.jpg",
 			"price": 18000,
 			"category": "everyday",
@@ -209,7 +209,7 @@
 		},
 		{
 			"id": 25,
-			"title": "Ankara Long Sleeve with green pants",
+			"title": "Ankara Sleeves and trouser",
 			"imagePath": "jidenna.jpg",
 			"price": 11000,
 			"category": "native",
@@ -227,7 +227,7 @@
 		},
 		{
 			"id": 27,
-			"title": "Long Sleeve Native Shirt Men",
+			"title": "Long Sleeve Native Shirt",
 			"imagePath": "long-sleeve-ankara.jpg",
 			"price": 3500,
 			"category": "native",
@@ -245,7 +245,7 @@
 		},
 		{
 			"id": 29,
-			"title": "Black and Yellow patterned dress",
+			"title": "black-Yellow patterned dress",
 			"imagePath": "love-this.jpg",
 			"price": 8000,
 			"category": "business",
@@ -335,7 +335,7 @@
 		},
 		{
 			"id": 39,
-			"title": "Fabulous Native Wear for Women",
+			"title": "Fabulous Native Women",
 			"imagePath": "native-women-fabulous.jpg",
 			"price": 15000,
 			"category": "native",
@@ -398,7 +398,7 @@
 		},
 		{
 			"id": 46,
-			"title": "Casual Women Shirt and Jeans",
+			"title": "Casual Shirt and Jeans",
 			"imagePath": "shirt-jeans-casual-women-3.jpg",
 			"price": 7500,
 			"category": "leisure",
@@ -407,7 +407,7 @@
 		},
 		{
 			"id": 47,
-			"title": "Casual Women Shirt and Jeans",
+			"title": "Casual Shirt and Jeans",
 			"imagePath": "shirt-jeans-casual-women-4.jpg",
 			"price": 7500,
 			"category": "leisure",
@@ -434,7 +434,7 @@
 		},
 		{
 			"id": 50,
-			"title": "Casual Men Wear Top with Pants",
+			"title": "Casual Top with Pants",
 			"imagePath": "shirt-jeans-men-black-1.jpg",
 			"price": 5500,
 			"category": "leisure",
@@ -569,7 +569,7 @@
 		},
 		{
 			"id": 65,
-			"title": "Corporate Executive Suit Women",
+			"title": "Corporate Executive Suit",
 			"imagePath": "women-business-4.jpg",
 			"price": 10000,
 			"category": "business",
@@ -641,7 +641,7 @@
 		},
 		{
 			"id": 74,
-			"title": "Multi colored patterned wear",
+			"title": "Multi colored wear",
 			"imagePath": "yellow-mixed.jpg",
 			"price": 7000,
 			"category": "native",
@@ -649,7 +649,7 @@
 			"gender": "men"
 		},
 		{
-			"id": 74,
+			"id": 75,
 			"title": "Peacock Flora Dress women",
 			"imagePath": "yellow-woman-ankara.jpg",
 			"price": 11400,

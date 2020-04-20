@@ -46,18 +46,20 @@ const Leisuremen = () => {
 								<div
 									className='col-lg-2 col-md-6 col-sm-12 shop-gallery'
 									key={product.id}>
-									<div className='card  item-card mb-3'>
+									<Link
+										to={`/product/${product.title}/${product.id}`}
+										className='card  item-card mb-3'>
 										<div className='row no-gutters'>
-											<div className='col-md-4 col-lg-12'>
+											<div className='col-6 col-lg-12'>
 												<img
 													src={`/products/${product.imagePath}`}
 													className='card-img'
 													alt='product-name'
 												/>
 											</div>
-											<div className='col-md-8 col-lg-12'>
+											<div className='col-6 col-lg-12'>
 												<div className='card-body'>
-													<p className='card-title'>{product.title}</p>
+													<small className='card-title'>{product.title}</small>
 													<h5 className='card-text'>
 														<del>N</del>
 														{product.price}
@@ -67,13 +69,13 @@ const Leisuremen = () => {
 															Available in Stock
 														</small>
 													</p>
-													<button className='btn btn-block btn-outline-success text-center'>
+													<Link className='btn btn-block btn-outline-success text-center'>
 														Buy{' '}
-													</button>
+													</Link>
 												</div>
 											</div>
 										</div>
-									</div>
+									</Link>
 								</div>
 							);
 						})}

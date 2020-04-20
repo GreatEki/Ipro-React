@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Navbar from './templates/Navbar';
 import NavGeneral from './templates/NavGeneral';
 import { Link } from 'react-router-dom';
 import Footer from './templates/Footer';
-const Product = () => {
+import { ProductsContext } from '../contexts/ProductsContext';
+const Product = (props) => {
+	const id = props.match.params.id;
+
+	const { getProduct, product } = useContext(ProductsContext);
+
+	useEffect(() => {
+		getProduct(id);
+
+		//eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [id]);
 	return (
 		<>
 			<div className='wrapper'>
@@ -15,11 +25,13 @@ const Product = () => {
 						<Link to='/' className='site-font text-decoration-none'>
 							Home >{' '}
 						</Link>{' '}
-						<Link to='/men' className='site-font text-decoration-none'>
+						<Link
+							to={`/product/${product.title}/${product.id}`}
+							className='site-font text-decoration-none'>
 							Product >{' '}
 						</Link>{' '}
 						<Link
-							to='#'
+							to={`/product/${product.title}/${product.id}`}
 							className='active site-font
 						text-decoration-none'>
 							{' '}
@@ -34,25 +46,26 @@ const Product = () => {
 						<div className='row bg-white'>
 							<div className='col-lg-6 col-md-12 product-img mt-5'>
 								<img
-									src='/products/ankara-shirt-men.jpg'
+									src={`/products/${product.imagePath}`}
 									alt='prod-img'
-									className='img-fluid'
+									className='img-fluid product-img'
 								/>
 							</div>
 
 							<div className='col-lg-6 col-md-12 product-details mt-5'>
-								<h2 className='product-title'> Ankara Shirt for Men </h2>
+								<h2 className='product-title'> {product.title} </h2>
 
 								<p>
-									Section:<span className='text-warning'> Men</span>
+									Section:
+									<span className='text-warning'> {product.category}</span>
 								</p>
 								<p>
-									Brand:<span className='text-warning'> Unknown</span>
+									Brand:<span className='text-warning'> {product.brand}</span>
 								</p>
 
 								<h4>
 									{' '}
-									<del className='del'>N </del> 3, 500
+									<del className='del'>N </del> {product.price}
 								</h4>
 
 								<div className='d-flex flew-row my-5'>

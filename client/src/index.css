@@ -100,7 +100,7 @@ form.form-inline {
 
 .j-image {
 	width: 100%;
-	height: 500px;
+	height: 900px;
 }
 
 .ipro {
@@ -310,11 +310,14 @@ form.form-inline {
 
 .item-card {
 	max-width: 100%;
+	color: rgb(36, 35, 35);
 }
 
 .item-card:hover {
 	border: 1px solid var(--bg-grey);
 	box-shadow: 5px 10px;
+	text-decoration: none;
+	color: black;
 }
 
 .card-img {
@@ -327,7 +330,7 @@ form.form-inline {
 /* =============================== Product Page Styling ======================================== */
 .product-img img {
 	width: 100%;
-	height: 400px;
+	height: 500px;
 }
 
 .wish-btn:hover {
