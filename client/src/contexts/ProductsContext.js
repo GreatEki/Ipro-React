@@ -4,6 +4,7 @@ import axios from 'axios';
 export const ProductsContext = createContext();
 
 const ProductsContextProvider = (props) => {
+	const [isLoading, setIsLoading] = useState(false);
 	const [everyDayMen, setEveryDayMen] = useState([]);
 	const [businessMen, setBusinessMen] = useState([]);
 	const [cultureMen, setCultureMen] = useState([]);
@@ -15,6 +16,11 @@ const ProductsContextProvider = (props) => {
 
 	const [product, setProduct] = useState({});
 	const [shopProducts, setShopProducts] = useState([]);
+	const [currentPage, setCurrentPage] = useState(1);
+	const [productsPerPage] = useState(18);
+	const [totalPost, setTotalPost] = useState(0);
+	let indexOfFirstProduct = Number;
+	let indexOfLastProduct = Number;
 
 	//DESC: Fetches products for our EveryDayMen Component
 	//URL: /products?category=everyday&gender=men&gender=unisex
@@ -147,18 +153,35 @@ const ProductsContextProvider = (props) => {
 		}
 	};
 
+	//DESC: This fecthes the products displayed in our Shop Component
+	//URL: /products
+	//REQUEST: GET
 	const getAllProducts = async () => {
 		try {
-			const res = await axios.get('http://localhost:3004/products');
+			setIsLoading(true);
 
-			setShopProducts(res.data);
+			indexOfLastProduct = currentPage * productsPerPage;
+			indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+
+			const res = await axios.get('http://localhost:3004/products');
+			setTotalPost(res.data.length);
+
+			const currentProducts = res.data.slice(
+				indexOfFirstProduct,
+				indexOfLastProduct
+			);
+
+			setShopProducts(currentProducts);
+			setIsLoading(false);
 		} catch (err) {
 			console.log(err);
 		}
 	};
+
 	return (
 		<ProductsContext.Provider
 			value={{
+				isLoading,
 				getEveryDayMenProducts,
 				everyDayMen,
 				getBusinessMenProducts,
@@ -179,6 +202,12 @@ const ProductsContextProvider = (props) => {
 				product,
 				getAllProducts,
 				shopProducts,
+				totalPost,
+				productsPerPage,
+				setCurrentPage,
+				getAllProducts,
+				setCurrentPage,
+				currentPage,
 			}}>
 			{props.children}
 		</ProductsContext.Provider>

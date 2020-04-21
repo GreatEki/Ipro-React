@@ -3,15 +3,19 @@ import Navbar from './templates/Navbar';
 import NavGeneral from './templates/NavGeneral';
 import { ProductsContext } from '../contexts/ProductsContext';
 import { Link } from 'react-router-dom';
+import Pagination from './templates/Pagination';
+import Footer from './templates/Footer';
 
 const Shop = () => {
-	const { getAllProducts, shopProducts } = useContext(ProductsContext);
+	const { getAllProducts, shopProducts, currentPage } = useContext(
+		ProductsContext
+	);
 
 	useEffect(() => {
 		getAllProducts();
 
 		//eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}, [currentPage]);
 	return (
 		<>
 			<div className='wrapper'>
@@ -60,9 +64,11 @@ const Shop = () => {
 															Available in Stock
 														</small>
 													</p>
-													<Link className='btn btn-block btn-outline-success text-center'>
+													<button
+														to={`/product/${product.title}/${product.id}`}
+														className='btn btn-block btn-outline-success text-center'>
 														Buy{' '}
-													</Link>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -72,8 +78,18 @@ const Shop = () => {
 						})}
 
 						{/*============================== End of Products Display ===============================*/}
+
+						<div className='container justify-content-end mt-5'>
+							<div className='row'>
+								<div className='col-lg-2 offset-lg-3'>
+									<Pagination className='text-center' />
+								</div>
+							</div>
+						</div>
 					</div>
 				</main>
+
+				<Footer />
 			</div>
 		</>
 	);
