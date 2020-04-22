@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { withRouter } from 'react-router-dom';
 export const CartContext = createContext();
@@ -12,6 +12,12 @@ const CartContextProvider = (props) => {
 
 	const [ifNewItem, setIfNewItem] = useState(false);
 	const [msgPop, setMsgPop] = useState({});
+
+	//DESC: This is used to save the cartItems in LocalStorage.
+	useEffect(() => {
+		localStorage.setItem('cartItems', JSON.stringify(cartItems));
+		localStorage.setItem('cartTotal', JSON.stringify(cartTotal));
+	}, [cartItems, cartTotal]);
 
 	//DESC: This method handles the Size selected by the customer in the Product Component
 	const handleSize = (e) => {
@@ -90,7 +96,7 @@ const CartContextProvider = (props) => {
 			price: item.price,
 		});
 
-		//This method allows me to automatically return back to the page the the customer was initially coming from
+		//This allows users to automatically return back to the page they were initially coming from
 		window.history.go(-1);
 
 		setTimeout(() => {
@@ -98,12 +104,23 @@ const CartContextProvider = (props) => {
 			setMsgPop({});
 		}, 5000);
 	};
+
+	/* DESC:  This gets cartItems from localStorage, ensuring that our LocalStorage is in sync with cartItems state.   
+	The items are displayed in your Cart.js component*/
+	const getCartItems = () => {
+		const localCart = localStorage.getItem('cartItems');
+		setCartItems(JSON.parse(localCart));
+
+		const localCartTotal = localStorage.getItem('cartTotal');
+		setCartTotal(JSON.parse(localCartTotal));
+	};
 	return (
 		<CartContext.Provider
 			value={{
 				addToCart,
 				handleQty,
 				handleSize,
+				getCartItems,
 				size,
 				qty,
 				cartItems,

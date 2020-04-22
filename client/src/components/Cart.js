@@ -1,11 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Navbar from './templates/Navbar';
 import NavGeneral from './templates/NavGeneral';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../contexts/CartContext';
 
 const Cart = (props) => {
-	const { cartItems, cartTotal } = useContext(CartContext);
+	const { cartItems, cartTotal, getCartItems } = useContext(CartContext);
+
+	useEffect(() => {
+		getCartItems();
+
+		//eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	return (
 		<>

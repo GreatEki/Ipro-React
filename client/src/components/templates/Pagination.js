@@ -22,19 +22,25 @@ const Pagination = () => {
 			pageNumbers.push(i);
 		}
 		return (
-			<nav className='pagination'>
-				{pageNumbers.map((no) => {
-					return (
-						<li className='page-item' key={no}>
-							<button
-								className='page-link text-body'
-								onClick={() => setCurrentPage(no)}>
-								{no}
-							</button>
-						</li>
-					);
-				})}
-			</nav>
+			<div className='container'>
+				<div className='row'>
+					<div className='col-12 col-md-4 offset-md-4'>
+						<nav className='pagination'>
+							{pageNumbers.map((no) => {
+								return (
+									<li className='page-item m-2' key={no}>
+										<button
+											className='page-link text-body'
+											onClick={() => setCurrentPage(no)}>
+											{no}
+										</button>
+									</li>
+								);
+							})}
+						</nav>
+					</div>
+				</div>
+			</div>
 		);
 	}
 };
