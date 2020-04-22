@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react';
-import uuid from 'uuid/v4';
+import { v4 as uuidv4 } from 'uuid';
+import { withRouter } from 'react-router-dom';
 export const CartContext = createContext();
 
 const CartContextProvider = (props) => {
@@ -7,7 +8,10 @@ const CartContextProvider = (props) => {
 	const [cartTotal, setCartTotal] = useState(0);
 
 	const [qty, setQty] = useState(1);
-	const [size, setSize] = useState('');
+	const [size, setSize] = useState('sm');
+
+	const [ifNewItem, setIfNewItem] = useState(false);
+	const [msgPop, setMsgPop] = useState({});
 
 	//DESC: This method handles the Size selected by the customer in the Product Component
 	const handleSize = (e) => {
@@ -58,7 +62,7 @@ const CartContextProvider = (props) => {
 
 	//DESC: This method handles saving items to our Cart. It is fired on the onSubmit event in our Product.js Component
 	const addToCart = (product, size, qty) => {
-		let val = uuid();
+		let val = uuidv4();
 
 		let item = product[val];
 
@@ -76,7 +80,23 @@ const CartContextProvider = (props) => {
 		setCartTotal((cartTotal) => (cartTotal += item.price));
 		setCartItems((cartItems) => [...cartItems, item]);
 
-		console.log(cartItems);
+		setIfNewItem(true);
+
+		setMsgPop({
+			message: 'Item Added to Cart',
+			image: product.imagePath,
+			title: product.title,
+			size: item.size,
+			price: item.price,
+		});
+
+		//This method allows me to automatically return back to the page the the customer was initially coming from
+		window.history.go(-1);
+
+		setTimeout(() => {
+			setIfNewItem(false);
+			setMsgPop({});
+		}, 5000);
 	};
 	return (
 		<CartContext.Provider
@@ -88,10 +108,12 @@ const CartContextProvider = (props) => {
 				qty,
 				cartItems,
 				cartTotal,
+				msgPop,
+				ifNewItem,
 			}}>
 			{props.children}
 		</CartContext.Provider>
 	);
 };
 
-export default CartContextProvider;
+export default withRouter(CartContextProvider);

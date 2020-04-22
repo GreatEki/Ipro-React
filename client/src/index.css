@@ -379,10 +379,12 @@ form.form-inline {
 }
 /* ============================== END OF  SIGNUP and SIGNIN COMPONENT ===================================*/
 
+/* ========================== Footer Page Styling =============================================*/
 .bg-footer {
 	float: left;
 	clear: none;
 }
+/* ========================== End of Footer Page Styling =============================================*/
 
 /* ***************************************
         **************************************
@@ -410,11 +412,6 @@ form.form-inline {
 		margin-top: 40%;
 		margin-bottom: 50%;
 		font-size: 18px;
-	}
-
-	/* Cart and Checkout Component Styling*/
-	.cart-title-bar {
-		visibility: hidden;
 	}
 }
 

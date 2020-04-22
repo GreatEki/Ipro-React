@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../contexts/CartContext';
 const Navbar = () => {
+	const { cartItems } = useContext(CartContext);
 	return (
 		<div className='container-fluid m-0 p-0'>
 			<nav className='navbar navbar-expand-lg navbar-light bg-light'>
@@ -42,8 +44,11 @@ const Navbar = () => {
 							to='/cart/overview'
 							className='nav-item nav-link border cart-btn'
 							type='button'>
-							<span className='badge badge-success p-2'> 1</span> Shopping Cart{' '}
-							<i className='fas fa-shopping-basket'></i>
+							<span className='badge badge-success p-2'>
+								{' '}
+								{cartItems.length}
+							</span>{' '}
+							Shopping Cart <i className='fas fa-shopping-basket'></i>
 						</Link>
 					</div>
 

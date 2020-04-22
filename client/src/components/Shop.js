@@ -5,11 +5,16 @@ import { ProductsContext } from '../contexts/ProductsContext';
 import { Link } from 'react-router-dom';
 import Pagination from './templates/Pagination';
 import Footer from './templates/Footer';
+import CartAlert from './templates/CartAlert';
 
 const Shop = () => {
 	const { getAllProducts, shopProducts, currentPage } = useContext(
 		ProductsContext
 	);
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	useEffect(() => {
 		getAllProducts();
@@ -35,6 +40,7 @@ const Shop = () => {
 				</section>
 
 				<main className='container-fluid content-wrapper justify-content-center px-lg-5 px-md-2'>
+					<CartAlert />
 					<div className='row mt-5 px-lg-5 pt-5'>
 						{/*============================ Products Display Starts Here ==========================*/}
 						{shopProducts.map((product) => {

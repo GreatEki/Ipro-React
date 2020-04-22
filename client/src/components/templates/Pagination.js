@@ -9,7 +9,11 @@ const Pagination = () => {
 	//console.log(NoofTabs);
 
 	if (isLoading) {
-		return <h1 className='text-center text-body'> Fetching Products </h1>;
+		return (
+			<div className='container'>
+				<h1 className='text-center text-body'> Getting Products </h1>
+			</div>
+		);
 	} else {
 		const pageNumbers = [];
 		const NoofTabs = Math.ceil(totalPost / productsPerPage);

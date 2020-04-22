@@ -4,8 +4,9 @@ import NavGeneral from './templates/NavGeneral';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../contexts/CartContext';
 
-const Cart = () => {
+const Cart = (props) => {
 	const { cartItems, cartTotal } = useContext(CartContext);
+
 	return (
 		<>
 			<div className='wrapper'>
@@ -34,34 +35,36 @@ const Cart = () => {
 				<main className='container-fluid content-wrapper'>
 					<div className='container my-5'>
 						{/*================= Cart Item Starts Here =======================*/}
-
 						{cartItems.length > 0 ? (
 							cartItems.map((item) => {
 								return (
 									<div className='row cart-slot mb-3' key={item.id}>
-										<div className='col-6 col-lg-2 m-0 p-lg-0'>
-											<div className='cart-title-bar pl-lg-2'> Product</div>
-											<img
-												className='img-fluid cart-image detail ml-3'
-												src={`/products/${item.imagePath}`}
-												alt='product-title'
-											/>
+										<div className='col-12 col-md-4 m-0 p-md-0'>
+											<div className='cart-title-bar pl-lg-2'>
+												{' '}
+												Product Details
+											</div>
+											<div className='d-flex flex-row'>
+												<img
+													className='img-fluid cart-image detail ml-3 d-inline'
+													src={`/products/${item.imagePath}`}
+													alt='product-title'
+												/>
+												<div className='d-inline'>
+													<p className='detail p-2 m-0'>{item.title}</p>
+													<p className='p-2 m-0'>
+														<span>size: </span> {item.size}
+													</p>
+												</div>
+											</div>
 										</div>
 
-										<div className='col-6 col-lg-2 m-0 p-lg-0'>
-											<div className='cart-title-bar'> Details </div>
-											<p className='detail'>{item.title}</p>
-											<p>
-												<span>size: </span> {item.size}
-											</p>
-										</div>
-
-										<div className='col-6 col-lg-2 m-0 p-lg-0'>
+										<div className='col-6 col-md-2 m-0 p-md-0'>
 											<div className='cart-title-bar'> Quantity</div>
 											<p className='detail'>({item.qty}) qty </p>
 										</div>
 
-										<div className='col-6 col-lg-2 m-0 p-lg-0'>
+										<div className='col-6 col-md-2 m-0 p-md-0'>
 											<div className='cart-title-bar'> Price</div>
 											<p className='detail'>
 												{' '}
@@ -69,7 +72,7 @@ const Cart = () => {
 											</p>
 										</div>
 
-										<div className='col-6 col-lg-2 m-0 p-lg-0'>
+										<div className='col-6 col-md-2 m-0 p-md-0'>
 											<div className='cart-title-bar'> Action</div>
 											<div className='text-info detail'>
 												{' '}
@@ -77,7 +80,7 @@ const Cart = () => {
 											</div>
 										</div>
 
-										<div className='col-6 col-lg-2 m-0 p-lg-0'>
+										<div className='col-6 col-md-2 m-0 p-md-0'>
 											<div className='cart-title-bar'> Action</div>
 											<div className='text-danger detail'> Remove Item</div>
 										</div>
