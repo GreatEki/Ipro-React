@@ -205,8 +205,7 @@ const ProductsContextProvider = (props) => {
 				totalPost,
 				productsPerPage,
 				setCurrentPage,
-				getAllProducts,
-				setCurrentPage,
+
 				currentPage,
 			}}>
 			{props.children}

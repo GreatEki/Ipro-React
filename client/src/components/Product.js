@@ -4,16 +4,25 @@ import NavGeneral from './templates/NavGeneral';
 import { Link } from 'react-router-dom';
 import Footer from './templates/Footer';
 import { ProductsContext } from '../contexts/ProductsContext';
+import { CartContext } from '../contexts/CartContext';
 const Product = (props) => {
 	const id = props.match.params.id;
 
 	const { getProduct, product } = useContext(ProductsContext);
+	const { addToCart, handleQty, handleSize, size, qty } = useContext(
+		CartContext
+	);
 
 	useEffect(() => {
 		getProduct(id);
 
 		//eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [id]);
+
+	const handleAddToCart = (e) => {
+		e.preventDefault();
+		addToCart(product, size, qty);
+	};
 	return (
 		<>
 			<div className='wrapper'>
@@ -72,23 +81,43 @@ const Product = (props) => {
 									<div className='p-1 font-weight-bold'> SIZE: </div>
 									&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
 									<div>
-										<button className='btn-sm mx-2 btn-size bg-white'>
+										<button
+											className='btn-sm mx-2 btn-size bg-white'
+											name='sm'
+											value={size}
+											onClick={(e) => handleSize(e)}>
 											{' '}
 											sm{' '}
 										</button>
-										<button className='btn-sm mx-2 btn-size bg-white'>
+										<button
+											className='btn-sm mx-2 btn-size bg-white'
+											name='mid'
+											value={size}
+											onClick={(e) => handleSize(e)}>
 											{' '}
 											mid{' '}
 										</button>
-										<button className='btn-sm mx-2 btn-size bg-white'>
+										<button
+											className='btn-sm mx-2 btn-size bg-white'
+											name='lg'
+											value={size}
+											onClick={(e) => handleSize(e)}>
 											{' '}
 											lg
 										</button>
-										<button className='btn-sm mx-2 btn-size bg-white'>
+										<button
+											className='btn-sm mx-2 btn-size bg-white'
+											name='x-lg'
+											value={size}
+											onClick={(e) => handleSize(e)}>
 											{' '}
 											x-lg
 										</button>
-										<button className='btn-sm mx-2 btn-size bg-white'>
+										<button
+											className='btn-sm mx-2 btn-size bg-white'
+											name='xx-lg'
+											value={size}
+											onClick={(e) => handleSize(e)}>
 											xx-lg{' '}
 										</button>
 									</div>
@@ -98,15 +127,31 @@ const Product = (props) => {
 									<div className='font-weight-bold p-1'>Quantity: </div>
 									&nbsp; &nbsp; &nbsp;
 									<div>
-										<button className='btn-sm bg-white'> - </button>
-										<button className='btn-sm bg-white'> 1 </button>
-										<button className='btn-sm bg-white'> + </button>
+										<button
+											className='btn-sm bg-white'
+											name='minus'
+											value={qty}
+											onClick={(e) => handleQty(e)}>
+											{' '}
+											-{' '}
+										</button>
+										<button className='btn-sm bg-white'> {qty} </button>
+										<button
+											className='btn-sm bg-white'
+											name='add'
+											value={qty}
+											onClick={(e) => handleQty(e)}>
+											{' '}
+											+{' '}
+										</button>
 									</div>
 								</div>
 
 								<div className='row'>
 									<div className='col-lg-6 col-12'>
-										<button className='btn btn-md btn-success btn-block  rounded-0 my-5 px-5'>
+										<button
+											onClick={(e) => handleAddToCart(e)}
+											className='btn btn-md btn-success btn-block  rounded-0 my-5 px-5'>
 											{' '}
 											Buy Now{' '}
 										</button>
