@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navbar from '../templates/Navbar';
 import NavGeneral from '../templates/NavGeneral';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../contexts/UserContext';
 
 const SignUp = () => {
+	const { newUser, handleUserInput, handleUserSubmit, msg } = useContext(
+		UserContext
+	);
+
 	return (
 		<>
 			<div className='wrapper'>
@@ -31,10 +36,17 @@ const SignUp = () => {
 
 				<div className='container-fluid content-wrapper'>
 					<div className='container'>
+						{msg.length > 0 ? (
+							<h5 className='text-white text-center mt-5'> {msg}</h5>
+						) : (
+							<p> </p>
+						)}
 						<div className='row my-5'>
 							<div className='col-lg-6 col-md-6 offset-lg-3 offset-md-3 col-sm-12 bg-white my-5 py-5 auth-form-container'>
 								<h5 className='text-center ipro'> Sign-Up </h5>
-								<form className='form auth-form px-lg-2 px-md-2'>
+								<form
+									onSubmit={(e) => handleUserSubmit(e, newUser)}
+									className='form auth-form px-lg-2 px-md-2'>
 									<p className='site-font my-3'>
 										{' '}
 										It only takes a few minutes. Join US today!!!{' '}
@@ -47,42 +59,54 @@ const SignUp = () => {
 										</label>
 										<input
 											type='text'
-											className='form-control rounded-pill font-weight-bolder'
+											name='firstname'
+											value={newUser.firstname}
+											onChange={(e) => handleUserInput(e)}
+											className='form-control rounded-pill'
 											required
 										/>
 									</div>
 									<div className='form-group my-4'>
 										<label
-											htmlFor='firstname'
+											htmlFor='lastname'
 											className='text-muted font-weight-bolder'>
 											LASTNAME{' '}
 										</label>
 										<input
 											type='text'
+											name='lastname'
+											value={newUser.lastname}
+											onChange={(e) => handleUserInput(e)}
 											className='form-control rounded-pill'
 											required
 										/>
 									</div>
 									<div className='form-group my-4'>
 										<label
-											htmlFor='firstname'
+											htmlFor='email'
 											className='text-muted font-weight-bolder'>
 											EMAIL{' '}
 										</label>
 										<input
 											type='email'
+											name='email'
+											value={newUser.email}
+											onChange={(e) => handleUserInput(e)}
 											className='form-control rounded-pill'
 											required
 										/>
 									</div>
 									<div className='form-group my-4'>
 										<label
-											htmlFor='firstname'
+											htmlFor='password'
 											className='text-muted font-weight-bolder'>
 											PASSWORD{' '}
 										</label>
 										<input
 											type='password'
+											name='password'
+											value={newUser.password}
+											onChange={(e) => handleUserInput(e)}
 											className='form-control rounded-pill'
 											required
 										/>
@@ -91,7 +115,9 @@ const SignUp = () => {
 										<div className='row'>
 											<div className='col-lg-6 col-md-6 offset-lg-3 offset-md-3 col-sm-12'>
 												<div className='form-group'>
-													<button className='btn btn-block btn-success rounded-0'>
+													<button
+														type='submit'
+														className='btn btn-block btn-success rounded-0'>
 														{' '}
 														JOIN{' '}
 													</button>

@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navbar from '../templates/Navbar';
 import NavGeneral from '../templates/NavGeneral';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../contexts/UserContext';
 
 const SignIn = () => {
+	const {
+		handleSignInSubmit,
+		msg,
+		email,
+		password,
+		setEmail,
+		setPassword,
+	} = useContext(UserContext);
+
 	return (
 		<>
 			<div className='wrapper'>
@@ -33,8 +43,15 @@ const SignIn = () => {
 					<div className='container'>
 						<div className='row my-5'>
 							<div className='col-lg-6 col-md-6 offset-lg-3 offset-md-3 col-sm-12 bg-white my-5 py-5 auth-form-container'>
+								{msg ? (
+									<small className='text-center text-danger'> {msg}</small>
+								) : (
+									<p> </p>
+								)}
 								<h5 className='text-center ipro'> Sign-In </h5>
-								<form className='form auth-form px-lg-2 px-md-2'>
+								<form
+									onSubmit={(e) => handleSignInSubmit(e)}
+									className='form auth-form px-lg-2 px-md-2'>
 									<p className='site-font my-3'> Manage your account. </p>
 
 									<div className='form-group my-4'>
@@ -45,6 +62,9 @@ const SignIn = () => {
 										</label>
 										<input
 											type='email'
+											name='email'
+											value={email}
+											onChange={(e) => setEmail(e.target.value)}
 											className='form-control rounded-pill'
 											required
 										/>
@@ -57,6 +77,9 @@ const SignIn = () => {
 										</label>
 										<input
 											type='password'
+											name='password'
+											value={password}
+											onChange={(e) => setPassword(e.target.value)}
 											className='form-control rounded-pill'
 											required
 										/>
@@ -65,7 +88,9 @@ const SignIn = () => {
 										<div className='row'>
 											<div className='col-lg-6 col-md-6 offset-lg-3 offset-md-3 col-sm-12'>
 												<div className='form-group'>
-													<button className='btn btn-block btn-success rounded-0'>
+													<button
+														type='submit'
+														className='btn btn-block btn-success rounded-0'>
 														{' '}
 														ENTER{' '}
 													</button>
