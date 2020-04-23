@@ -10,11 +10,8 @@ app.use(express.json());
 //Database Connection
 dbConnection();
 
-app.use((req, res, next) => {
-	res.status(200).json({
-		message: 'App connected to the server',
-	});
-});
+//Importing routes
+app.use('/api/users/auth', require('./api/routes/userRoutes'));
 
 //Handling CORS
 app.use((req, res, next) => {
