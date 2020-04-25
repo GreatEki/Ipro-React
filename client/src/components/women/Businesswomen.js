@@ -3,6 +3,7 @@ import Navbar from '../templates/Navbar';
 import Navwomen from '../templates/Navwomen';
 import { Link } from 'react-router-dom';
 import { ProductsContext } from '../../contexts/ProductsContext';
+import CartAlert from '../templates/CartAlert';
 const Businesswomen = () => {
 	const { getBusinessWomenProducts, businessWomen } = useContext(
 		ProductsContext
@@ -39,6 +40,7 @@ const Businesswomen = () => {
 				</section>
 
 				<main className='container-fluid content-wrapper justify-content-center px-lg-5 px-md-2'>
+					<CartAlert />
 					<div className='row mt-5 px-lg-5 px-md-2 pt-5'>
 						{/*========================== Proucts Display Starts Here =========================*/}
 

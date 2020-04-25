@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../contexts/CartContext';
 
 const Cart = (props) => {
-	const { cartItems, cartTotal, getCartItems } = useContext(CartContext);
+	const { cartItems, cartTotal, getCartItems, removeCartItem } = useContext(
+		CartContext
+	);
 
 	useEffect(() => {
 		getCartItems();
@@ -80,15 +82,20 @@ const Cart = (props) => {
 
 										<div className='col-6 col-md-2 m-0 p-md-0'>
 											<div className='cart-title-bar'> Action</div>
-											<div className='text-info detail'>
+											<Link className='text-info detail cart-action mt-md-4 pt-5'>
 												{' '}
 												Save Item for Later
-											</div>
+											</Link>
 										</div>
 
 										<div className='col-6 col-md-2 m-0 p-md-0'>
 											<div className='cart-title-bar'> Action</div>
-											<div className='text-danger detail'> Remove Item</div>
+											<button
+												onClick={() => removeCartItem(item)}
+												className='text-danger detail cart-action mt-md-1 p-2 mb-4'>
+												{' '}
+												Remove Item
+											</button>
 										</div>
 									</div>
 								);

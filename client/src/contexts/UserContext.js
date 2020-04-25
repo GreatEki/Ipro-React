@@ -1,10 +1,11 @@
 import React, { createContext, useState } from 'react';
 import axios from 'axios';
-import { withRouter } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 export const UserContext = createContext();
 
 const UserContextProvider = (props) => {
+	let history = useHistory();
 	const [newUser, setNewUser] = useState({
 		firstname: '',
 		lastname: '',
@@ -95,7 +96,7 @@ const UserContextProvider = (props) => {
 			setMsg(res.data.message);
 			setIsAuth(true);
 
-			props.history.push('/users/dashboard');
+			history.push('/users/auth/dashboard');
 		} catch (err) {
 			if (err) {
 				err.message = 'Invalid Credentials';
@@ -104,6 +105,13 @@ const UserContextProvider = (props) => {
 				setMsg('');
 			}
 		}
+	};
+
+	const logout = () => {
+		setToken('');
+		localStorage.removeItem('auth');
+		history.push('/users/signin');
+		window.location.reload(true);
 	};
 	return (
 		<UserContext.Provider
@@ -117,12 +125,14 @@ const UserContextProvider = (props) => {
 				handleUserSubmit,
 				signUpUser,
 				msg,
+				isAuth,
 				signInUser,
 				handleSignInSubmit,
+				logout,
 			}}>
 			{props.children}
 		</UserContext.Provider>
 	);
 };
 
-export default withRouter(UserContextProvider);
+export default UserContextProvider;

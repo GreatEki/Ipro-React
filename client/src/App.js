@@ -21,6 +21,8 @@ import Shop from './components/Shop';
 import ProductsContextProvider from './contexts/ProductsContext';
 import CartContextProvider from './contexts/CartContext';
 import UserContextProvider from './contexts/UserContext';
+import context from './contexts/UserContext';
+import PrivateRoute from './components/users/PrivateRoute';
 function App() {
 	return (
 		<div className='App'>
@@ -47,10 +49,21 @@ function App() {
 								<Route exact path='/leisure/women' component={Leisurewomen} />
 								<Route path='/women' component={Women} />
 								<Route path='/cart/overview' component={Cart} />
-								<Route path='/checkout' component={CheckOut} />
 								<Route path='/users/signup' component={SignUp} />
 								<Route path='/users/signin' component={SignIn} />
-								<Route path='/users/dashboard' component={Dashboard} />
+								<PrivateRoute
+									exact
+									path='/users/auth/dashboard'
+									component={Dashboard}
+									auth={context.auth}
+								/>
+
+								<PrivateRoute
+									exact
+									path='/cart/checkout'
+									component={CheckOut}
+									auth={context.auth}
+								/>
 							</UserContextProvider>
 						</CartContextProvider>
 					</ProductsContextProvider>

@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../contexts/CartContext';
+import { UserContext } from '../../contexts/UserContext';
 const Navbar = () => {
 	const { cartItems } = useContext(CartContext);
+	const { isAuth, logout } = useContext(UserContext);
 	return (
 		<div className='container-fluid m-0 p-0'>
 			<nav className='navbar navbar-expand-lg navbar-light bg-light'>
@@ -21,8 +23,16 @@ const Navbar = () => {
 				<div className='collapse navbar-collapse' id='mainNavBar'>
 					<div className='navbar-nav'>
 						<Link to='/' className='nav-item nav-link'>
-							Home
+							HOME
 						</Link>
+						{isAuth ? (
+							<Link to='/users/auth/dashboard' className='nav-item nav-link '>
+								ACCOUNT
+							</Link>
+						) : (
+							<p> </p>
+						)}
+
 						<Link to='/shop' className='nav-item nav-link '>
 							SHOP
 						</Link>
@@ -72,12 +82,30 @@ const Navbar = () => {
 						</Link>
 
 						<div className='dropdown-menu' aria-labelledby='navbarDropDown'>
-							<Link to='/users/signin' className='dropdown-item'>
-								Sign-In
-							</Link>
-							<Link to='/users/signup' className='dropdown-item'>
-								Join
-							</Link>
+							{isAuth ? (
+								<div>
+									<Link
+										to='/users/auth/dashboard'
+										className='dropdown-item site-font'>
+										Account
+									</Link>
+
+									<button
+										onClick={() => logout()}
+										className='dropdown-item text-danger site-font'>
+										Logout
+									</button>
+								</div>
+							) : (
+								<div>
+									<Link to='/users/signin' className='dropdown-item site-font'>
+										Sign-In
+									</Link>
+									<Link to='/users/signup' className='dropdown-item site-font'>
+										Join
+									</Link>
+								</div>
+							)}
 						</div>
 					</ul>
 				</div>

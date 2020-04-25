@@ -6,6 +6,8 @@ export const CartContext = createContext();
 const CartContextProvider = (props) => {
 	const [cartItems, setCartItems] = useState([]);
 	const [cartTotal, setCartTotal] = useState(0);
+	const [deliveryRate, setDeliveryRate] = useState(1200);
+	const [grandTotal, setGrandTotal] = useState(0);
 
 	const [qty, setQty] = useState(1);
 	const [size, setSize] = useState('sm');
@@ -114,6 +116,15 @@ const CartContextProvider = (props) => {
 		const localCartTotal = localStorage.getItem('cartTotal');
 		setCartTotal(JSON.parse(localCartTotal));
 	};
+
+	const removeCartItem = (prod) => {
+		setCartItems(cartItems.filter((item) => item.id !== prod.id));
+		localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+		setCartTotal((cartTotal) => (cartTotal -= prod.price));
+		localStorage.setItem('cartTotal', JSON.stringify(cartTotal));
+		return cartItems;
+	};
 	return (
 		<CartContext.Provider
 			value={{
@@ -121,6 +132,10 @@ const CartContextProvider = (props) => {
 				handleQty,
 				handleSize,
 				getCartItems,
+				removeCartItem,
+				setGrandTotal,
+				grandTotal,
+				deliveryRate,
 				size,
 				qty,
 				cartItems,

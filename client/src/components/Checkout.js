@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Navbar from './templates/Navbar';
 import NavGeneral from './templates/NavGeneral';
 import { Link } from 'react-router-dom';
-
+import { CartContext } from '../contexts/CartContext';
 const CheckOut = () => {
+	const {
+		cartItems,
+		cartTotal,
+		deliveryRate,
+		grandTotal,
+		setGrandTotal,
+	} = useContext(CartContext);
+
+	useEffect(() => {
+		setGrandTotal(cartTotal + deliveryRate);
+	}, []);
 	return (
 		<>
 			<div className='wrapper'>
@@ -44,26 +55,37 @@ const CheckOut = () => {
 
 						<div className='w-100'></div>
 						{/*Cart Items Display Starts here*/}
-						<div className='col-6 px-lg-5'>
-							<img
-								className='img-fluid cart-pics d-inline'
-								src='/images/artem-bali.jpg'
-								alt='prod-name'
-							/>
-							<p className='d-inline'>Artem-Bali </p>
 
-							<div className='d-block'>
-								size:<span> mid</span>{' '}
-							</div>
-							<div className='d-block'>
-								qty:<span> ( 5 )</span>{' '}
-							</div>
-						</div>
-						<div className='col-6 px-lg-5'>
-							<div className='text-right font-weight-bold'>
-								<del className='del'> N</del> 3,000
-							</div>
-						</div>
+						{cartItems.map((item) => {
+							return (
+								<>
+									<div className='col-6 px-lg-5'>
+										<div className='d-flex flex-row'>
+											<img
+												className='img-fluid cart-pics detail ml-3 d-inline'
+												src={`/products/${item.imagePath}`}
+												alt='product-title'
+											/>
+											<div className='d-inline'>
+												<p className='detail p-2 m-0'>{item.title}</p>
+												<p className='p-2 m-0 d-inline detail'>
+													<span>size: </span> {item.size}
+												</p>
+												<p className='p-2 m-0 detail'>
+													Qty: <span> ( {item.qty} ) </span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div className='col-6 px-lg-5'>
+										<div className='text-right font-weight-bold'>
+											<del className='del'> N</del> {item.price}
+										</div>
+									</div>
+								</>
+							);
+						})}
+
 						{/*End of Cart Items display Starts here */}
 					</div>
 
@@ -75,7 +97,7 @@ const CheckOut = () => {
 
 						<div className='col-6 mt-3 px-lg-5'>
 							<h5 className='text-right'>
-								<del className='del'>N</del> 3, 000
+								<del className='del'>N</del> {cartTotal}
 							</h5>
 						</div>
 					</div>
@@ -86,7 +108,7 @@ const CheckOut = () => {
 
 						<div className='col-6 mt-3 px-lg-5'>
 							<h5 className='text-right'>
-								<del className='del'>N</del> 1,500
+								<del className='del'>N</del> {deliveryRate}
 							</h5>
 						</div>
 					</div>
@@ -97,7 +119,7 @@ const CheckOut = () => {
 
 						<div className='col-6 mt-5 px-lg-5'>
 							<h5 className='text-right'>
-								<del className='del'>N</del> 30, 000
+								<del className='del'>N</del> {grandTotal}
 							</h5>
 						</div>
 					</div>

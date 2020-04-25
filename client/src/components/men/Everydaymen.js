@@ -3,6 +3,7 @@ import Navbar from '../templates/Navbar';
 import Navmen from '../templates/Navmen';
 import { Link } from 'react-router-dom';
 import { ProductsContext } from '../../contexts/ProductsContext';
+import CartAlert from '../templates/CartAlert';
 const Everydaymen = () => {
 	const { getEveryDayMenProducts, everyDayMen } = useContext(ProductsContext);
 
@@ -37,6 +38,7 @@ const Everydaymen = () => {
 				</section>
 
 				<main className='container-fluid content-wrapper justify-content-center px-lg-5 px-md-2'>
+					<CartAlert />
 					<div className='row mt-5 px-lg-5 px-md-2 pt-5'>
 						{/*================ EveryDay Men Products card starts ===========================*/}
 						{everyDayMen.map((product) => {

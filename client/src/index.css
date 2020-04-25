@@ -363,8 +363,8 @@ form.form-inline {
 }
 
 .cart-pics {
-	width: 25%;
-	height: 50px;
+	width: 30%;
+	height: 100px;
 }
 /*===============================  End of Cart and CheckOut Page Styling =======================================*/
 
@@ -391,7 +391,7 @@ form.form-inline {
         *************************************
          MEDIUM SIZED SCREENs (Ipads and Tablets)
     */
-@media screen and (min-width: 425px) and (max-width: 800px) {
+@media screen and (min-width: 425px) and (max-width: 1500px) {
 	* {
 		box-sizing: border-box;
 	}
@@ -413,6 +413,11 @@ form.form-inline {
 		margin-bottom: 50%;
 		font-size: 18px;
 	}
+
+	small.card-title {
+		font-size: 9px;
+		font-weight: bold;
+	}
 }
 
 /* ***************************************
@@ -420,7 +425,7 @@ form.form-inline {
         *************************************
          SMALL SCREEN PHONES (ANDROID AND IPHONES)
     */
-@media screen and (min-width: 310px) and (max-width: 424px) {
+@media screen and (min-width: 310px) and (max-width: 750px) {
 	* {
 		box-sizing: border-box;
 	}
@@ -467,6 +472,10 @@ form.form-inline {
 	/* Cart and Checkout Component Styling*/
 	.cart-title-bar {
 		visibility: hidden;
+	}
+
+	.detail {
+		font-size: 8px;
 	}
 
 	/* SignUp and SignIn Component*/
