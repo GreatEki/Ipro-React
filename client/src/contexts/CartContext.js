@@ -11,6 +11,10 @@ const CartContextProvider = (props) => {
 
 	const [qty, setQty] = useState(1);
 	const [size, setSize] = useState('sm');
+	const [sizeStyle, setSizeStyle] = useState({
+		bg: '',
+		font: '',
+	});
 
 	const [ifNewItem, setIfNewItem] = useState(false);
 	const [msgPop, setMsgPop] = useState({});
@@ -30,12 +34,10 @@ const CartContextProvider = (props) => {
 		switch (input) {
 			case 'sm':
 				setSize(input);
-
 				break;
 
 			case 'mid':
 				setSize(input);
-
 				break;
 			case 'lg':
 				setSize(input);
@@ -134,6 +136,7 @@ const CartContextProvider = (props) => {
 				getCartItems,
 				removeCartItem,
 				setGrandTotal,
+				sizeStyle,
 				grandTotal,
 				deliveryRate,
 				size,

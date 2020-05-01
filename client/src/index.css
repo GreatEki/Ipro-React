@@ -157,6 +157,8 @@ form.form-inline {
 	background-image: url('/images/man-pose-beside-water-store-unsplash.jpg');
 	background-size: cover;
 	background-position: center;
+	background-attachment: fixed;
+	height: 100%;
 }
 .section-1.men h1 {
 	position: relative;
@@ -200,6 +202,7 @@ form.form-inline {
 .section-1.women {
 	background-image: url('/images/eloise-ambursley.jpg');
 	background-size: cover;
+	background-attachment: fixed;
 	height: 100%;
 }
 .section-1.women h1 {

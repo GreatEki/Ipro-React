@@ -9,7 +9,7 @@ const Product = (props) => {
 	const id = props.match.params.id;
 
 	const { getProduct, product } = useContext(ProductsContext);
-	const { addToCart, handleQty, handleSize, size, qty } = useContext(
+	const { addToCart, handleQty, handleSize, size, qty, sizeStyle } = useContext(
 		CartContext
 	);
 
@@ -82,23 +82,25 @@ const Product = (props) => {
 									&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
 									<div>
 										<button
-											className='btn-sm mx-2 btn-size bg-white'
+											className='btn-sm mx-2 btn-size'
 											name='sm'
 											value={size}
 											onClick={(e) => handleSize(e)}>
 											{' '}
 											sm{' '}
 										</button>
+
 										<button
-											className='btn-sm mx-2 btn-size bg-white'
+											className='btn-sm mx-2 btn-size'
 											name='mid'
 											value={size}
 											onClick={(e) => handleSize(e)}>
 											{' '}
 											mid{' '}
 										</button>
+
 										<button
-											className='btn-sm mx-2 btn-size bg-white'
+											className='btn-sm mx-2 btn-size'
 											name='lg'
 											value={size}
 											onClick={(e) => handleSize(e)}>
@@ -106,7 +108,7 @@ const Product = (props) => {
 											lg
 										</button>
 										<button
-											className='btn-sm mx-2 btn-size bg-white'
+											className='btn-sm mx-2 btn-size'
 											name='x-lg'
 											value={size}
 											onClick={(e) => handleSize(e)}>
@@ -114,7 +116,7 @@ const Product = (props) => {
 											x-lg
 										</button>
 										<button
-											className='btn-sm mx-2 btn-size bg-white'
+											className='btn-sm mx-2 btn-size'
 											name='xx-lg'
 											value={size}
 											onClick={(e) => handleSize(e)}>

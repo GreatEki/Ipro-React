@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 
 	//Allow Access for the following request methods
 	if (req.method === 'OPTIONS') {
-		res.header('Access-Control-Allow-Methods', 'PUT POST, PATCH, GET, DELETE');
+		res.header('Access-Control-Allow-Methods', 'POST, PUT, PATCH, GET, DELETE');
 		return res.status(200).json({});
 	}
 
@@ -32,5 +32,6 @@ app.use((req, res, next) => {
 
 //Importing routes
 app.use('/api/users/auth', require('./api/routes/userRoutes'));
+app.use('/api/orders', require('./api/routes/orderRoutes'));
 
 module.exports = app;
