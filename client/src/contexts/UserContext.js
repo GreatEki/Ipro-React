@@ -116,6 +116,7 @@ const UserContextProvider = (props) => {
 	return (
 		<UserContext.Provider
 			value={{
+				token,
 				email,
 				password,
 				newUser,
@@ -124,6 +125,7 @@ const UserContextProvider = (props) => {
 				handleUserInput,
 				handleUserSubmit,
 				signUpUser,
+				authUser,
 				msg,
 				isAuth,
 				signInUser,

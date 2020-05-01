@@ -6,15 +6,11 @@ export const CartContext = createContext();
 const CartContextProvider = (props) => {
 	const [cartItems, setCartItems] = useState([]);
 	const [cartTotal, setCartTotal] = useState(0);
-	const [deliveryRate, setDeliveryRate] = useState(1200);
+	const [deliveryRate] = useState(1200);
 	const [grandTotal, setGrandTotal] = useState(0);
 
 	const [qty, setQty] = useState(1);
 	const [size, setSize] = useState('sm');
-	const [sizeStyle, setSizeStyle] = useState({
-		bg: '',
-		font: '',
-	});
 
 	const [ifNewItem, setIfNewItem] = useState(false);
 	const [msgPop, setMsgPop] = useState({});
@@ -136,7 +132,6 @@ const CartContextProvider = (props) => {
 				getCartItems,
 				removeCartItem,
 				setGrandTotal,
-				sizeStyle,
 				grandTotal,
 				deliveryRate,
 				size,

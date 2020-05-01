@@ -3,6 +3,8 @@ import Navbar from './templates/Navbar';
 import NavGeneral from './templates/NavGeneral';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../contexts/CartContext';
+import { OrderContext } from '../contexts/OrderContext';
+import { UserContext } from '../contexts/UserContext';
 const CheckOut = () => {
 	const {
 		cartItems,
@@ -12,8 +14,14 @@ const CheckOut = () => {
 		setGrandTotal,
 	} = useContext(CartContext);
 
+	const { authUser } = useContext(UserContext);
+
+	const { handleSubmitOrder, orderAlert } = useContext(OrderContext);
+
 	useEffect(() => {
 		setGrandTotal(cartTotal + deliveryRate);
+
+		//eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (
 		<>
@@ -42,9 +50,15 @@ const CheckOut = () => {
 			</section>
 
 			<div className='container-fluid content-wrapper'>
+				{orderAlert ? (
+					<h5 className='text-center text-whte pt-5'> {orderAlert} </h5>
+				) : (
+					<p> </p>
+				)}
 				<div className='container mx-auto my-5 py-5'>
 					<div className='row bg-white py-5 align-items-end'>
 						{/* Checkout Title Bar - Products and Subtotal*/}
+
 						<div className='col-6 px-lg-5'>
 							<h5> PRODUCTS </h5>
 						</div>
@@ -126,7 +140,11 @@ const CheckOut = () => {
 
 					<div className='bg-white row'>
 						<div className='col-md-12 py-5 col-lg-6 offset-lg-3'>
-							<button className='btn btn-block btn-success rounded-0'>
+							<button
+								onClick={(e) =>
+									handleSubmitOrder(e, authUser.id, cartItems, grandTotal)
+								}
+								className='btn btn-block btn-success rounded-0'>
 								{' '}
 								PAY NOW{' '}
 							</button>
