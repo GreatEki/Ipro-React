@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Navbar from '../templates/Navbar';
 import NavGeneral from '../templates/NavGeneral';
 import { Link } from 'react-router-dom';
 import '../../css/dashboard.css';
 import Footer from '../templates/Footer';
+import { OrderContext } from '../../contexts/OrderContext';
+import { UserContext } from '../../contexts/UserContext';
 
 const Dashboard = () => {
+	const { authUser } = useContext(UserContext);
+	const { orders, getUserOrders } = useContext(OrderContext);
+
+	useEffect(() => {
+		getUserOrders(authUser.id);
+		console.log(authUser.id);
+		console.log(orders);
+
+		//eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 	return (
 		<>
 			<div>
@@ -39,7 +51,11 @@ const Dashboard = () => {
 				<main className='container-fluid'>
 					<div className='container-fluid px-sm-2'>
 						<p>
-							Account Name: <span> Tester 1 Test </span>{' '}
+							Account Name:{' '}
+							<span className='text-danger account_name'>
+								{' '}
+								{authUser.firstname} {authUser.lastname}{' '}
+							</span>{' '}
 						</p>
 
 						<section className='row'>
@@ -84,82 +100,95 @@ const Dashboard = () => {
 						<section className='row'>
 							<div className='col-12 col-lg-8 offset-lg-2'>
 								<h5 className='site-font-lg mt-4'> Order History</h5>
-								<div className='card'>
-									{/*=========== Card Order Header ================= */}
-									<section className='row card-header m-0'>
-										<div className='col-6'>
-											<p className='text-dark site-font'>
-												{' '}
-												Order Date:{' '}
-												<span className='site-font text-danger'>
-													Monday, Friday, 3rd April, 2020{' '}
-												</span>
-											</p>{' '}
-										</div>
+								{orders.map((order) => {
+									return (
+										<div className='card my-5' key={order._id}>
+											{/*=========== Card Order Header ================= */}
 
-										<div className='col-6'>
-											<p className='text-dark text-right site-font'>
-												{' '}
-												Delivery Status:{' '}
-												<span className='site-font text-success'>
-													Delivering
-												</span>
-											</p>{' '}
-										</div>
-									</section>
-									{/*==============End 0f Card Order Header ================== */}
+											<section className='row card-header m-0'>
+												<div className='col-6'>
+													<p className='text-dark site-font'>
+														{' '}
+														Order Date:{' '}
+														<span className='site-font text-danger'>
+															Monday, Friday, 3rd April, 2020{' '}
+														</span>
+													</p>{' '}
+												</div>
 
-									{/* ================== Card Order Body ======================*/}
-									<section className='row card-body align-items-end'>
-										<div className='col-6 '>
-											<ul className='list-group list-group-flush'>
-												<li className='list-group-item'>
-													<img
-														className='order-img d-block'
-														src='/images/gown-pink.jpg'
-														alt='img-name'
-													/>
-													<div className='d-block'>Ankara Shirt</div>
-													<div className='d-block'>
-														<small>mid</small>
+												<div className='col-6'>
+													<p className='text-dark text-right site-font'>
+														{' '}
+														Delivery Status:{' '}
+														<span className='site-font text-success'>
+															{order.deliveryStatus}
+														</span>
+													</p>{' '}
+												</div>
+											</section>
+											{/*==============End 0f Card Order Header ================== */}
+
+											{/* ================== Card Order Body ======================*/}
+											{order.products.map((item) => {
+												return (
+													<section className='row card-body align-items-end'>
+														<div className='col-6'>
+															<ul className='list-group list-group-flush'>
+																<li className='list-group-item'>
+																	<img
+																		src={`/products/${item.imagePath}`}
+																		className='order-img d-block'
+																		alt='img-name'
+																	/>
+																	<div className='d-block'>{item.title}</div>
+																	<div className='d-block'>
+																		<small>{item.size}</small>
+																	</div>
+																	<div className='d-block'>
+																		qty:<span>( {item.qty} )</span>{' '}
+																	</div>
+																</li>
+															</ul>
+														</div>
+														<div className='col-6 '>
+															<div className='text-right'>
+																<del className='del'>N</del>
+																{item.price}
+															</div>
+														</div>
+													</section>
+												);
+											})}
+											{/* ================== End of Card Order Body ======================*/}
+
+											{/*======================= Card Footer =============================*/}
+											<div className='card-footer'>
+												<div className='row'>
+													<div className='col-6'>
+														<div className='font-weight-bold'>
+															Order Total:
+															<span>
+																<del className='del'>N</del>
+																{order.orderTotal}
+															</span>
+														</div>
 													</div>
-													<div className='d-block'>
-														qty:<span>(5)</span>{' '}
+
+													<div className='col-6'>
+														<p className='text-right text-success'>
+															<small className='text-danger'>
+																payment-status:{' '}
+															</small>
+															{order.paymentStatus}
+														</p>
 													</div>
-												</li>
-											</ul>
-										</div>
-										<div className='col-6 '>
-											<div className='text-right'>
-												<del className='del'>N</del>
-												3,500
-											</div>
-										</div>
-									</section>
-
-									{/* ================== End of Card Order Body ======================*/}
-
-									{/*======================= Card Footer =============================*/}
-									<div className='card-footer'>
-										<div className='row'>
-											<div className='col-6'>
-												<div className='font-weight-bold'>
-													Order Total:
-													<span>
-														<del className='del'>N</del>
-														5, 000
-													</span>
 												</div>
 											</div>
 
-											<div className='col-6'>
-												<p className='text-right text-success'>Paystack</p>
-											</div>
+											{/*======================= End of Card Footer =============================*/}
 										</div>
-									</div>
-
-									{/*======================= End of Card Footer =============================*/}
-								</div>
+									);
+								})}
 							</div>
 						</section>
 					</div>

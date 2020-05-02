@@ -8,6 +8,7 @@ const OrderContextProvider = (props) => {
 	const [isSubmitted, setIsSubmitted] = useState(false);
 	const [orderAlert, setOrderAlert] = useState('');
 	let history = useHistory();
+	const ENDPOINT = 'http://localhost:5000';
 
 	const handleSubmitOrder = (e, userId, products, orderTotal) => {
 		e.preventDefault();
@@ -56,7 +57,7 @@ const OrderContextProvider = (props) => {
 
 	const getUserOrders = async (userId) => {
 		try {
-			const res = await axios.get(`http://localhost:5000/api/orders/${userId}`);
+			const res = await axios.get(`${ENDPOINT}/api/orders/${userId}`);
 
 			if (!res) {
 				setOrders([]);
@@ -64,7 +65,7 @@ const OrderContextProvider = (props) => {
 				setOrders(res.data.orders);
 			}
 		} catch (err) {
-			history.push('/');
+			console.log(err.message);
 		}
 	};
 	return (

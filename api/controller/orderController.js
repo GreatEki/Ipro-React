@@ -85,14 +85,7 @@ exports.getUserOrders = async (req, res) => {
 			success: true,
 			message: 'Orders Fetched',
 			count: userOrder.length,
-			orders: userOrder.map((order) => {
-				return {
-					userId: order.userId,
-					paymentStatus: order.paymentStatus,
-					deliveryStatus: order.deliveryStatus,
-					products: order.products,
-				};
-			}),
+			orders: userOrder,
 		});
 	} catch (error) {
 		return res.status(500).json({
