@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Germania+One|Pacifico|Anton|Cinzel|Shadows+Into+Light|Righteous|Roboto|Oswald');
 
 :root {
+	--Anton: Anton;
+	--Pacifico: Pacifico;
+	--Lato: Lato;
+	--Cinzel: Cinzel;
 	--ad-text: Roboto;
 	--ad-minor-text: Oswald;
 	--bg-grey: darkgrey;
@@ -124,6 +128,95 @@ form.form-inline {
 	height: 300px;
 }
 
+.businessBanner {
+	background-image: url('/products/tamarcus-brown.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 300px;
+}
+
+.leftSideIntro {
+	background-image: url('/products/light-purple-women.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 700px; /*Set ipad size to 400px*/
+}
+
+.leftSideIntro h1 {
+	font-family: var(--ad-text);
+	margin-top: 25px;
+	color: burlywood;
+}
+
+.idleBtn {
+	background-color: lightgray;
+	width: 250px;
+	font-family: var(--ad-text);
+	font-size: 18px;
+	color: black;
+	border: 4px solid white;
+	position: relative;
+	top: 150px;
+	left: 65%;
+	padding: 30px 30px;
+	z-index: 1;
+}
+
+.paraIntro {
+	font-size: 18px;
+	text-align: end;
+	font-family: Lucida Calligraphy;
+}
+
+.rightSideIntro .Polo {
+	background-image: url('/products/marvel-venom-print-2200.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: black;
+	height: 200px;
+	font-size: 12px;
+}
+.rightSideIntro .Skirts {
+	background-image: url('/products/gold-buttoned-red-7000.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: red;
+	height: 200px;
+	font-size: 12px;
+}
+.rightSideIntro .Tshirt {
+	background-image: url('/products/men-white-long-sleeves-5300.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: black;
+	height: 200px;
+	font-size: 12px;
+}
+.rightSideIntro .Trads {
+	background-image: url('/products/Traditional-Dashiki-Men.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: red;
+	height: 200px;
+	font-size: 12px;
+}
+.rightSideIntro .Suits {
+	background-image: url('/products/royal-red-suit-20000.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: red;
+	height: 200px;
+	font-size: 12px;
+}
+.rightSideIntro .Pants {
+	background-image: url('/products/lady-jean.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: red;
+	height: 200px;
+	font-size: 12px;
+}
+
 .display-6 {
 	margin-top: 100px;
 }
@@ -131,6 +224,25 @@ form.form-inline {
 	background-color: blue;
 }
 
+.itemPara {
+	font-family: var(--Cinzel);
+}
+
+.price {
+	font-family: var(--Lato);
+	color: lightcoral;
+}
+
+.nativeBanner {
+	background-image: url('/products/native-wear-display.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 300px;
+}
+
+.fa-star {
+	color: white;
+}
 .site-ad-text {
 	color: white;
 	font-family: var(--ad-text);

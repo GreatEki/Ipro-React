@@ -9,112 +9,127 @@ const Home = () => {
 		<div className='m-0 p-0 wrapper bg-home container-fluid'>
 			<Navbar />
 			<NavGeneral />
-			<div
-				id='carouselExampleSlidesOnly'
-				className='carousel slide'
-				data-ride='carousel'>
-				<div className='carousel-inner'>
-					<div className='carousel-item active'>
-						<img
-							src={`/images/Ifedayo-Fashion.jpg`}
-							className='d-block w-100 j-image'
-							alt='carousel-img'
-						/>
-					</div>
-
-					<div className='carousel-item'>
-						<img
-							src={`/images/artem-bali.jpg`}
-							className='d-block w-100 j-image'
-							alt='carousel-img'
-						/>
-					</div>
-					<div className='carousel-item'>
-						<img
-							src={`/images/marcus-loke.jpg`}
-							className='d-block w-100 j-image'
-							alt='carousel-img'
-						/>
-					</div>
-				</div>
-			</div>
 
 			<main className='container-fluid mt-5'>
-				{/* ============================== Casual Wears Section ================================*/}
 				<section className='card mx-lg-5 my-5 mx-md-0'>
-					<h1 className=' card-title p-4'>Everyday Wears</h1>
+					{/*========================== Intro Section ===================================*/}
+					<div className='row p-lg-4 card-body'>
+						<div className='col-md-6 col-12 mb-3 leftSideIntro px-5'>
+							<h1 className='text-right text-wrap'> Everything Clothing</h1>
+
+							<p className='paraIntro'>
+								{' '}
+								Your fav <i className='fas fa-smile fa-2x'></i> fashion store
+							</p>
+
+							<div className='idleBtn text-center'> SHOP NOW</div>
+						</div>
+
+						<div className='col-md-6 col-12 mb-3 rightSideIntro px-5'>
+							<div className='row'>
+								<div className='col-md-6 col-6 Polo py-3 py-3 mb-5'>Polo</div>
+								<div className='col-md-6 col-6 Skirts py-3  py-3 mb-5'>
+									Skirts
+								</div>
+
+								<div className='w-100'> </div>
+
+								<div className='col-md-6 col-6 Tshirt px-3 py-3 mb-5'>
+									T-shirts
+								</div>
+								<div className='col-md-6 col-6 Trads px-3 py-3 mb-5'>Trads</div>
+
+								<div className='w-100'> </div>
+								<div className='col-md-6 col-6 Suits px-3 py-3 mb-5'>Suits</div>
+								<div className='col-md-6 col-6 Pants px-3 py-3 mb-5'>Pants</div>
+							</div>
+						</div>
+					</div>
+
+					{/*========================== End of Intro Section ===================================*/}
+
+					{/* ============================== Casual Wears Section ================================*/}
+					<h1 className=' card-title p-4'>Everyday </h1>
 					<hr />
 					<div className='row p-lg-4 card-body'>
-						<div className='col-lg-2 col-12 mb-3'>
+						<div className='col-md-3 col-12 mb-3'>
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
-									src={'/products/shirt-jeans-casual-women-1.jpg'}
+									src={'/products/purple-sweet-casaul-8500.jpg'}
 									alt='banner'
 								/>
 							</Link>
+							<p className='text-dark text-wrap itemPara'>
+								Black Short Jeans Men{' '}
+							</p>
+							<span className='price'>
+								{' '}
+								<del className='del'>N </del>7, 000
+							</span>
 						</div>
 
-						<div className='col-lg-2 col-12 mb-3'>
+						<div className='col-md-3 col-12 mb-3'>
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
-									src={'/products/shirt-jeans-men-1.jpg'}
+									src={'/products/venice-polo.jpg'}
 									alt='banner'
 								/>
 							</Link>
+							<p className='text-dark text-wrap itemPara'>
+								Black Short Jeans Men{' '}
+							</p>
+							<span className='price'>
+								{' '}
+								<del className='del'>N </del>7, 000
+							</span>
 						</div>
 
-						<div className='col-lg-2 col-12 mb-3'>
+						<div className='col-md-3 col-12 mb-3 '>
 							<Link to='/'>
 								<img
-									className='front-img img-fluid'
-									src={'/products/shirt-jeans-casual-women-4.jpg'}
-									alt='banner'
-								/>
-							</Link>
-						</div>
-
-						<div className='col-lg-2 col-12 mb-3'>
-							<Link to='/'>
-								<img
-									className='front-img img-fluid'
-									src={'/products/shirt-jeans-men-2.jpg'}
-									alt='banner'
-								/>
-							</Link>
-						</div>
-
-						<div className='col-lg-2 col-12 mb-3'>
-							<Link to='/'>
-								<img
+									l
 									className='front-img img-fluid'
 									src={'/products/jessica-castro-449555-unsplash.jpg'}
 									alt='banner'
 								/>
 							</Link>
+							<p className='text-dark text-wrap itemPara'>
+								Black Short Jeans Men{' '}
+							</p>
+							<span className='price'>
+								{' '}
+								<del className='del'>N </del>7, 000
+							</span>
 						</div>
 
-						<div className='col-lg-2 col-12 mb-3'>
+						<div className='col-md-3 col-12 mb-3'>
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
-									src={'/products/shirt-jeans-men-black-1.jpg'}
+									src={'/products/paradise-polo.jpg'}
 									alt='banner'
 								/>
 							</Link>
+
+							<p className='text-dark text-wrap itemPara'>
+								Black Short Jeans Men{' '}
+							</p>
+							<span className='price'>
+								{' '}
+								<del className='del'>N </del>7, 000
+							</span>
 						</div>
 					</div>
-				</section>
 
-				{/* =================================== End of Casual Wears =============================================*/}
+					{/* =================================== End of Casual Wears =============================================*/}
 
-				{/*================================== Business and Corporate Section ======================================*/}
-				<section className='card mx-lg-5 my-5 mx-md-0'>
-					<h1 className='card-title p-4'>Business and Coporate</h1>
+					{/*================================== Business and Corporate Section ======================================*/}
+					<h1 className=' card-title p-4'>Business </h1>
 					<hr />
 					<div className='row card-body'>
-						<div className='col-lg-2 col-12 mb-3'>
+						<div className='col-lg-3 col-12 mb-3'>
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
@@ -122,112 +137,173 @@ const Home = () => {
 									alt='banner'
 								/>
 							</Link>
+							<p className='text-dark text-wrap itemPara'>
+								Black Short Jeans Men{' '}
+							</p>
+							<span className='price'>
+								{' '}
+								<del className='del'>N </del>7, 000
+							</span>
 						</div>
 
-						<div className='col-lg-2 col-12 mb-3'>
+						<div className='col-lg-6 businessBanner col-12 mb-3'>
+							<h2 className='text-white pt-3'> Business Trends</h2>
+							<span className='text-white d-block'> New Design 2020</span>
+							<small className='text-white d-block'> Shop Business</small>
+						</div>
+
+						<div className='col-lg-3 col-12 mb-3'>
+							<Link to='/'>
+								<img
+									className='front-img'
+									src={'/products/illumination-marketing.jpg'}
+									alt='banner'
+								/>
+							</Link>
+							<p className='text-dark text-wrap itemPara'>
+								Black Short Jeans Men{' '}
+							</p>
+							<span className='price'>
+								{' '}
+								<del className='del'>N </del>7, 000
+							</span>
+						</div>
+					</div>
+
+					{/*=================================== End of Business and Corporate =======================================*/}
+
+					{/* ================================== Nativity and Culture ================================================ */}
+
+					<h1 className='card-title p-4'> Culture</h1>
+					<hr />
+					<div className='row card-body'>
+						<div className='col-lg-3 col-md-6 col-12 mb-3'>
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
-									src={'/products/women-business-1.jpg'}
+									src={'/products/sleeveless-woman.jpg'}
 									alt='banner'
 								/>
 							</Link>
+							<p className='text-dark text-wrap itemPara'>
+								Black Short Jeans Men{' '}
+							</p>
+							<span className='price'>
+								{' '}
+								<del className='del'>N </del>7, 000
+							</span>
 						</div>
 
-						<div className='col-lg-2 col-12 mb-3'>
+						<div className='col-lg-3 col-md-6 col-12 mb-3'>
 							<Link to='/'>
 								<img
-									className='front-img'
-									src={'/products/men-corporate-suit-1.jpg'}
+									className='front-img img-fluid'
+									src={'/products/tight-fitted-ankara.jpg'}
 									alt='banner'
 								/>
 							</Link>
+							<p className='text-dark text-wrap itemPara'>
+								Black Short Jeans Men{' '}
+							</p>
+							<span className='price'>
+								{' '}
+								<del className='del'>N </del>7, 000
+							</span>
 						</div>
 
-						<div className='col-lg-2 col-12 mb-3'>
-							<Link to='/'>
-								<img
-									className='front-img'
-									src={'/products/women-business-4.jpg'}
-									alt='banner'
-								/>
-							</Link>
-						</div>
+						<div className='col-lg-6 col-12 mb-3 nativeBanner'>
+							<div>
+								<h2 className='text-white pt-3'>
+									{' '}
+									Owambe and Sophisticated Cultural Wears
+								</h2>
 
-						<div className='col-lg-2 col-12 mb-3'>
-							<Link to='/'>
-								<img
-									className='front-img'
-									src={'/products/men-corporate-suit-2.jpg'}
-									alt='banner'
-								/>
-							</Link>
-						</div>
-
-						<div className='col-lg-2 col-12 mb-3'>
-							<Link to='/'>
-								<img
-									className='front-img'
-									src={'/products/women-corporate-gown-green.jpg'}
-									alt='banner'
-								/>
-							</Link>
+								<p className='text-center text-warning paraIntro'>
+									{' '}
+									Be the <i className='fas fa-star'></i> of the party
+								</p>
+							</div>
 						</div>
 					</div>
-				</section>
-				{/*=================================== End of Business and Corporate =======================================*/}
 
-				{/* ================================== Nativity and Culture ================================================ */}
-				<section className='card mx-lg-5 my-5 mx-md-0'>
-					<h1 className='card-title p-4'>Nativity and Culture</h1>
+					{/* ==================================== End of Nativity and Culture =====================================*/}
+
+					{/*========================= Brand New Section =========================*/}
+
+					<h1 className=' card-title p-4'>Brand New</h1>
 					<hr />
-					<div className='row card-body'>
-						<div className='col-lg-2 col-12 mb-3'>
-							<img
-								className='front-img img-fluid'
-								src={'/products/sleeveless-woman.jpg'}
-								alt='banner'
-							/>
+					<div className='row p-lg-4 card-body'>
+						<div className='col-md-3 col-12 mb-3'>
+							<Link to='/'>
+								<img
+									className='front-img img-fluid'
+									src={'/products/shirt-jeans-casual-women-1.jpg'}
+									alt='banner'
+								/>
+							</Link>
+							<p className='text-dark text-wrap itemPara'>
+								Black Short Jeans Men{' '}
+							</p>
+							<span className='price'>
+								{' '}
+								<del className='del'>N </del>7, 000
+							</span>
 						</div>
 
-						<div className='col-lg-2 col-12 mb-3'>
-							<img
-								className='front-img img-fluid'
-								src={'/products/tight-fitted-ankara.jpg'}
-								alt='banner'
-							/>
+						<div className='col-md-3 col-12 mb-3'>
+							<Link to='/'>
+								<img
+									className='front-img img-fluid'
+									src={'/products/shirt-jeans-men-1.jpg'}
+									alt='banner'
+								/>
+							</Link>
+							<p className='text-dark text-wrap itemPara'>
+								Black Short Jeans Men{' '}
+							</p>
+							<span className='price'>
+								{' '}
+								<del className='del'>N </del>7, 000
+							</span>
 						</div>
 
-						<div className='col-lg-2 col-12 mb-3'>
-							<img
-								className='front-img'
-								src={'/products/yellow-woman-ankara.jpg'}
-								alt='banner'
-							/>
+						<div className='col-md-3 col-12 mb-3 '>
+							<Link to='/'>
+								<img
+									l
+									className='front-img img-fluid'
+									src={'/products/jessica-castro-449555-unsplash.jpg'}
+									alt='banner'
+								/>
+							</Link>
+							<p className='text-dark text-wrap itemPara'>
+								Black Short Jeans Men{' '}
+							</p>
+							<span className='price'>
+								{' '}
+								<del className='del'>N </del>7, 000
+							</span>
 						</div>
 
-						<div className='col-lg-2 col-12 mb-3'>
-							<img
-								className='front-img'
-								src={'/products/ankara-shirt-men.jpg'}
-								alt='banner'
-							/>
-						</div>
+						<div className='col-md-3 col-12 mb-3'>
+							<Link to='/'>
+								<img
+									className='front-img img-fluid'
+									src={'/products/shirt-jeans-men-black-1.jpg'}
+									alt='banner'
+								/>
+							</Link>
 
-						<div className='col-lg-2 col-12 mb-3'>
-							<img
-								className='front-img'
-								src={'/products/native-women-fabulous.jpg'}
-								alt='banner'
-							/>
-						</div>
-
-						<div className='col-lg-2 col-12 mb-3'>
-							<img className='front-img' src={'/images/jidenna.jpg'} alt='' />
+							<p className='text-dark text-wrap itemPara'>
+								Black Short Jeans Men{' '}
+							</p>
+							<span className='price'>
+								{' '}
+								<del className='del'>N </del>7, 000
+							</span>
 						</div>
 					</div>
 				</section>
-				{/* ==================================== End of Nativity and Culture =====================================*/}
 
 				{/*=================================== Advert Card Section  =============================================*/}
 
