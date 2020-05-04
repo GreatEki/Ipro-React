@@ -1,0 +1,235 @@
+/* Men and Women Page Shared Classes Page Stling*/
+.section-1.men {
+	background-image: url('/images/man-pose-beside-water-store-unsplash.jpg');
+	background-size: 100vw;
+	background-position: center;
+	background-attachment: fixed;
+	height: 100%;
+	padding: 100px 0;
+}
+.section-1.men h1 {
+	position: relative;
+	left: 15%;
+	top: 30%;
+	margin-bottom: 10%;
+	font-family: Anton, sans-serif;
+	font-size: 4rem;
+	font-weight: bolder;
+	letter-spacing: 4px;
+	color: white;
+}
+.section-1.men h1 span {
+	font-family: Shadows Into Light, cursive;
+	font-size: 3rem;
+	letter-spacing: 5px;
+	margin-left: 7%;
+}
+.section-1.men a {
+	border: white 3px solid;
+	width: 500px;
+	height: 50px;
+	color: white;
+	background: transparent;
+	font-family: Righteous, cursive;
+	font-size: 24px;
+	font-weight: 400;
+	margin-top: 40%;
+	margin-bottom: 20%;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	position: relative;
+	left: 12%;
+}
+.section-1.men a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+.section-1.women {
+	background-image: url('/images/eloise-ambursley.jpg');
+	background-size: 100vw;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+}
+.section-1.women h1 {
+	position: relative;
+	left: 15%;
+	top: 15%;
+	margin-bottom: 10%;
+	font-family: Anton, sans-serif;
+	font-size: 4rem;
+	font-weight: bolder;
+	letter-spacing: 4px;
+	color: white;
+}
+.section-1.women h1 span {
+	font-family: Shadows Into Light, cursive;
+	font-size: 3rem;
+	letter-spacing: 5px;
+	margin-left: 7%;
+}
+.section-1.women a {
+	border: white 3px solid;
+	width: 500px;
+	height: 50px;
+	color: white;
+	background: transparent;
+	font-family: Righteous, cursive;
+	font-size: 24px;
+	font-weight: 400;
+	margin-top: 50%;
+	margin-bottom: 60%;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	position: relative;
+	left: 12%;
+}
+.section-1.women a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+.cat-images {
+	width: 100%;
+	height: 450px;
+}
+
+.cat-title {
+	margin-top: 3%;
+	margin-bottom: 3%;
+	line-height: 1.5;
+	font-family: Anton, sans-serif;
+	font-size: 24px;
+	letter-spacing: 2.5;
+	text-align: center;
+}
+
+.cat-desc {
+	margin-top: 3%;
+	margin-bottom: 3%;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 16px;
+	letter-spacing: 1.2;
+	text-align: center;
+}
+
+.btn-shop {
+	position: relative;
+	margin-left: 37%;
+	width: 200px;
+	height: 50px;
+	background-color: white;
+	color: black;
+	font-weight: bold;
+	font-size: 16px;
+	font-family: Cinzel, serif;
+	text-align: center;
+	border: 3px solid black;
+	padding: 5px 5px;
+}
+.btn-shop:hover {
+	background-color: black;
+	color: white;
+	text-decoration: none;
+}
+
+.connect {
+	background-color: gold;
+}
+.connect img {
+	width: 100%;
+	height: 250px;
+}
+.connect .col-lg-6.col-md-6 {
+	margin-left: 5%;
+}
+
+.about-img {
+	width: 100%;
+	height: 500px;
+}
+
+/* End of Men and Women Page Shared Classes Page Stling*/
+
+/*========== Smalll Screen Sizes Display =================*/
+
+@media (min-width: 100px) and (max-width: 767px) {
+	/* Men Page Styling */
+
+	.section-1.men {
+		background-attachment: scroll;
+		background-size: 100vw;
+	}
+	.section-1.men h1 {
+		left: 25%;
+		font-size: 2rem;
+	}
+	.section-1.men h1 span {
+		font-size: 1.2rem;
+	}
+	.section-1.men a {
+		width: 250px;
+		margin-top: 30%;
+		margin-bottom: 15%;
+		font-size: 18px;
+		margin-left: 1%;
+		padding: 5px 5px;
+	}
+	/* Women Page Styling */
+
+	.section-1.women {
+		background-attachment: scroll;
+	}
+	.section-1.women h1 {
+		left: 22%;
+		font-size: 2rem;
+	}
+	.section-1.women h1 span {
+		font-size: 1.5rem;
+	}
+	.section-1.women a {
+		width: 250px;
+		margin-top: 30%;
+		margin-bottom: 40%;
+		font-size: 18px;
+		margin-left: 1%;
+		padding: 5px 5px;
+	}
+
+	.cat-images {
+		height: 300px;
+	}
+}
+
+/*================ End of Small Screen Sizes Display ========================*/
+
+/*==================== Medium Screen Sizes tablets, ipads(mini) ========================*/
+
+@media (min-width: 768px) and (max-width: 1200px) {
+	/* Women Page Styling */
+
+	.section-1.men {
+		background-attachment: scroll;
+		background-size: 100vw;
+	}
+
+	.section-1.women {
+		background-attachment: scroll;
+		background-size: 100vw;
+		height: 100%;
+	}
+	.section-1.women h1 {
+		font-size: 3rem;
+	}
+	.section-1.women h1 span {
+		font-size: 2rem;
+	}
+	.section-1.women a {
+		margin-top: 40%;
+		margin-bottom: 50%;
+		font-size: 18px;
+	}
+}

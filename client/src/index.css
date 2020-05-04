@@ -64,185 +64,7 @@ p {
 	text-decoration-style: double;
 }
 
-/*  ***************Navigation Styling********************************/
-
-.sm-nav {
-	background-color: var(--bg-grey);
-	font: left;
-	clear: none;
-}
-
-.sm-link:hover {
-	background-color: white;
-	color: green !important;
-	border: 1px solid;
-	box-shadow: 5px 10px;
-}
-
-.search-bar {
-	background-color: lightgoldenrodyellow;
-}
-
-.nav.justify-content-center {
-	width: 100%;
-}
-
-form.form-inline {
-	width: 100%;
-}
-
-.search-input {
-	width: 30% !important;
-}
-
-.logo {
-	width: 150px;
-	height: 100px;
-	border-radius: 50%;
-	border: 2px solid gold;
-}
-
-.j-image {
-	width: 100%;
-	height: 900px;
-}
-
-.ipro {
-	font-family: Pacifico, cursive;
-	font-size: 32px;
-}
-
-.mx.auto {
-	font-size: 30px;
-}
-
-.nav-item.nav-link {
-	color: black;
-	font-size: 18px;
-	font-family: Germania One, cursive;
-	font-weight: 400;
-}
-
-.front-img {
-	width: 100%;
-	height: 300px;
-}
-
-.businessBanner {
-	background-image: url('/products/tamarcus-brown.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 300px;
-}
-
-.leftSideIntro {
-	background-image: url('/products/light-purple-women.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 700px; /*Set ipad size to 400px*/
-}
-
-.leftSideIntro h1 {
-	font-family: var(--ad-text);
-	margin-top: 25px;
-	color: burlywood;
-}
-
-.idleBtn {
-	background-color: lightgray;
-	width: 250px;
-	font-family: var(--ad-text);
-	font-size: 18px;
-	color: black;
-	border: 4px solid white;
-	position: relative;
-	top: 150px;
-	left: 65%;
-	padding: 30px 30px;
-	z-index: 1;
-}
-
-.paraIntro {
-	font-size: 18px;
-	text-align: end;
-	font-family: Lucida Calligraphy;
-}
-
-.rightSideIntro .Polo {
-	background-image: url('/products/marvel-venom-print-2200.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: black;
-	height: 200px;
-	font-size: 12px;
-}
-.rightSideIntro .Skirts {
-	background-image: url('/products/gold-buttoned-red-7000.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: red;
-	height: 200px;
-	font-size: 12px;
-}
-.rightSideIntro .Tshirt {
-	background-image: url('/products/men-white-long-sleeves-5300.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: black;
-	height: 200px;
-	font-size: 12px;
-}
-.rightSideIntro .Trads {
-	background-image: url('/products/Traditional-Dashiki-Men.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: red;
-	height: 200px;
-	font-size: 12px;
-}
-.rightSideIntro .Suits {
-	background-image: url('/products/royal-red-suit-20000.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: red;
-	height: 200px;
-	font-size: 12px;
-}
-.rightSideIntro .Pants {
-	background-image: url('/products/lady-jean.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: red;
-	height: 200px;
-	font-size: 12px;
-}
-
-.display-6 {
-	margin-top: 100px;
-}
-.support {
-	background-color: blue;
-}
-
-.itemPara {
-	font-family: var(--Cinzel);
-}
-
-.price {
-	font-family: var(--Lato);
-	color: lightcoral;
-}
-
-.nativeBanner {
-	background-image: url('/products/native-wear-display.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 300px;
-}
-
-.fa-star {
-	color: white;
-}
+/* ========= Global classes ============*/
 .site-ad-text {
 	color: white;
 	font-family: var(--ad-text);
@@ -264,161 +86,7 @@ form.form-inline {
 	padding: 20px 0 20px 0;
 }
 
-/* Men and Women Page Shared Classes Page Stling*/
-.section-1.men {
-	background-image: url('/images/man-pose-beside-water-store-unsplash.jpg');
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	height: 100%;
-}
-.section-1.men h1 {
-	position: relative;
-	left: 15%;
-	top: 30%;
-	margin-bottom: 10%;
-	font-family: Anton, sans-serif;
-	font-size: 4rem;
-	font-weight: bolder;
-	letter-spacing: 4px;
-	color: white;
-}
-.section-1.men h1 span {
-	font-family: Shadows Into Light, cursive;
-	font-size: 3rem;
-	letter-spacing: 5px;
-	margin-left: 7%;
-}
-.section-1.men a {
-	border: white 3px solid;
-	width: 500px;
-	height: 50px;
-	color: white;
-	background: transparent;
-	font-family: Righteous, cursive;
-	font-size: 24px;
-	font-weight: 400;
-	margin-top: 40%;
-	margin-bottom: 20%;
-	padding: 5px 10px;
-	text-align: center;
-	text-decoration: none;
-	position: relative;
-	left: 12%;
-}
-.section-1.men a:hover {
-	color: white;
-	text-decoration: none;
-}
-
-.section-1.women {
-	background-image: url('/images/eloise-ambursley.jpg');
-	background-size: cover;
-	background-attachment: fixed;
-	height: 100%;
-}
-.section-1.women h1 {
-	position: relative;
-	left: 15%;
-	top: 15%;
-	margin-bottom: 10%;
-	font-family: Anton, sans-serif;
-	font-size: 4rem;
-	font-weight: bolder;
-	letter-spacing: 4px;
-	color: white;
-}
-.section-1.women h1 span {
-	font-family: Shadows Into Light, cursive;
-	font-size: 3rem;
-	letter-spacing: 5px;
-	margin-left: 7%;
-}
-.section-1.women a {
-	border: white 3px solid;
-	width: 500px;
-	height: 50px;
-	color: white;
-	background: transparent;
-	font-family: Righteous, cursive;
-	font-size: 24px;
-	font-weight: 400;
-	margin-top: 50%;
-	margin-bottom: 60%;
-	padding: 5px 10px;
-	text-align: center;
-	text-decoration: none;
-	position: relative;
-	left: 12%;
-}
-.section-1.women a:hover {
-	color: white;
-	text-decoration: none;
-}
-
-.cat-images {
-	width: 100%;
-	height: 450px;
-}
-
-.cat-title {
-	margin-top: 3%;
-	margin-bottom: 3%;
-	line-height: 1.5;
-	font-family: Anton, sans-serif;
-	font-size: 24px;
-	letter-spacing: 2.5;
-	text-align: center;
-}
-
-.cat-desc {
-	margin-top: 3%;
-	margin-bottom: 3%;
-	font-family: 'Courier New', Courier, monospace;
-	font-size: 16px;
-	letter-spacing: 1.2;
-	text-align: center;
-}
-
-.btn-shop {
-	position: relative;
-	margin-left: 37%;
-	width: 200px;
-	height: 50px;
-	background-color: white;
-	color: black;
-	font-weight: bold;
-	font-size: 16px;
-	font-family: Cinzel, serif;
-	text-align: center;
-	border: 3px solid black;
-	padding: 5px 5px;
-}
-.btn-shop:hover {
-	background-color: black;
-	color: white;
-	text-decoration: none;
-}
-
-.connect {
-	background-color: gold;
-}
-.connect img {
-	width: 100%;
-	height: 250px;
-}
-.connect .col-lg-6.col-md-6 {
-	margin-left: 5%;
-}
-
-.about-img {
-	width: 100%;
-	height: 500px;
-}
-
-/* End of Men and Women Page Shared Classes Page Stling*/
-
-/* ============ Categories Menu Page Styling ==========================*/
+/* ============ Shop and Category Styling ==========================*/
 .shop-gallery {
 	max-width: 100%;
 }
@@ -440,7 +108,7 @@ form.form-inline {
 	height: 250px !important;
 }
 
-/* =============================== End of Categories Menu Page Styling  ==========================*/
+/* =============================== End of Shop and Categories Menu Page Styling  ==========================*/
 
 /* =============================== Product Page Styling ======================================== */
 .product-img img {
@@ -494,19 +162,12 @@ form.form-inline {
 }
 /* ============================== END OF  SIGNUP and SIGNIN COMPONENT ===================================*/
 
-/* ========================== Footer Page Styling =============================================*/
-.bg-footer {
-	float: left;
-	clear: none;
-}
-/* ========================== End of Footer Page Styling =============================================*/
-
 /* ***************************************
         **************************************
         *************************************
          MEDIUM SIZED SCREENs (Ipads and Tablets)
     */
-@media screen and (min-width: 425px) and (max-width: 1500px) {
+@media (min-width: 768px) and (max-width: 1500px) {
 	* {
 		box-sizing: border-box;
 	}
@@ -515,18 +176,6 @@ form.form-inline {
 	}
 	footer .footer-list {
 		visibility: hidden;
-	}
-	/* Women Page Styling */
-	.section-1.women h1 {
-		font-size: 3rem;
-	}
-	.section-1.women h1 span {
-		font-size: 2rem;
-	}
-	.section-1.women a {
-		margin-top: 40%;
-		margin-bottom: 50%;
-		font-size: 18px;
 	}
 
 	small.card-title {
@@ -540,7 +189,7 @@ form.form-inline {
         *************************************
          SMALL SCREEN PHONES (ANDROID AND IPHONES)
     */
-@media screen and (min-width: 310px) and (max-width: 750px) {
+@media (min-width: 100px) and (max-width: 767px) {
 	* {
 		box-sizing: border-box;
 	}
@@ -550,38 +199,6 @@ form.form-inline {
 
 	.ipro {
 		font-size: 26px;
-	}
-	/* Men Page Styling */
-	.section-1.men h1 {
-		left: 25%;
-		font-size: 2rem;
-	}
-	.section-1.men h1 span {
-		font-size: 1.2rem;
-	}
-	.section-1.men a {
-		width: 250px;
-		margin-top: 30%;
-		margin-bottom: 15%;
-		font-size: 18px;
-		margin-left: 1%;
-		padding: 5px 5px;
-	}
-	/* Women Page Styling */
-	.section-1.women h1 {
-		left: 22%;
-		font-size: 2rem;
-	}
-	.section-1.women h1 span {
-		font-size: 1.5rem;
-	}
-	.section-1.women a {
-		width: 250px;
-		margin-top: 30%;
-		margin-bottom: 40%;
-		font-size: 18px;
-		margin-left: 1%;
-		padding: 5px 5px;
 	}
 
 	/* Cart and Checkout Component Styling*/

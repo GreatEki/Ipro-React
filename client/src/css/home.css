@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Germania+One|Pacifico|Anton|Cinzel|Shadows+Into+Light|Righteous|Roboto|Oswald');
+
+:root {
+	--Anton: Anton;
+	--Pacifico: Pacifico;
+	--Lato: Lato;
+	--Cinzel: Cinzel;
+	--ad-text: Roboto;
+	--ad-minor-text: Oswald;
+	--bg-grey: darkgrey;
+	--site-font: Anton;
+}
+
+.front-img {
+	width: 100%;
+	height: 300px;
+}
+
+.businessBanner {
+	background-image: url('/products/tamarcus-brown.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 300px;
+}
+
+.leftSideIntro {
+	background-image: url('/products/light-purple-women.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 700px; /*Set ipad size to 400px*/
+}
+
+.leftSideIntro h1 {
+	font-family: var(--ad-text);
+	margin-top: 25px;
+	color: burlywood;
+}
+
+.idleBtn {
+	background-color: lightgray;
+	width: 350px;
+	font-family: var(--ad-text);
+	font-size: 18px;
+	color: black;
+	border: 4px solid white;
+	position: relative;
+	top: 160px;
+	left: 68%;
+	padding: 30px 40px;
+	z-index: 1;
+}
+
+.idleBtn:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.paraIntro {
+	font-size: 18px;
+	text-align: end;
+	font-family: Lucida Calligraphy;
+}
+
+.rightSideIntro .Polo {
+	background-image: url('/products/marvel-venom-print-2200.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: black;
+	height: 200px;
+	font-size: 12px;
+}
+.rightSideIntro .Skirts {
+	background-image: url('/products/gold-buttoned-red-7000.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: red;
+	height: 200px;
+	font-size: 12px;
+}
+.rightSideIntro .Tshirt {
+	background-image: url('/products/men-white-long-sleeves-5300.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: black;
+	height: 200px;
+	font-size: 12px;
+}
+.rightSideIntro .Trads {
+	background-image: url('/products/Traditional-Dashiki-Men.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: red;
+	height: 200px;
+	font-size: 12px;
+}
+.rightSideIntro .Suits {
+	background-image: url('/products/royal-red-suit-20000.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: red;
+	height: 200px;
+	font-size: 12px;
+}
+.rightSideIntro .Pants {
+	background-image: url('/products/lady-jean.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: red;
+	height: 200px;
+	font-size: 12px;
+}
+
+.display-6 {
+	margin-top: 100px;
+}
+.support {
+	background-color: blue;
+}
+
+.itemPara {
+	font-family: var(--Cinzel);
+}
+
+.price {
+	font-family: var(--Lato);
+	color: lightcoral;
+}
+
+.nativeBanner {
+	background-image: url('/products/native-wear-display.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 300px;
+}
+
+.fa-star {
+	color: white;
+}
+
+/*================= Ipad Pro and Large Tablets =============*/
+@media (min-width: 1024px) and (max-width: 1270px) {
+	.leftSideIntro {
+		padding-left: 10px !important;
+	}
+	.idleBtn {
+		top: 490px;
+		left: 1.5%;
+		padding: 25px 40px;
+	}
+}
+
+/*================End of Ipad Pro and Large Tablets ===============*/
+
+/*===================== Medium Screen Sizes ========================*/
+
+@media (min-width: 767px) and (max-width: 1023px) {
+	.leftSideIntro {
+		padding-left: 10px !important;
+	}
+	.idleBtn {
+		top: 430px;
+		left: 0.5%;
+		padding: 25px 40px !important;
+	}
+
+	.v-center {
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
+/*===================== End of Medium Screen Sizes ========================*/
+
+/*==================== Small Screen Sizes ==================== */
+
+@media (min-width: 100px) and (max-width: 767px) {
+	.leftSideIntro {
+		padding-left: 10px !important;
+	}
+	.idleBtn {
+		top: 450px;
+		left: 0.5%;
+		padding: 25px 40px;
+	}
+
+	.support {
+		margin: 15px 19px;
+		padding: 10px 10px;
+	}
+
+	.support .site-ad-text {
+		font-size: 20px;
+	}
+	.support .small-ad-text {
+		font-size: 14px;
+	}
+}

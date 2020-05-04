@@ -3,6 +3,7 @@ import Navbar from './templates/Navbar';
 import { Link } from 'react-router-dom';
 import Footer from './templates/Footer';
 import NavGeneral from './templates/NavGeneral';
+import '../css/home.css';
 
 const Home = () => {
 	return (
@@ -22,26 +23,37 @@ const Home = () => {
 								Your fav <i className='fas fa-smile fa-2x'></i> fashion store
 							</p>
 
-							<div className='idleBtn text-center'> SHOP NOW</div>
+							<Link to='/shop' className='idleBtn text-center'>
+								{' '}
+								SHOP NOW
+							</Link>
 						</div>
 
 						<div className='col-md-6 col-12 mb-3 rightSideIntro px-5'>
 							<div className='row'>
-								<div className='col-md-6 col-6 Polo py-3 py-3 mb-5'>Polo</div>
-								<div className='col-md-6 col-6 Skirts py-3  py-3 mb-5'>
+								<div className='col-md-6 col-6 Polo py-md-3 py-3 mb-5'>
+									Polo
+								</div>
+								<div className='col-md-6 col-6 Skirts py-md-3  py-3 mb-5'>
 									Skirts
 								</div>
 
 								<div className='w-100'> </div>
 
-								<div className='col-md-6 col-6 Tshirt px-3 py-3 mb-5'>
+								<div className='col-md-6 col-6 Tshirt px-md-3 py-3 mb-5'>
 									T-shirts
 								</div>
-								<div className='col-md-6 col-6 Trads px-3 py-3 mb-5'>Trads</div>
+								<div className='col-md-6 col-6 Trads px-3 py-md-3 mb-5'>
+									Trads
+								</div>
 
 								<div className='w-100'> </div>
-								<div className='col-md-6 col-6 Suits px-3 py-3 mb-5'>Suits</div>
-								<div className='col-md-6 col-6 Pants px-3 py-3 mb-5'>Pants</div>
+								<div className='col-md-6 col-6 Suits px-md-3 py-3 mb-5'>
+									Suits
+								</div>
+								<div className='col-md-6 col-6 Pants px-md-3 py-3 mb-5'>
+									Pants
+								</div>
 							</div>
 						</div>
 					</div>
@@ -52,7 +64,7 @@ const Home = () => {
 					<h1 className=' card-title p-4'>Everyday </h1>
 					<hr />
 					<div className='row p-lg-4 card-body'>
-						<div className='col-md-3 col-12 mb-3'>
+						<div className='col-lg-3 col-md-6 col-12 mb-3'>
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
@@ -69,7 +81,7 @@ const Home = () => {
 							</span>
 						</div>
 
-						<div className='col-md-3 col-12 mb-3'>
+						<div className='col-lg-3 col-md-6 col-12 mb-3'>
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
@@ -86,10 +98,9 @@ const Home = () => {
 							</span>
 						</div>
 
-						<div className='col-md-3 col-12 mb-3 '>
+						<div className='col-lg-3 col-md-6 col-12 mb-3 '>
 							<Link to='/'>
 								<img
-									l
 									className='front-img img-fluid'
 									src={'/products/jessica-castro-449555-unsplash.jpg'}
 									alt='banner'
@@ -104,7 +115,7 @@ const Home = () => {
 							</span>
 						</div>
 
-						<div className='col-md-3 col-12 mb-3'>
+						<div className='col-lg-3 col-md-6 col-12 mb-3'>
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
@@ -129,7 +140,13 @@ const Home = () => {
 					<h1 className=' card-title p-4'>Business </h1>
 					<hr />
 					<div className='row card-body'>
-						<div className='col-lg-3 col-12 mb-3'>
+						<div className='col-lg-6 businessBanner col-12 mb-3'>
+							<h2 className='text-white pt-3'> Business Trends</h2>
+							<span className='text-white d-block'> New Design 2020</span>
+							<small className='text-white d-block'> Shop Business</small>
+						</div>
+
+						<div className='col-lg-3 col-md-6 col-12 mb-3'>
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
@@ -146,13 +163,7 @@ const Home = () => {
 							</span>
 						</div>
 
-						<div className='col-lg-6 businessBanner col-12 mb-3'>
-							<h2 className='text-white pt-3'> Business Trends</h2>
-							<span className='text-white d-block'> New Design 2020</span>
-							<small className='text-white d-block'> Shop Business</small>
-						</div>
-
-						<div className='col-lg-3 col-12 mb-3'>
+						<div className='col-lg-3 col-md-6 col-12 mb-3'>
 							<Link to='/'>
 								<img
 									className='front-img'
@@ -213,9 +224,9 @@ const Home = () => {
 
 						<div className='col-lg-6 col-12 mb-3 nativeBanner'>
 							<div>
-								<h2 className='text-white pt-3'>
+								<h2 className='text-white pt-3 text-center'>
 									{' '}
-									Owambe and Sophisticated Cultural Wears
+									Owambe and Elite Cultural Wears
 								</h2>
 
 								<p className='text-center text-warning paraIntro'>
@@ -233,7 +244,7 @@ const Home = () => {
 					<h1 className=' card-title p-4'>Brand New</h1>
 					<hr />
 					<div className='row p-lg-4 card-body'>
-						<div className='col-md-3 col-12 mb-3'>
+						<div className='col-lg-3 col-md-6 col-12 mb-3'>
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
@@ -250,7 +261,7 @@ const Home = () => {
 							</span>
 						</div>
 
-						<div className='col-md-3 col-12 mb-3'>
+						<div className='col-lg-3 col-md-6 col-12 mb-3'>
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
@@ -267,10 +278,9 @@ const Home = () => {
 							</span>
 						</div>
 
-						<div className='col-md-3 col-12 mb-3 '>
+						<div className='col-lg-3 col-md-6 col-12 mb-3 '>
 							<Link to='/'>
 								<img
-									l
 									className='front-img img-fluid'
 									src={'/products/jessica-castro-449555-unsplash.jpg'}
 									alt='banner'
@@ -285,7 +295,7 @@ const Home = () => {
 							</span>
 						</div>
 
-						<div className='col-md-3 col-12 mb-3'>
+						<div className='col-lg-3 col-md-6 col-12 mb-3'>
 							<Link to='/'>
 								<img
 									className='front-img img-fluid'
@@ -310,22 +320,23 @@ const Home = () => {
 				<section className='mx-lg-5 mx-md-5'>
 					<div className='row'>
 						{/*1st Card*/}
-						<div className='col-lg-6 col-md-12'>
+						<div className='col-md-6'>
 							<div className='card'>
 								<img src={'/images/help-support.jpg'} alt='banner' />
 							</div>
 						</div>
 
 						{/*2nd Card*/}
-						<div className='col-lg-6 col-md-12 support'>
-							<div className='text-center mt-lg-5 mt-md-2'>
-								<span className='site-ad-text'>
+						<div className='col-md-6 support'>
+							<div className='text-center v-center mt-lg-5 mt-md-2'>
+								<span className='site-ad-text '>
 									Need Help Placing Orders????
 								</span>
 								<br />
 								<span className='site-ad-text'>
 									{' '}
-									Call <span className='text-warning'>08100548455 now</span>
+									Call <i className='fas fa-phone'></i>{' '}
+									<span className='text-warning'>08100548455 </span> now
 								</span>
 								<br />
 								<span className='small-ad-text'>Let us Assist you. </span>

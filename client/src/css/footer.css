@@ -16,6 +16,8 @@
 
 .bg-footer {
 	background-color: whitesmoke;
+	float: left;
+	clear: none;
 }
 /* Footer */
 .footer-font {

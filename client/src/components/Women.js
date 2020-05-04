@@ -3,6 +3,7 @@ import Navbar from './templates/Navbar';
 import Footer from './templates/Footer';
 import Navwomen from './templates/Navwomen';
 import { Link } from 'react-router-dom';
+import '../css/menandwomen.css';
 const Women = () => {
 	return (
 		<div>
@@ -22,7 +23,7 @@ const Women = () => {
 					</div>
 				</div>
 
-				<div className='container mt-5'>
+				<div className='container mt-lg-5 mt-0'>
 					<div className='row my-5'>
 						<div
 							className='col-lg-6 col-md-6 my-5 justify-content-center'
@@ -58,34 +59,6 @@ const Women = () => {
 										Shop Now
 									</Link>
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div
-					className='container-fluid m-0 p-0'
-					data-aos='fade-up'
-					data-aos-easing='ease-in-sine'>
-					<div className='connect'>
-						<div className='row'>
-							<div className='col-lg-4 col-md-4 mt-3'>
-								<img
-									src='/products/nordwood-themes-359015-unsplash.jpg'
-									alt=''
-									className='my-5 ml-5'
-								/>
-							</div>
-							<div className='col-lg-6 col-md-6 mt-5'>
-								<h3 className='heading-1'>We make your clothes Unique!!!</h3>
-								<p className=' lead text-muted'>
-									With special and unique designs that stands you out, designs
-									that speak to your uniqueness
-								</p>
-								<p className='text-muted'>
-									You've got that special design pattern that you want? Give us
-									a try and we will bring make that design a reality
-								</p>
 							</div>
 						</div>
 					</div>
