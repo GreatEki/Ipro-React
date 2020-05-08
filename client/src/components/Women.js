@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './templates/Navbar';
 import Footer from './templates/Footer';
 import Navwomen from './templates/Navwomen';
 import { Link } from 'react-router-dom';
 import '../css/menandwomen.css';
 const Women = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+
+		//eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 	return (
 		<div>
 			<Navbar />

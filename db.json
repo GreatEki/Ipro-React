@@ -656,6 +656,150 @@
 			"category": "native",
 			"brand": "long dress",
 			"gender": "women"
+		},
+		{
+			"id": 76,
+			"title": "Assymetric Skirt",
+			"imagePath": "asymetric-skirt-6000.jpg",
+			"price": 6000,
+			"category": "business",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 77,
+			"title": "Gold Buttoned Skirt",
+			"imagePath": "gold-buttoned-7000.jpg",
+			"price": 7000,
+			"category": "business",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 78,
+			"title": "Gold Buttoned Skirt Red",
+			"imagePath": "gold-buttoned-red-7000.jpg",
+			"price": 7000,
+			"category": "business",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 79,
+			"title": "High Waist BodyCon",
+			"imagePath": "high-waist-bodycon-2000.jpg",
+			"price": 2000,
+			"category": "business",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 80,
+			"title": "Ilac Female Dress",
+			"imagePath": "ilac-female-dress.jpg",
+			"price": 9000,
+			"category": "everyday",
+			"brand": "ilac",
+			"gender": "women"
+		},
+		{
+			"id": 81,
+			"title": "Purple Comfy Suit",
+			"imagePath": "illumination-marketing.jpg",
+			"price": 9000,
+			"category": "business",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 82,
+			"title": "Ladies Jean Short",
+			"imagePath": "lady-jean.jpg",
+			"price": 1500,
+			"category": "leisure",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 83,
+			"title": "New-York printed T",
+			"imagePath": "lady-jean.jpg",
+			"price": 3500,
+			"category": "leisure",
+			"brand": "unknown",
+			"gender": "men"
+		},
+		{
+			"id": 84,
+			"title": "High Waist Ladies Sports",
+			"imagePath": "nike-highwaist-sport-women.jpg",
+			"price": 4000,
+			"category": "leisure",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 85,
+			"title": "Paradise Print Polo",
+			"imagePath": "paradise-polo.jpg",
+			"price": 2500,
+			"category": "everyday",
+			"brand": "unknown",
+			"gender": "unisex"
+		},
+		{
+			"id": 86,
+			"title": "Long Pencil Skirt",
+			"imagePath": "pencil-skirt.jpg",
+			"price": 2000,
+			"category": "everyday",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 87,
+			"title": "Purple Jacket with short",
+			"imagePath": "purple-sweet-casaul-8500.jpg",
+			"price": 2500,
+			"category": "everyday",
+			"brand": "unknown",
+			"gender": "women"
+		},
+		{
+			"id": 88,
+			"title": "Forever Shirt and Jeans",
+			"imagePath": "shirt-jeans-casual-women-2.jpg",
+			"price": 7000,
+			"category": "everyday",
+			"brand": "forever",
+			"gender": "women"
+		},
+		{
+			"id": 89,
+			"title": "Dashiki",
+			"imagePath": "Traditional-Dashiki-Men.jpg",
+			"price": 3500,
+			"category": "native",
+			"brand": "traditional",
+			"gender": "unisex"
+		},
+		{
+			"id": 90,
+			"title": "Venice Polo Shirt",
+			"imagePath": "venice-polo.jpg",
+			"price": 3000,
+			"category": "everyday",
+			"brand": "unknown",
+			"gender": "unisex"
+		},
+		{
+			"id": 91,
+			"title": "World Printed T",
+			"imagePath": "world-polo.jpg",
+			"price": 2500,
+			"category": "everyday",
+			"brand": "unknown",
+			"gender": "unisex"
 		}
 	]
 }

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/Nav.css';
+import { SearchContext } from '../../contexts/SearchContext';
 const NavGeneral = () => {
+	const { handleInput, val } = useContext(SearchContext);
 	return (
 		<>
 			<div className='container-fluid nav-wrapper m-0 p-0'>
@@ -38,16 +40,18 @@ const NavGeneral = () => {
 								<input
 									type='text'
 									className='form-control'
+									onChange={(e) => handleInput(e)}
 									placeholder='Search for products, brands and categories'
 									aria-label='Input group example'
 									aria-describedby='btnGroupAddon2'
 								/>
 								<div className='input-group-prepend'>
-									<button
+									<Link
+										to={`/search/${val}`}
 										className='input-group-text bg-success text-white'
 										id='btnGroupAddon2'>
 										<i className='fas fa-search'></i>
-									</button>
+									</Link>
 								</div>
 							</div>
 						</form>

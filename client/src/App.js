@@ -18,10 +18,12 @@ import SignIn from './components/users/SignIn';
 import Dashboard from './components/users/Dashboard';
 import Cart from './components/Cart';
 import Shop from './components/Shop';
+import Search from './components/Search';
 import ProductsContextProvider from './contexts/ProductsContext';
 import CartContextProvider from './contexts/CartContext';
 import UserContextProvider from './contexts/UserContext';
 import OrderContextProvider from './contexts/OrderContext';
+import SearchContextProvider from './contexts/SearchContext';
 import context from './contexts/UserContext';
 import PrivateRoute from './components/users/PrivateRoute';
 function App() {
@@ -33,47 +35,62 @@ function App() {
 						<CartContextProvider>
 							<UserContextProvider>
 								<OrderContextProvider>
-									<Route exact path='/' component={Home} />
-									<Route path='/shop' component={Shop} />
-									<Route exact path='/product/:title/:id' component={Product} />
-									<Route exact path='/business' component={Product} />
-									<Route exact path='/everyday' component={Product} />
-									<Route exact path='/culture' component={Product} />
-									<Route exact path='/leisure' component={Product} />
-									<Route exact path='/business/men' component={Businessmen} />
-									<Route exact path='/everyday/men' component={Everydaymen} />
-									<Route exact path='/culture/men' component={Culturemen} />
-									<Route exact path='/leisure/men' component={Leisuremen} />
-									<Route path='/men' component={Men} />
-									<Route
-										exact
-										path='/business/women'
-										component={Businesswomen}
-									/>
-									<Route
-										exact
-										path='/everyday/women'
-										component={Everydaywomen}
-									/>
-									<Route exact path='/culture/women' component={Culturewomen} />
-									<Route exact path='/leisure/women' component={Leisurewomen} />
-									<Route path='/women' component={Women} />
-									<Route path='/cart/overview' component={Cart} />
-									<Route path='/users/signup' component={SignUp} />
-									<Route path='/users/signin' component={SignIn} />
-									<PrivateRoute
-										exact
-										path='/users/auth/dashboard'
-										component={Dashboard}
-										auth={context.auth}
-									/>
+									<SearchContextProvider>
+										<Route exact path='/' component={Home} />
+										<Route path='/shop' component={Shop} />
+										<Route path='/search/:val' component={Search} />
+										<Route
+											exact
+											path='/product/:title/:id'
+											component={Product}
+										/>
+										<Route exact path='/business' component={Product} />
+										<Route exact path='/everyday' component={Product} />
+										<Route exact path='/culture' component={Product} />
+										<Route exact path='/leisure' component={Product} />
+										<Route exact path='/business/men' component={Businessmen} />
+										<Route exact path='/everyday/men' component={Everydaymen} />
+										<Route exact path='/culture/men' component={Culturemen} />
+										<Route exact path='/leisure/men' component={Leisuremen} />
+										<Route path='/men' component={Men} />
+										<Route
+											exact
+											path='/business/women'
+											component={Businesswomen}
+										/>
+										<Route
+											exact
+											path='/everyday/women'
+											component={Everydaywomen}
+										/>
+										<Route
+											exact
+											path='/culture/women'
+											component={Culturewomen}
+										/>
+										<Route
+											exact
+											path='/leisure/women'
+											component={Leisurewomen}
+										/>
+										<Route path='/women' component={Women} />
+										<Route path='/cart/overview' component={Cart} />
+										<Route path='/users/signup' component={SignUp} />
+										<Route path='/users/signin' component={SignIn} />
+										<PrivateRoute
+											exact
+											path='/users/auth/dashboard'
+											component={Dashboard}
+											auth={context.auth}
+										/>
 
-									<PrivateRoute
-										exact
-										path='/cart/checkout'
-										component={CheckOut}
-										auth={context.auth}
-									/>
+										<PrivateRoute
+											exact
+											path='/cart/checkout'
+											component={CheckOut}
+											auth={context.auth}
+										/>
+									</SearchContextProvider>
 								</OrderContextProvider>
 							</UserContextProvider>
 						</CartContextProvider>

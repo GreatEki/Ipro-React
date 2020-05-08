@@ -1,28 +1,23 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import Navbar from './templates/Navbar';
 import NavGeneral from './templates/NavGeneral';
-import { ProductsContext } from '../contexts/ProductsContext';
-import { Link } from 'react-router-dom';
 import Pagination from './templates/Pagination';
-import Footer from './templates/Footer';
 import CartAlert from './templates/CartAlert';
+import { Link } from 'react-router-dom';
+import { SearchContext } from '../contexts/SearchContext';
+import { ProductsContext } from '../contexts/ProductsContext';
 
-const Shop = () => {
-	const { getAllProducts, shopProducts, currentPage } = useContext(
-		ProductsContext
-	);
+const Search = (props) => {
+	const val = props.match.params.val;
 
-	useEffect(() => {
-		window.scrollTo(0, 0);
-
-		//eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	const { searchProduct, searchRes } = useContext(SearchContext);
+	const { currentPage } = useContext(ProductsContext);
 
 	useEffect(() => {
-		getAllProducts();
+		searchProduct(val);
 
 		//eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [currentPage]);
+	}, [val, currentPage]);
 	return (
 		<>
 			<div className='wrapper'>
@@ -35,9 +30,9 @@ const Shop = () => {
 							Home >{' '}
 						</Link>{' '}
 						<Link to='/shop' className='site-font text-decoration-none'>
-							SHOP >{' '}
+							Search Result >{' '}
 						</Link>{' '}
-						<h1 className='site-font my-4'>SHOP </h1>
+						<h1 className='site-font my-4'> {val} </h1>
 					</div>
 				</section>
 
@@ -45,7 +40,7 @@ const Shop = () => {
 					<CartAlert />
 					<div className='row mt-5 px-lg-5 pt-5'>
 						{/*============================ Products Display Starts Here ==========================*/}
-						{shopProducts.map((product) => {
+						{searchRes.map((product) => {
 							return (
 								<div
 									className='col-md-6 col-sm-6 col-lg-2 shop-gallery'
@@ -96,11 +91,9 @@ const Shop = () => {
 						</div>
 					</div>
 				</main>
-
-				<Footer />
 			</div>
 		</>
 	);
 };
 
-export default Shop;
+export default Search;
