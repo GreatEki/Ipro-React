@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './templates/Navbar';
 import { Link } from 'react-router-dom';
 import Footer from './templates/Footer';
 import NavGeneral from './templates/NavGeneral';
+import HomeEveryDay from './templates/HomeEveryDay';
+import HomeBusiness from './templates/HomeBusiness';
+import HomeNative from './templates/HomeNative';
+import HomeBrandNew from './templates/HomeBrandNew';
 import '../css/home.css';
 
 const Home = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+
+		//eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 	return (
 		<div className='m-0 p-0 wrapper bg-home container-fluid'>
 			<Navbar />
@@ -63,256 +72,31 @@ const Home = () => {
 					{/* ============================== Casual Wears Section ================================*/}
 					<h1 className=' card-title p-4'>Everyday </h1>
 					<hr />
-					<div className='row p-lg-4 card-body'>
-						<div className='col-lg-3 col-md-6 col-12 mb-3'>
-							<Link to='/'>
-								<img
-									className='front-img img-fluid'
-									src={'/products/purple-sweet-casaul-8500.jpg'}
-									alt='banner'
-								/>
-							</Link>
-							<p className='text-dark text-wrap itemPara'>
-								Black Short Jeans Men{' '}
-							</p>
-							<span className='price'>
-								{' '}
-								<del className='del'>N </del>7, 000
-							</span>
-						</div>
 
-						<div className='col-lg-3 col-md-6 col-12 mb-3'>
-							<Link to='/'>
-								<img
-									className='front-img img-fluid'
-									src={'/products/venice-polo.jpg'}
-									alt='banner'
-								/>
-							</Link>
-							<p className='text-dark text-wrap itemPara'>
-								Black Short Jeans Men{' '}
-							</p>
-							<span className='price'>
-								{' '}
-								<del className='del'>N </del>7, 000
-							</span>
-						</div>
-
-						<div className='col-lg-3 col-md-6 col-12 mb-3 '>
-							<Link to='/'>
-								<img
-									className='front-img img-fluid'
-									src={'/products/jessica-castro-449555-unsplash.jpg'}
-									alt='banner'
-								/>
-							</Link>
-							<p className='text-dark text-wrap itemPara'>
-								Black Short Jeans Men{' '}
-							</p>
-							<span className='price'>
-								{' '}
-								<del className='del'>N </del>7, 000
-							</span>
-						</div>
-
-						<div className='col-lg-3 col-md-6 col-12 mb-3'>
-							<Link to='/'>
-								<img
-									className='front-img img-fluid'
-									src={'/products/paradise-polo.jpg'}
-									alt='banner'
-								/>
-							</Link>
-
-							<p className='text-dark text-wrap itemPara'>
-								Black Short Jeans Men{' '}
-							</p>
-							<span className='price'>
-								{' '}
-								<del className='del'>N </del>7, 000
-							</span>
-						</div>
-					</div>
-
+					<HomeEveryDay />
 					{/* =================================== End of Casual Wears =============================================*/}
 
 					{/*================================== Business and Corporate Section ======================================*/}
 					<h1 className=' card-title p-4'>Business </h1>
 					<hr />
-					<div className='row card-body'>
-						<div className='col-lg-6 businessBanner col-12 mb-3'>
-							<h2 className='text-white pt-3'> Business Trends</h2>
-							<span className='text-white d-block'> New Design 2020</span>
-							<small className='text-white d-block'> Shop Business</small>
-						</div>
 
-						<div className='col-lg-3 col-md-6 col-12 mb-3'>
-							<Link to='/'>
-								<img
-									className='front-img img-fluid'
-									src={'/products/javier-reyes.jpg'}
-									alt='banner'
-								/>
-							</Link>
-							<p className='text-dark text-wrap itemPara'>
-								Black Short Jeans Men{' '}
-							</p>
-							<span className='price'>
-								{' '}
-								<del className='del'>N </del>7, 000
-							</span>
-						</div>
-
-						<div className='col-lg-3 col-md-6 col-12 mb-3'>
-							<Link to='/'>
-								<img
-									className='front-img'
-									src={'/products/illumination-marketing.jpg'}
-									alt='banner'
-								/>
-							</Link>
-							<p className='text-dark text-wrap itemPara'>
-								Black Short Jeans Men{' '}
-							</p>
-							<span className='price'>
-								{' '}
-								<del className='del'>N </del>7, 000
-							</span>
-						</div>
-					</div>
-
+					<HomeBusiness />
 					{/*=================================== End of Business and Corporate =======================================*/}
 
 					{/* ================================== Nativity and Culture ================================================ */}
 
 					<h1 className='card-title p-4'> Culture</h1>
 					<hr />
-					<div className='row card-body'>
-						<div className='col-lg-3 col-md-6 col-12 mb-3'>
-							<Link to='/'>
-								<img
-									className='front-img img-fluid'
-									src={'/products/sleeveless-woman.jpg'}
-									alt='banner'
-								/>
-							</Link>
-							<p className='text-dark text-wrap itemPara'>
-								Black Short Jeans Men{' '}
-							</p>
-							<span className='price'>
-								{' '}
-								<del className='del'>N </del>7, 000
-							</span>
-						</div>
 
-						<div className='col-lg-3 col-md-6 col-12 mb-3'>
-							<Link to='/'>
-								<img
-									className='front-img img-fluid'
-									src={'/products/tight-fitted-ankara.jpg'}
-									alt='banner'
-								/>
-							</Link>
-							<p className='text-dark text-wrap itemPara'>
-								Black Short Jeans Men{' '}
-							</p>
-							<span className='price'>
-								{' '}
-								<del className='del'>N </del>7, 000
-							</span>
-						</div>
-
-						<div className='col-lg-6 col-12 mb-3 nativeBanner'>
-							<div>
-								<h2 className='text-white pt-3 text-center'>
-									{' '}
-									Owambe and Elite Cultural Wears
-								</h2>
-
-								<p className='text-center text-warning paraIntro'>
-									{' '}
-									Be the <i className='fas fa-star'></i> of the party
-								</p>
-							</div>
-						</div>
-					</div>
-
+					<HomeNative />
 					{/* ==================================== End of Nativity and Culture =====================================*/}
 
 					{/*========================= Brand New Section =========================*/}
 
 					<h1 className=' card-title p-4'>Brand New</h1>
 					<hr />
-					<div className='row p-lg-4 card-body'>
-						<div className='col-lg-3 col-md-6 col-12 mb-3'>
-							<Link to='/'>
-								<img
-									className='front-img img-fluid'
-									src={'/products/shirt-jeans-casual-women-1.jpg'}
-									alt='banner'
-								/>
-							</Link>
-							<p className='text-dark text-wrap itemPara'>
-								Black Short Jeans Men{' '}
-							</p>
-							<span className='price'>
-								{' '}
-								<del className='del'>N </del>7, 000
-							</span>
-						</div>
 
-						<div className='col-lg-3 col-md-6 col-12 mb-3'>
-							<Link to='/'>
-								<img
-									className='front-img img-fluid'
-									src={'/products/shirt-jeans-men-1.jpg'}
-									alt='banner'
-								/>
-							</Link>
-							<p className='text-dark text-wrap itemPara'>
-								Black Short Jeans Men{' '}
-							</p>
-							<span className='price'>
-								{' '}
-								<del className='del'>N </del>7, 000
-							</span>
-						</div>
-
-						<div className='col-lg-3 col-md-6 col-12 mb-3 '>
-							<Link to='/'>
-								<img
-									className='front-img img-fluid'
-									src={'/products/jessica-castro-449555-unsplash.jpg'}
-									alt='banner'
-								/>
-							</Link>
-							<p className='text-dark text-wrap itemPara'>
-								Black Short Jeans Men{' '}
-							</p>
-							<span className='price'>
-								{' '}
-								<del className='del'>N </del>7, 000
-							</span>
-						</div>
-
-						<div className='col-lg-3 col-md-6 col-12 mb-3'>
-							<Link to='/'>
-								<img
-									className='front-img img-fluid'
-									src={'/products/shirt-jeans-men-black-1.jpg'}
-									alt='banner'
-								/>
-							</Link>
-
-							<p className='text-dark text-wrap itemPara'>
-								Black Short Jeans Men{' '}
-							</p>
-							<span className='price'>
-								{' '}
-								<del className='del'>N </del>7, 000
-							</span>
-						</div>
-					</div>
+					<HomeBrandNew />
 				</section>
 
 				{/*=================================== Advert Card Section  =============================================*/}
