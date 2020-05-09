@@ -2,3 +2,6 @@
 
 config/config.js
 # This would ignore the config.js file while other files within the 'config' folder would be staged for cmmit
+
+
+config/database.js
