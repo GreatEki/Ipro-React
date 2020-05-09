@@ -41,6 +41,7 @@ const NavGeneral = () => {
 									type='text'
 									className='form-control'
 									onChange={(e) => handleInput(e)}
+									required
 									placeholder='Search for products, brands and categories'
 									aria-label='Input group example'
 									aria-describedby='btnGroupAddon2'

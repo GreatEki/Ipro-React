@@ -40,45 +40,51 @@ const Search = (props) => {
 					<CartAlert />
 					<div className='row mt-5 px-lg-5 pt-5'>
 						{/*============================ Products Display Starts Here ==========================*/}
-						{searchRes.map((product) => {
-							return (
-								<div
-									className='col-md-6 col-sm-6 col-lg-2 shop-gallery'
-									key={product.id}>
-									<Link
-										to={`/product/${product.title}/${product.id}`}
-										className='card  item-card mb-3'>
-										<div className='row no-gutters'>
-											<div className='col-6 col-lg-12'>
-												<img
-													src={`/products/${product.imagePath}`}
-													className='card-img'
-													alt='product-name'
-												/>
-											</div>
-											<div className='col-6 col-lg-12'>
-												<div className='card-body'>
-													<small className='card-title'>{product.title}</small>
-													<h5 className='card-text'>
-														<del>N</del> {product.price}
-													</h5>
-													<p className='card-text'>
-														<small className='text-muted'>
-															Available in Stock
+						{searchRes.length < 1 ? (
+							<h1 className='text-center'> No products Found </h1>
+						) : (
+							searchRes.map((product) => {
+								return (
+									<div
+										className='col-md-6 col-sm-6 col-lg-2 shop-gallery'
+										key={product.id}>
+										<Link
+											to={`/product/${product.title}/${product.id}`}
+											className='card  item-card mb-3'>
+											<div className='row no-gutters'>
+												<div className='col-6 col-lg-12'>
+													<img
+														src={`/products/${product.imagePath}`}
+														className='card-img'
+														alt='product-name'
+													/>
+												</div>
+												<div className='col-6 col-lg-12'>
+													<div className='card-body'>
+														<small className='card-title'>
+															{product.title}
 														</small>
-													</p>
-													<button
-														to={`/product/${product.title}/${product.id}`}
-														className='btn btn-block btn-outline-success text-center'>
-														Buy{' '}
-													</button>
+														<h5 className='card-text'>
+															<del>N</del> {product.price}
+														</h5>
+														<p className='card-text'>
+															<small className='text-muted'>
+																Available in Stock
+															</small>
+														</p>
+														<button
+															to={`/product/${product.title}/${product.id}`}
+															className='btn btn-block btn-outline-success text-center'>
+															Buy{' '}
+														</button>
+													</div>
 												</div>
 											</div>
-										</div>
-									</Link>
-								</div>
-							);
-						})}
+										</Link>
+									</div>
+								);
+							})
+						)}
 
 						{/*============================== End of Products Display ===============================*/}
 

@@ -15,7 +15,7 @@ const SearchContextProvider = (props) => {
 
 	const searchProduct = async (val) => {
 		try {
-			const res = await Axios.get(`${ENDPOINT}/products/?category=${val}`);
+			const res = await Axios.get(`${ENDPOINT}/products/?q=${val}`);
 
 			setSearchRes(res.data);
 		} catch (err) {
