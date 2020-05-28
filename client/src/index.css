@@ -43,6 +43,10 @@ p {
 .site-font {
 	font-family: var(--site-font);
 }
+
+.h-center {
+	margin: 0 auto;
+}
 /* ============== Wrapper Classes ==============*/
 .wrapper {
 	overflow-x: hidden;
@@ -171,39 +175,39 @@ p {
 }
 /* =========================== End of HomeCategories Styling ============================== */
 
-/* ***************************************
-        **************************************
-        *************************************
-         MEDIUM SIZED SCREENs (Ipads and Tablets)
-    */
-@media (min-width: 768px) and (max-width: 1500px) {
-	* {
-		box-sizing: border-box;
-	}
-	html {
-		overflow-x: hidden;
-	}
-
-	.input-group.search-input {
-		width: 60% !important;
-	}
-
-	footer .footer-list {
-		visibility: hidden;
-	}
-
-	small.card-title {
-		font-size: 9px;
-		font-weight: bold;
-	}
+/* ===== Error Component Styling  ===== */
+.ErrorBox {
+	width: 100vw;
+	height: 100vh;
 }
 
+.ErrorMsg {
+	height: 70vh;
+	top: 15vh;
+	width: 50vw;
+}
+
+.fa-exclamation-triangle {
+	color: #e6224d;
+	margin-left: 10.01vw;
+	padding: 20px;
+}
+
+.retry {
+	margin-left: 30%;
+	width: 40% !important;
+	background: green;
+	font-family: var(--Cinzel);
+}
+
+/* ===== End of Error Component Styling =====  */
+
 /* ***************************************
         **************************************
         *************************************
-         SMALL SCREEN PHONES (ANDROID AND IPHONES)
+         SMALL SCREENS:  SMall PHONES (ANDROID AND IPHONES)
     */
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 100px) and (max-width: 575px) {
 	* {
 		box-sizing: border-box;
 	}
@@ -234,5 +238,96 @@ p {
 	}
 	[data-aos] {
 		visibility: visible;
+	}
+	.ErrorBox {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+
+	.ErrorMsg {
+		min-height: 100% !important;
+		top: 0vh !important;
+	}
+
+	.fa-exclamation-triangle {
+		margin-left: 18vw;
+	}
+}
+
+/* END OF SMALL SCREENS: PHONES (ANDROID AND IPHONES)*/
+
+/*  
+	 SMALL SCREEN: BIG PHONES
+	   */
+@media (min-width: 576px) and (max-width: 767px) {
+	.ErrorBox {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+
+	.ErrorMsg {
+		min-height: 100% !important;
+		top: 0vh !important;
+	}
+
+	.fa-exclamation-triangle {
+		margin-left: 30vw;
+	}
+}
+/* 
+	 END OF BIGGER PHONES */
+
+/* 
+         MEDIUM SCREENs:  Ipads and Tablets
+    */
+@media (min-width: 768px) and (max-width: 1023px) {
+	* {
+		box-sizing: border-box;
+	}
+	html {
+		overflow-x: hidden;
+	}
+
+	.input-group.search-input {
+		width: 60% !important;
+	}
+
+	footer .footer-list {
+		visibility: hidden;
+	}
+
+	small.card-title {
+		font-size: 9px;
+		font-weight: bold;
+	}
+
+	.ErrorMsg {
+		min-width: 75%;
+		margin-left: 12%;
+		height: 75vh;
+	}
+
+	.fa-exclamation-triangle {
+		margin-left: 30%;
+	}
+
+	.ErrorBox {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+}
+
+/* END OF MEDIUM SCREENs:  Ipads and Tablets */
+
+/* Wide Screen: Ipad Pro and Small Laptops */
+@media (min-width: 1024px) and (max-width: 1279px) {
+	.ErrorMsg {
+		min-width: 75%;
+		margin-left: 12%;
+		height: 80vh;
+	}
+
+	.fa-exclamation-triangle {
+		margin-left: 37%;
 	}
 }

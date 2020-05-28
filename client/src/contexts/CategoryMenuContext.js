@@ -18,7 +18,12 @@ const CategoryMenuContextProvider = (props) => {
 
 			setLeisure(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 
@@ -30,7 +35,12 @@ const CategoryMenuContextProvider = (props) => {
 
 			setBusiness(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 	const fetchCulture = async () => {
@@ -39,7 +49,12 @@ const CategoryMenuContextProvider = (props) => {
 
 			setCulture(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 	const fetchEveryDay = async () => {
@@ -50,7 +65,12 @@ const CategoryMenuContextProvider = (props) => {
 
 			setEveryDay(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 	return (

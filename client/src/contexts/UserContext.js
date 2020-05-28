@@ -64,7 +64,14 @@ const UserContextProvider = (props) => {
 			console.log(res);
 			setMsg(res.data.message);
 		} catch (err) {
-			setMsg(err.message);
+			if (err.response.status === 500) {
+				setMsg('');
+				history.push('/500');
+			} else {
+				const errObj = err.response.data;
+
+				setMsg(errObj.message);
+			}
 		}
 	};
 
@@ -98,11 +105,13 @@ const UserContextProvider = (props) => {
 
 			history.push('/users/auth/dashboard');
 		} catch (err) {
-			if (err) {
-				err.message = 'Invalid Credentials';
-				setMsg(err.message);
-			} else {
+			if (err.response.status === 500) {
 				setMsg('');
+				history.push('/500');
+			} else {
+				const errObj = err.response.data;
+
+				setMsg(errObj.message);
 			}
 		}
 	};

@@ -9,7 +9,7 @@ const Product = (props) => {
 	const id = props.match.params.id;
 
 	const { getProduct, product } = useContext(ProductsContext);
-	const { addToCart, handleQty, handleSize, size, qty, sizeStyle } = useContext(
+	const { addToCart, handleQty, handleSize, size, qty } = useContext(
 		CartContext
 	);
 

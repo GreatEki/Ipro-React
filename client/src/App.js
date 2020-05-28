@@ -31,6 +31,7 @@ import PrivateRoute from './components/users/PrivateRoute';
 import Business from './components/Business';
 import Culture from './components/Culture';
 import EveryDay from './components/Everyday';
+import ErrorPage from './components/templates/Error';
 function App() {
 	return (
 		<div className='App'>
@@ -91,6 +92,7 @@ function App() {
 											<Route path='/cart/overview' component={Cart} />
 											<Route path='/users/signup' component={SignUp} />
 											<Route path='/users/signin' component={SignIn} />
+											<Route path='/500' component={ErrorPage} />
 											<PrivateRoute
 												exact
 												path='/users/auth/dashboard'

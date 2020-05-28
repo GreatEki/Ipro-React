@@ -50,7 +50,7 @@ const OrderContextProvider = (props) => {
 			setOrderAlert(res.data.message);
 			console.log(res.data.message);
 		} catch (err) {
-			//history.push('/');
+			// history.push('/');
 			setOrderAlert(err.message);
 		}
 	};

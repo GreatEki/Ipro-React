@@ -34,7 +34,12 @@ const ProductsContextProvider = (props) => {
 			setEveryDayMen(res.data);
 			//console.log(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 
@@ -49,7 +54,12 @@ const ProductsContextProvider = (props) => {
 
 			setBusinessMen(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 
@@ -64,7 +74,12 @@ const ProductsContextProvider = (props) => {
 
 			setCultureMen(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 	//DESC: Fetches products for our LeisureMen Component
@@ -78,7 +93,12 @@ const ProductsContextProvider = (props) => {
 
 			setLeisureMen(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 
@@ -93,7 +113,12 @@ const ProductsContextProvider = (props) => {
 
 			setBusinessWomen(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 	//DESC: Fetches products for our cultureWomen Component
@@ -107,7 +132,12 @@ const ProductsContextProvider = (props) => {
 
 			setCultureWomen(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 
@@ -122,7 +152,12 @@ const ProductsContextProvider = (props) => {
 
 			setEveryDayWomen(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 	//DESC: Fetches products for our everyDayWomen Component
@@ -136,7 +171,12 @@ const ProductsContextProvider = (props) => {
 
 			setLeisureWomen(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 
@@ -149,7 +189,12 @@ const ProductsContextProvider = (props) => {
 
 			setProduct(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 

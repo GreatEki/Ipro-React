@@ -27,7 +27,12 @@ const SearchContextProvider = (props) => {
 
 			setSearchRes(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 
@@ -40,7 +45,12 @@ const SearchContextProvider = (props) => {
 
 			setHomeEveryDayItem(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 
@@ -51,7 +61,12 @@ const SearchContextProvider = (props) => {
 
 			setHomeBusinessItem(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 
@@ -62,7 +77,12 @@ const SearchContextProvider = (props) => {
 
 			setHomeNativeItem(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 
@@ -75,7 +95,12 @@ const SearchContextProvider = (props) => {
 
 			setHomeBrandNewItem(res.data);
 		} catch (err) {
-			console.log(err.message);
+			if (err.response.status === 500) {
+				props.history.push('/500');
+			} else {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 	return (

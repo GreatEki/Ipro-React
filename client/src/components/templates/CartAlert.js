@@ -12,7 +12,11 @@ const CartAlert = () => {
 						<div className=' alert alert-light'>
 							<i className='fas fa-thumbs-up fa-2x'></i>
 							<h5 className='text-center text-success'>{msgPop.message} </h5>
-							<img src={`/products/${msgPop.image}`} className='cart-image' />
+							<img
+								src={`/products/${msgPop.image}`}
+								className='cart-image'
+								alt='pic'
+							/>
 							<p className='d-inline'> {msgPop.title}</p>
 							<p className='text-center text-success'>
 								{' '}
