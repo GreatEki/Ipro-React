@@ -4,7 +4,7 @@ const ErrorPage = () => {
 	return (
 		<div>
 			<div className='row bg-home ErrorBox'>
-				<div className='col-12 col-md-4 offset-md-4 bg-white ErrorMsg'>
+				<div className='col-12 col-md-4 offset-md-4 bg-white ErrorMsg '>
 					<div className=''>
 						{' '}
 						<i className='fas fa-exclamation-triangle fa-9x'></i>

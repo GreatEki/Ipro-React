@@ -22,7 +22,7 @@ const Women = () => {
 								<h1>
 									Women's<span>Place</span>
 								</h1>
-								<Link href=''>Elegance | Classy</Link>
+								<Link to='/women'>Elegance | Classy</Link>
 							</div>
 						</div>
 					</div>

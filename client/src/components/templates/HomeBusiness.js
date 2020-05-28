@@ -19,9 +19,9 @@ const HomeBusiness = () => {
 					<small className='text-white d-block'> Shop Business</small>
 				</div>
 
-				{homeBusinessItem.map((product) => {
+				{homeBusinessItem.map((product, index) => {
 					return (
-						<div className='col-lg-3 col-md-6 col-12 mb-3 HomeProd'>
+						<div className='col-lg-3 col-md-6 col-12 mb-3 HomeProd' key={index}>
 							<Link to={`/product/${product.title}/${product.id}`}>
 								<img
 									className='front-img img-fluid'

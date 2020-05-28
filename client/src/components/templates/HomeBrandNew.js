@@ -13,9 +13,9 @@ const HomeBrandNew = () => {
 	return (
 		<>
 			<div className='row p-lg-4 card-body'>
-				{homeBrandNewItem.map((product) => {
+				{homeBrandNewItem.map((product, index) => {
 					return (
-						<div className='col-lg-3 col-md-6 col-12 mb-3 HomeProd'>
+						<div className='col-lg-3 col-md-6 col-12 mb-3 HomeProd' key={index}>
 							<Link to={`/product/${product.title}/${product.id}`}>
 								<img
 									className='front-img img-fluid'

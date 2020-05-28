@@ -35,24 +35,21 @@ const Navwomen = () => {
 				</ul>
 				<div className='container-fluid search-bar m-0 p-0'>
 					<div className='nav '>
-						<form className='form-inline input-group  justify-content-center p-2 my-2 my-lg-0'>
-							<div className='input-group search-input'>
+						<form className='justify-content-center p-2 my-2 my-lg-0 w-100'>
+							<div className='d-flex flex-row searchBar justify-content-center'>
 								<input
-									type='text'
+									className='d-inline m-0 searchText'
 									onChange={(e) => handleInput(e)}
-									className='form-control'
+									value={val}
+									required
 									placeholder='Search for products, brands and categories'
-									aria-label='Input group example'
-									aria-describedby='btnGroupAddon2'
 								/>
-								<div className='input-group-prepend'>
-									<Link
-										to={`/search/${val}`}
-										className='input-group-text bg-success text-white'
-										id='btnGroupAddon2'>
-										<i className='fas fa-search'></i>
-									</Link>
-								</div>
+								<Link
+									to={`/search/${val}`}
+									className='d-inline m-0 p-2 searchLink'
+									role='btn'>
+									<i className='fas fa-search 2x text-center'></i>
+								</Link>
 							</div>
 						</form>
 					</div>
