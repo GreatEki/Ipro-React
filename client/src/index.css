@@ -51,6 +51,7 @@ p {
 
 .content-wrapper {
 	background-color: var(--bg-grey);
+	min-height: 100vh;
 }
 
 .bg-home {
@@ -182,6 +183,11 @@ p {
 	html {
 		overflow-x: hidden;
 	}
+
+	.input-group.search-input {
+		width: 60% !important;
+	}
+
 	footer .footer-list {
 		visibility: hidden;
 	}
@@ -203,6 +209,13 @@ p {
 	}
 	html {
 		overflow-x: hidden;
+	}
+
+	.sm-nav {
+		display: none;
+	}
+	.input-group.search-input {
+		width: 40% !important;
 	}
 
 	.ipro {

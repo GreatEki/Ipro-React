@@ -36,24 +36,20 @@ const NavGeneral = () => {
 				<div className='container-fluid search-bar m-0 p-0'>
 					<div className='nav '>
 						<form className='form-inline input-group  justify-content-center p-2 my-2 my-lg-0'>
-							<div className='input-group search-input'>
+							<div className='input-group search-input m-0'>
 								<input
 									type='text'
-									className='form-control'
+									className='form-control searchText d-inline'
 									onChange={(e) => handleInput(e)}
 									required
 									placeholder='Search for products, brands and categories'
-									aria-label='Input group example'
-									aria-describedby='btnGroupAddon2'
 								/>
-								<div className='input-group-prepend'>
-									<Link
-										to={`/search/${val}`}
-										className='input-group-text bg-success text-white'
-										id='btnGroupAddon2'>
-										<i className='fas fa-search'></i>
-									</Link>
-								</div>
+								<Link
+									to={`/search/${val}`}
+									className='input-group-text bg-success text-white d-inline'
+									id='btnGroupAddon2'>
+									<i className='fas fa-search'></i>
+								</Link>
 							</div>
 						</form>
 					</div>

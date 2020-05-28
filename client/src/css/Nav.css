@@ -25,7 +25,21 @@ form.form-inline {
 }
 
 .search-input {
-	width: 30% !important;
+	width: 100% !important;
+	background: green;
+}
+
+.searchText {
+	width: 50% !important;
+	padding: 5px;
+	outline: none;
+	border: hidden;
+	margin: 0 auto;
+}
+
+.searchText:focus {
+	border: none !important;
+	outline: none !important;
 }
 
 .logo {
