@@ -13,7 +13,7 @@
 }
 
 .search-bar {
-	background-color: lightgoldenrodyellow;
+	background-color: #f7e783;
 }
 
 .nav.justify-content-center {
@@ -24,22 +24,30 @@ form.form-inline {
 	width: 100%;
 }
 
-.search-input {
+.searchBar {
 	width: 100% !important;
-	background: green;
 }
 
 .searchText {
 	width: 50% !important;
-	padding: 5px;
+	padding: 10px;
 	outline: none;
-	border: hidden;
+	border: none;
 	margin: 0 auto;
 }
 
 .searchText:focus {
 	border: none !important;
 	outline: none !important;
+}
+
+.searchLink {
+	background-color: green;
+}
+
+.fa-search {
+	color: white;
+	width: 30px !important;
 }
 
 .logo {
@@ -68,4 +76,13 @@ form.form-inline {
 	font-size: 18px;
 	font-family: Germania One, cursive;
 	font-weight: 400;
+}
+
+@media (min-width: 100px) and (max-width: 767px) {
+	.sm-nav {
+		display: none;
+	}
+	.searchText {
+		width: 75% !important;
+	}
 }

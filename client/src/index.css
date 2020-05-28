@@ -211,13 +211,6 @@ p {
 		overflow-x: hidden;
 	}
 
-	.sm-nav {
-		display: none;
-	}
-	.input-group.search-input {
-		width: 40% !important;
-	}
-
 	.ipro {
 		font-size: 26px;
 	}

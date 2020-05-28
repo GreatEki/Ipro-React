@@ -35,20 +35,20 @@ const NavGeneral = () => {
 				</ul>
 				<div className='container-fluid search-bar m-0 p-0'>
 					<div className='nav '>
-						<form className='form-inline input-group  justify-content-center p-2 my-2 my-lg-0'>
-							<div className='input-group search-input m-0'>
+						<form className='justify-content-center p-2 my-2 my-lg-0 w-100'>
+							<div className='d-flex flex-row searchBar justify-content-center'>
 								<input
-									type='text'
-									className='form-control searchText d-inline'
+									className='d-inline m-0 searchText'
 									onChange={(e) => handleInput(e)}
+									value={val}
 									required
 									placeholder='Search for products, brands and categories'
 								/>
 								<Link
 									to={`/search/${val}`}
-									className='input-group-text bg-success text-white d-inline'
-									id='btnGroupAddon2'>
-									<i className='fas fa-search'></i>
+									className='d-inline m-0 p-2 searchLink'
+									role='btn'>
+									<i className='fas fa-search 2x text-center'></i>
 								</Link>
 							</div>
 						</form>
