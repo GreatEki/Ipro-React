@@ -24,7 +24,7 @@ const Home = () => {
 				<section className='card mx-lg-5 my-5 mx-md-0'>
 					{/*========================== Intro Section ===================================*/}
 					<div className='row p-lg-4 card-body'>
-						<div className='col-md-6 col-12 mb-3 leftSideIntro px-5'>
+						<div className='col-md-6 col-12 mb-3 leftSideIntro'>
 							<h1 className='text-right text-wrap'> Everything Clothing</h1>
 
 							<p className='paraIntro'>
@@ -32,13 +32,12 @@ const Home = () => {
 								Your fav <i className='fas fa-smile fa-2x'></i> fashion store
 							</p>
 
-							<Link to='/shop' className='idleBtn text-center'>
-								{' '}
-								SHOP NOW
-							</Link>
+							{/* <h2 to='/shop' className='idleBtn text-center'>
+								Your Clothing Plug
+							</h2> */}
 						</div>
 
-						<div className='col-md-6 col-12 mb-3 rightSideIntro px-5'>
+						<div className='col-md-6 col-12 mb-3  rightSideIntro px-5'>
 							<div className='row'>
 								<div className='col-md-6 col-6 Polo py-md-3 py-3 mb-5'>
 									Polo

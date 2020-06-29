@@ -24,7 +24,7 @@
 }
 
 .leftSideIntro {
-	background-image: url('/products/light-purple-women.jpg');
+	background-image: url('/images/Ifedayo-Fashion.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 700px; /*Set ipad size to 400px*/
@@ -38,27 +38,30 @@
 
 .idleBtn {
 	background-color: lightgray;
-	width: 350px;
 	font-family: var(--ad-text);
 	font-size: 18px;
-	color: black;
-	border: 4px solid white;
+	/* width: 770px; */
+	color: burlywood;
+	background-color: black;
+	border: 4px solid black;
 	position: relative;
-	top: 160px;
-	left: 68%;
+	top: 20px;
 	padding: 30px 40px;
 	z-index: 1;
 }
 
 .idleBtn:hover {
 	text-decoration: none;
-	color: black;
+	color: white;
+	background-color: black;
+	border: 4px solid white;
 }
 
 .paraIntro {
 	font-size: 18px;
 	text-align: end;
 	font-family: Lucida Calligraphy;
+	color: burlywood;
 }
 
 .rightSideIntro .Polo {
@@ -141,6 +144,9 @@
 @media (min-width: 1024px) and (max-width: 1270px) {
 	.leftSideIntro {
 		padding-left: 10px !important;
+		background-size: cover;
+		background-repeat: round;
+		/* height: 200em; */
 	}
 	.idleBtn {
 		top: 490px;
@@ -156,6 +162,16 @@
 @media (min-width: 767px) and (max-width: 1023px) {
 	.leftSideIntro {
 		padding-left: 10px !important;
+		background-size: cover;
+		background-repeat: round;
+	}
+
+	.leftSideIntro h1 {
+		font-size: 32px;
+	}
+
+	.paraIntro {
+		font-size: 14px;
 	}
 	.idleBtn {
 		top: 430px;
@@ -173,11 +189,47 @@
 }
 /*===================== End of Medium Screen Sizes ========================*/
 
-/*==================== Small Screen Sizes ==================== */
+/*==================== Small Screen Sizes : For Small Phones ==================== */
 
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 100px) and (max-width: 575px) {
 	.leftSideIntro {
 		padding-left: 10px !important;
+		background-size: 100%;
+		height: 400px;
+	}
+
+	.leftSideIntro h1 {
+		font-size: 26px;
+	}
+
+	.paraIntro {
+		font-size: 11px;
+	}
+	.idleBtn {
+		top: 420px;
+		left: 0.5%;
+		padding: 25px 40px;
+	}
+
+	.support {
+		margin: 15px 19px;
+		padding: 10px 10px;
+	}
+
+	.support .site-ad-text {
+		font-size: 20px;
+	}
+	.support .small-ad-text {
+		font-size: 14px;
+	}
+}
+/*==================== End of  Small Screen Sizes : For Big Phones ==================== */
+
+@media (min-width: 576px) and (max-width: 767px) {
+	.leftSideIntro {
+		padding-left: 10px !important;
+		background-size: 100%;
+		height: 500px;
 	}
 	.idleBtn {
 		top: 420px;

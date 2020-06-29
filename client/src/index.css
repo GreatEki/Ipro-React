@@ -330,4 +330,12 @@ p {
 	.fa-exclamation-triangle {
 		margin-left: 37%;
 	}
+
+	small.card-title {
+		font-size: 10px;
+	}
+
+	h5.card-text {
+		font-size: 14px !important;
+	}
 }

@@ -20,6 +20,7 @@ const Shop = () => {
 
 	useEffect(() => {
 		getAllProducts();
+		window.scrollTo(0, 0);
 
 		//eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentPage]);
@@ -32,10 +33,10 @@ const Shop = () => {
 				<section className='container-fluid bg-white'>
 					<div className='py-3'>
 						<Link to='/' className='site-font text-decoration-none'>
-							Home >{' '}
+							Home{' '}
 						</Link>{' '}
 						<Link to='/shop' className='site-font text-decoration-none'>
-							SHOP >{' '}
+							SHOP{' '}
 						</Link>{' '}
 						<h1 className='site-font my-4'>SHOP </h1>
 					</div>
@@ -43,12 +44,12 @@ const Shop = () => {
 
 				<main className='container-fluid content-wrapper justify-content-center px-lg-5 px-md-2'>
 					<CartAlert />
-					<div className='row mt-5 px-lg-5 pt-5'>
+					<div className='row mt-5 px-lg-5 px-5  pt-5'>
 						{/*============================ Products Display Starts Here ==========================*/}
 						{shopProducts.map((product) => {
 							return (
 								<div
-									className='col-md-6 col-sm-6 col-lg-2 shop-gallery'
+									className='col-md-6 col-lg-3 shop-gallery '
 									key={product.id}>
 									<Link
 										to={`/product/${product.title}/${product.id}`}

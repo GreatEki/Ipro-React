@@ -11,6 +11,7 @@ const Cart = (props) => {
 
 	useEffect(() => {
 		getCartItems();
+		window.scrollTo(0, 0);
 
 		//eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
@@ -24,10 +25,10 @@ const Cart = (props) => {
 				<section className='container-fluid bg-white'>
 					<div className='py-3'>
 						<Link to='/' className='site-font text-decoration-none'>
-							Home >{' '}
+							Home{' '}
 						</Link>{' '}
 						<Link to='/products' className='site-font text-decoration-none'>
-							Product >{' '}
+							Product{' '}
 						</Link>{' '}
 						<Link
 							to='/products/checkout'
@@ -82,7 +83,9 @@ const Cart = (props) => {
 
 										<div className='col-6 col-md-2 m-0 p-md-0'>
 											<div className='cart-title-bar'> Action</div>
-											<Link className='text-info detail cart-action mt-md-4 pt-5'>
+											<Link
+												to='/'
+												className='text-info detail cart-action mt-md-4 pt-5'>
 												{' '}
 												Save Item for Later
 											</Link>
