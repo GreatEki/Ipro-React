@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const jwtKey = require('../../config/config').jwtKey;
+// const jwtKey = require('../../config/config').jwtKey;
 const User = require('../models/UserModel');
 
 //DESC: Signs up our user to our database
@@ -86,7 +86,7 @@ exports.signin = async (req, res) => {
 				//3. an expiration duration
 				const token = await jwt.sign(
 					{ email: user.email, id: user._id },
-					jwtKey,
+					process.env.JWT_KEY,
 					{
 						expiresIn: '1h',
 					}

@@ -22,10 +22,10 @@ const Culturemen = () => {
 				<section className='container-fluid bg-white'>
 					<div className='py-3'>
 						<Link to='/' className='site-font text-decoration-none'>
-							Home >{' '}
+							Home &gt;{' '}
 						</Link>{' '}
 						<Link to='/men' className='site-font text-decoration-none'>
-							Men >{' '}
+							Men &gt;{' '}
 						</Link>{' '}
 						<Link
 							to='/cart/overview'
@@ -43,9 +43,11 @@ const Culturemen = () => {
 					<div className='row mt-5 px-lg-5 px-md-2 pt-5'>
 						{/* ==========================Products Display Starts Here ====================*/}
 
-						{cultureMen.map((product) => {
+						{cultureMen.map((product, index) => {
 							return (
-								<div className='col-lg-2 col-md-6 col-sm-12 shop-gallery'>
+								<div
+									className='col-lg-2 col-md-6 col-sm-12 shop-gallery'
+									key={index}>
 									<Link
 										to={`/product/${product.title}/${product.id}`}
 										className='card  item-card mb-3'>
@@ -68,9 +70,11 @@ const Culturemen = () => {
 															Available in Stock
 														</small>
 													</p>
-													<Link className='btn btn-block btn-outline-success text-center'>
+													<button
+														to={`/product/${product.title}/${product.id}`}
+														className='btn btn-block btn-outline-success text-center'>
 														Buy{' '}
-													</Link>
+													</button>
 												</div>
 											</div>
 										</div>

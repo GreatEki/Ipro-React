@@ -17,7 +17,7 @@ const ProductsContextProvider = (props) => {
 	const [product, setProduct] = useState({});
 	const [shopProducts, setShopProducts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
-	const [productsPerPage] = useState(18);
+	const [productsPerPage] = useState(20);
 	const [totalPost, setTotalPost] = useState(0);
 	let indexOfFirstProduct = Number;
 	let indexOfLastProduct = Number;
@@ -28,17 +28,17 @@ const ProductsContextProvider = (props) => {
 	const getEveryDayMenProducts = async () => {
 		try {
 			const res = await axios.get(
-				'http://localhost:3004/products?category=everyday&gender=men&gender=unisex'
+				`${process.env.REACT_APP_JSON_ENDPOINT}/products?category=everyday&gender=men&gender=unisex`
 			);
 
 			setEveryDayMen(res.data);
 			//console.log(res.data);
 		} catch (err) {
-			if (err.response.status === 500) {
+			if (err.message === 'Network Error') {
 				props.history.push('/500');
-			} else {
+			} else if (err.response) {
 				const errObj = err.response.data;
-				console.log(errObj.message);
+				console.log(errObj.response);
 			}
 		}
 	};
@@ -49,16 +49,16 @@ const ProductsContextProvider = (props) => {
 	const getBusinessMenProducts = async () => {
 		try {
 			const res = await axios.get(
-				'http://localhost:3004/products?category=business&gender=men&gender=unisex'
+				`${process.env.REACT_APP_JSON_ENDPOINT}/products?category=business&gender=men&gender=unisex`
 			);
 
 			setBusinessMen(res.data);
 		} catch (err) {
-			if (err.response.status === 500) {
+			if (err.message === 'Network Error') {
 				props.history.push('/500');
-			} else {
+			} else if (err.response) {
 				const errObj = err.response.data;
-				console.log(errObj.message);
+				console.log(errObj.response);
 			}
 		}
 	};
@@ -69,16 +69,16 @@ const ProductsContextProvider = (props) => {
 	const getCultureMenProducts = async () => {
 		try {
 			const res = await axios.get(
-				'http://localhost:3004/products?category=native&gender=men&gender=unisex'
+				`${process.env.REACT_APP_JSON_ENDPOINT}/products?category=native&gender=men&gender=unisex`
 			);
 
 			setCultureMen(res.data);
 		} catch (err) {
-			if (err.response.status === 500) {
+			if (err.message === 'Network Error') {
 				props.history.push('/500');
-			} else {
+			} else if (err.response) {
 				const errObj = err.response.data;
-				console.log(errObj.message);
+				console.log(errObj.response);
 			}
 		}
 	};
@@ -88,14 +88,14 @@ const ProductsContextProvider = (props) => {
 	const getLeisureMenProducts = async () => {
 		try {
 			const res = await axios.get(
-				'http://localhost:3004/products?category=leisure&gender=men&gender=unisex'
+				`${process.env.REACT_APP_JSON_ENDPOINT}/products?category=leisure&gender=men&gender=unisex`
 			);
 
 			setLeisureMen(res.data);
 		} catch (err) {
-			if (err.response.status === 500) {
+			if (err.message === 'Network Error') {
 				props.history.push('/500');
-			} else {
+			} else if (err.response) {
 				const errObj = err.response.data;
 				console.log(errObj.message);
 			}
@@ -108,14 +108,14 @@ const ProductsContextProvider = (props) => {
 	const getBusinessWomenProducts = async () => {
 		try {
 			const res = await axios.get(
-				'http://localhost:3004/products?category=business&gender=women&gender=unisex'
+				`${process.env.REACT_APP_JSON_ENDPOINT}/products?category=business&gender=women&gender=unisex`
 			);
 
 			setBusinessWomen(res.data);
 		} catch (err) {
-			if (err.response.status === 500) {
+			if (err.message === 'Network Error') {
 				props.history.push('/500');
-			} else {
+			} else if (err.response) {
 				const errObj = err.response.data;
 				console.log(errObj.message);
 			}
@@ -127,14 +127,14 @@ const ProductsContextProvider = (props) => {
 	const getCultureWomenProducts = async () => {
 		try {
 			const res = await axios.get(
-				'http://localhost:3004/products?category=native&gender=women'
+				`${process.env.REACT_APP_JSON_ENDPOINT}/products?category=native&gender=women`
 			);
 
 			setCultureWomen(res.data);
 		} catch (err) {
-			if (err.response.status === 500) {
+			if (err.message === 'Network Error') {
 				props.history.push('/500');
-			} else {
+			} else if (err.response) {
 				const errObj = err.response.data;
 				console.log(errObj.message);
 			}
@@ -147,16 +147,16 @@ const ProductsContextProvider = (props) => {
 	const geteveryDayWomenProducts = async () => {
 		try {
 			const res = await axios.get(
-				'http://localhost:3004/products?category=everyday&gender=women&gender=unisex'
+				`${process.env.REACT_APP_JSON_ENDPOINT}/products?category=everyday&gender=women&gender=unisex`
 			);
 
 			setEveryDayWomen(res.data);
 		} catch (err) {
-			if (err.response.status === 500) {
+			if (err.message === 'Network Error') {
 				props.history.push('/500');
-			} else {
+			} else if (err.response) {
 				const errObj = err.response.data;
-				console.log(errObj.message);
+				console.log(err.response);
 			}
 		}
 	};
@@ -166,14 +166,14 @@ const ProductsContextProvider = (props) => {
 	const getLeisureWomenProducts = async () => {
 		try {
 			const res = await axios.get(
-				'http://localhost:3004/products?category=leisure&gender=women&gender=unisex'
+				`${process.env.REACT_APP_JSON_ENDPOINT}/products?category=leisure&gender=women&gender=unisex`
 			);
 
 			setLeisureWomen(res.data);
 		} catch (err) {
-			if (err.response.status === 500) {
+			if (err.message === 'Network Error') {
 				props.history.push('/500');
-			} else {
+			} else if (err.response) {
 				const errObj = err.response.data;
 				console.log(errObj.message);
 			}
@@ -185,13 +185,15 @@ const ProductsContextProvider = (props) => {
 	//REQUEST: GET
 	const getProduct = async (id) => {
 		try {
-			const res = await axios.get(`http://localhost:3004/products/${id}`);
+			const res = await axios.get(
+				`${process.env.REACT_APP_JSON_ENDPOINT}/products/${id}`
+			);
 
 			setProduct(res.data);
 		} catch (err) {
-			if (err.response.status === 500) {
+			if (err.message === 'Network Error') {
 				props.history.push('/500');
-			} else {
+			} else if (err.response) {
 				const errObj = err.response.data;
 				console.log(errObj.message);
 			}
@@ -208,7 +210,9 @@ const ProductsContextProvider = (props) => {
 			indexOfLastProduct = currentPage * productsPerPage;
 			indexOfFirstProduct = indexOfLastProduct - productsPerPage;
 
-			const res = await axios.get('http://localhost:3004/products');
+			const res = await axios.get(
+				`${process.env.REACT_APP_JSON_ENDPOINT}/products`
+			);
 			setTotalPost(res.data.length);
 
 			const currentProducts = res.data.slice(
@@ -219,7 +223,12 @@ const ProductsContextProvider = (props) => {
 			setShopProducts(currentProducts);
 			setIsLoading(false);
 		} catch (err) {
-			console.log(err);
+			if (err.message === 'Network Error') {
+				props.history.push('/500');
+			} else if (err.response) {
+				const errObj = err.response.data;
+				console.log(errObj.message);
+			}
 		}
 	};
 

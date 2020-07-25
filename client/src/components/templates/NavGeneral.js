@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../../css/Nav.css';
 import { SearchContext } from '../../contexts/SearchContext';
 const NavGeneral = () => {
-	const { handleInput, val } = useContext(SearchContext);
+	const { handleInput, val, pushToSearch } = useContext(SearchContext);
 	return (
 		<>
 			<div className='container-fluid nav-wrapper m-0 p-0'>
@@ -41,6 +41,9 @@ const NavGeneral = () => {
 									className='d-inline m-0 searchText'
 									onChange={(e) => handleInput(e)}
 									value={val}
+									onKeyPress={(e) =>
+										e.key === 'Enter' ? pushToSearch(e, val) : null
+									}
 									required
 									placeholder='Search for products, brands and categories'
 								/>

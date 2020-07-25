@@ -1,14 +1,10 @@
 const express = require('express');
-const dbConnection = require('./config/database');
 
 //Initialise Express
 const app = express();
 
 //Express Middleware and Body-Parser
 app.use(express.json());
-
-//Database Connection
-dbConnection();
 
 //Handling CORS
 app.use((req, res, next) => {
@@ -29,9 +25,5 @@ app.use((req, res, next) => {
 
 	next();
 });
-
-//Importing routes
-app.use('/api/users/auth', require('./api/routes/userRoutes'));
-app.use('/api/orders', require('./api/routes/orderRoutes'));
 
 module.exports = app;

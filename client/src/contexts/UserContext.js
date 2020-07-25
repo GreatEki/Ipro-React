@@ -56,7 +56,7 @@ const UserContextProvider = (props) => {
 		};
 		try {
 			const res = await axios.post(
-				'http://localhost:5000/api/users/auth/signup',
+				`${process.env.REACT_APP_SERVER}/api/users/auth/signup`,
 				user,
 				config
 			);
@@ -64,8 +64,8 @@ const UserContextProvider = (props) => {
 			console.log(res);
 			setMsg(res.data.message);
 		} catch (err) {
-			if (err.response.status === 500) {
-				setMsg('');
+			if (err.message === 'Network Error') {
+				setMsg(err.message);
 				history.push('/500');
 			} else {
 				const errObj = err.response.data;
@@ -85,7 +85,7 @@ const UserContextProvider = (props) => {
 
 		try {
 			const res = await axios.post(
-				'http://localhost:5000/api/users/auth/signin',
+				`${process.env.REACT_APP_SERVER}api/users/auth/signin`,
 				user,
 				config
 			);
@@ -105,8 +105,8 @@ const UserContextProvider = (props) => {
 
 			history.push('/users/auth/dashboard');
 		} catch (err) {
-			if (err.response.status === 500) {
-				setMsg('');
+			if (err.message === 'Network Error') {
+				setMsg(err.message);
 				history.push('/500');
 			} else {
 				const errObj = err.response.data;

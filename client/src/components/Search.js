@@ -27,10 +27,10 @@ const Search = (props) => {
 				<section className='container-fluid bg-white'>
 					<div className='py-3'>
 						<Link to='/' className='site-font text-decoration-none'>
-							Home >{' '}
+							Home &gt;{' '}
 						</Link>{' '}
 						<Link to='/shop' className='site-font text-decoration-none'>
-							Search Result >{' '}
+							Search Result &gt;{' '}
 						</Link>{' '}
 						<h1 className='site-font my-4'> {val} </h1>
 					</div>
@@ -41,7 +41,7 @@ const Search = (props) => {
 					<div className='row mt-5 px-lg-5 pt-5'>
 						{/*============================ Products Display Starts Here ==========================*/}
 						{searchRes.length < 1 ? (
-							<h1 className='text-center'> No products Found </h1>
+							<h1 className='text-center'> No Products Found </h1>
 						) : (
 							searchRes.map((product) => {
 								return (

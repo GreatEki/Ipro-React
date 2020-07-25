@@ -27,15 +27,15 @@ const Dashboard = () => {
 				<section className='container-fluid bg-white'>
 					<div className='py-3'>
 						<Link to='/' className='site-font text-decoration-none'>
-							Home >{' '}
+							Home &gt;{' '}
 						</Link>{' '}
 						<Link to='/men' className='site-font text-decoration-none'>
-							User >{' '}
+							User &gt;{' '}
 						</Link>{' '}
 						<Link
 							to='/user/dashboard'
 							className='site-font text-decoration-none'>
-							Dashboard >{' '}
+							Dashboard &gt;{' '}
 						</Link>{' '}
 						<Link
 							to='#'

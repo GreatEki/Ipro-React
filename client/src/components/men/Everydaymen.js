@@ -21,10 +21,10 @@ const Everydaymen = () => {
 				<section className='container-fluid bg-white'>
 					<div className='py-3'>
 						<Link to='/' className='site-font text-decoration-none'>
-							Home >{' '}
+							Home &gt;{' '}
 						</Link>{' '}
 						<Link to='/men' className='site-font text-decoration-none'>
-							Men >{' '}
+							Men &gt;{' '}
 						</Link>{' '}
 						<Link
 							to='/cart/overview'

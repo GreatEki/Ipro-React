@@ -170,6 +170,7 @@ p {
 /* =========================== HomeCategories  Styling ============================== */
 .HomeProd:hover {
 	box-shadow: 1px 1px;
+	transform: scale(1.1);
 	z-index: 1;
 	background-color: whitesmoke;
 }

@@ -22,10 +22,10 @@ const Leisuremen = () => {
 				<section className='container-fluid bg-white'>
 					<div className='py-3'>
 						<Link to='/' className='site-font text-decoration-none'>
-							Home >{' '}
+							Home &gt;{' '}
 						</Link>{' '}
 						<Link to='/men' className='site-font text-decoration-none'>
-							Men >{' '}
+							Men &gt;{' '}
 						</Link>{' '}
 						<Link
 							to='/cart/overview'
@@ -71,9 +71,11 @@ const Leisuremen = () => {
 															Available in Stock
 														</small>
 													</p>
-													<Link className='btn btn-block btn-outline-success text-center'>
+													<button
+														to={`/product/${product.title}/${product.id}`}
+														className='btn btn-block btn-outline-success text-center'>
 														Buy{' '}
-													</Link>
+													</button>
 												</div>
 											</div>
 										</div>

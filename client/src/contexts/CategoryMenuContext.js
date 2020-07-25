@@ -13,12 +13,12 @@ const CategoryMenuContextProvider = (props) => {
 	const fetchLeisure = async () => {
 		try {
 			const res = await Axios.get(
-				`${calls.ENDPOINT}/products?category=leisure`
+				`${process.env.REACT_APP_JSON_ENDPOINT}/products?category=leisure`
 			);
 
 			setLeisure(res.data);
 		} catch (err) {
-			if (err.response.status === 500) {
+			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else {
 				const errObj = err.response.data;
@@ -30,12 +30,12 @@ const CategoryMenuContextProvider = (props) => {
 	const fetchBusiness = async () => {
 		try {
 			const res = await Axios.get(
-				`${calls.ENDPOINT}/products?category=business`
+				`${process.env.REACT_APP_JSON_ENDPOINT}/products?category=business`
 			);
 
 			setBusiness(res.data);
 		} catch (err) {
-			if (err.response.status === 500) {
+			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else {
 				const errObj = err.response.data;
@@ -45,11 +45,13 @@ const CategoryMenuContextProvider = (props) => {
 	};
 	const fetchCulture = async () => {
 		try {
-			const res = await Axios.get(`${calls.ENDPOINT}/products?category=native`);
+			const res = await Axios.get(
+				`${process.env.REACT_APP_JSON_ENDPOINT}/products?category=native`
+			);
 
 			setCulture(res.data);
 		} catch (err) {
-			if (err.response.status === 500) {
+			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else {
 				const errObj = err.response.data;
@@ -60,12 +62,12 @@ const CategoryMenuContextProvider = (props) => {
 	const fetchEveryDay = async () => {
 		try {
 			const res = await Axios.get(
-				`${calls.ENDPOINT}/products?category=everyday`
+				`${process.env.REACT_APP_JSON_ENDPOINT}/products?category=everyday`
 			);
 
 			setEveryDay(res.data);
 		} catch (err) {
-			if (err.response.status === 500) {
+			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else {
 				const errObj = err.response.data;

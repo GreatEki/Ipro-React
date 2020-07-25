@@ -41,7 +41,7 @@ const OrderContextProvider = (props) => {
 		};
 		try {
 			const res = await axios.post(
-				`http://localhost:5000/api/orders/place-order`,
+				`${process.env.REACT_APP_JSON_ENDPOINT}/api/orders/place-order`,
 				order,
 				config
 			);
@@ -57,7 +57,9 @@ const OrderContextProvider = (props) => {
 
 	const getUserOrders = async (userId) => {
 		try {
-			const res = await axios.get(`${ENDPOINT}/api/orders/${userId}`);
+			const res = await axios.get(
+				`${process.env.REACT_APP_JSON_ENDPOINT}/api/orders/${userId}`
+			);
 
 			if (!res) {
 				setOrders([]);

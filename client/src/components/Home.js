@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Navbar from './templates/Navbar';
-import { Link } from 'react-router-dom';
 import Footer from './templates/Footer';
 import NavGeneral from './templates/NavGeneral';
 import HomeEveryDay from './templates/HomeEveryDay';
