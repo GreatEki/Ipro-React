@@ -44,9 +44,9 @@ const Navbar = () => {
 						<Link to='/women' className='nav-item nav-link'>
 							WOMEN
 						</Link>
-						<Link to='/contact' className='nav-item nav-link'>
+						{/* <Link to='/contact' className='nav-item nav-link'>
 							Contact Us
-						</Link>
+						</Link> */}
 					</div>
 
 					<div className='collapse navbar-collapse'></div>

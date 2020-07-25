@@ -1,5 +1,4 @@
 import React, { createContext, useState } from 'react';
-import { calls } from '../config/config';
 import Axios from 'axios';
 
 export const CategoryMenuContext = createContext();
@@ -21,8 +20,7 @@ const CategoryMenuContextProvider = (props) => {
 			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else {
-				const errObj = err.response.data;
-				console.log(errObj.message);
+				props.history.push('/500');
 			}
 		}
 	};
@@ -38,8 +36,7 @@ const CategoryMenuContextProvider = (props) => {
 			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else {
-				const errObj = err.response.data;
-				console.log(errObj.message);
+				props.history.push('/500');
 			}
 		}
 	};
@@ -54,8 +51,7 @@ const CategoryMenuContextProvider = (props) => {
 			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else {
-				const errObj = err.response.data;
-				console.log(errObj.message);
+				props.history.push('/500');
 			}
 		}
 	};
@@ -70,8 +66,7 @@ const CategoryMenuContextProvider = (props) => {
 			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else {
-				const errObj = err.response.data;
-				console.log(errObj.message);
+				props.history.push('/500');
 			}
 		}
 	};

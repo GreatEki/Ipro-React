@@ -68,9 +68,9 @@ const Everydaymen = () => {
 															Available in Stock
 														</small>
 													</p>
-													<Link className='btn btn-block btn-outline-success text-center'>
+													<button className='btn btn-block btn-outline-success text-center'>
 														Buy{' '}
-													</Link>
+													</button>
 												</div>
 											</div>
 										</div>

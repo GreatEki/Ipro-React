@@ -4,9 +4,12 @@
 	"description": "Custom Clothing Store",
 	"main": "server.js",
 	"scripts": {
+		"build": "cd client && npm run build",
+		"install-client": "cd client && npm install",
+		"heroku-postbuild": "npm run install-client && npm run build",
 		"json-server": "json-server --watch db.json --port 3004",
-		"start": "node server.js",
-		"server": "nodemon server.js",
+		"server": "node server.js",
+		"start": "concurrently \"npm run server\" \"npm run json-server\" ",
 		"client": "cd client && npm start",
 		"app": "concurrently \" npm run client\"  \"npm run server\" \"npm run json-server \""
 	},
@@ -27,5 +30,8 @@
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.2"
+	},
+	"engines": {
+		"node": "10.15.3"
 	}
 }

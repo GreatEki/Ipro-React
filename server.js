@@ -1,4 +1,5 @@
 const http = require('http');
+const express = require('express');
 const app = require('./app');
 const dotenv = require('dotenv');
 const path = require('path');
@@ -18,6 +19,11 @@ app.use('/api/users/auth', require('./api/routes/userRoutes'));
 app.use('/api/orders', require('./api/routes/orderRoutes'));
 
 const PORT = process.env.PORT || 5000;
+
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static(path.join(__dirname, 'client/build')));
+}
+
 server.listen(PORT, () =>
 	console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
 );

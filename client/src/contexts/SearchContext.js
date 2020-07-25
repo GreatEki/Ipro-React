@@ -14,8 +14,6 @@ const SearchContextProvider = (props) => {
 	const [homeNativeItem, setHomeNativeItem] = useState([]);
 	const [homeBrandNewItem, setHomeBrandNewItem] = useState([]);
 
-	let ENDPOINT = 'http://localhost:3004';
-
 	//This method handles the input field for our search functionality
 	const handleInput = (e) => {
 		setVal(e.target.value);

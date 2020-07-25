@@ -37,8 +37,7 @@ const ProductsContextProvider = (props) => {
 			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else if (err.response) {
-				const errObj = err.response.data;
-				console.log(errObj.response);
+				props.history.push('/500');
 			}
 		}
 	};
@@ -57,8 +56,7 @@ const ProductsContextProvider = (props) => {
 			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else if (err.response) {
-				const errObj = err.response.data;
-				console.log(errObj.response);
+				props.history.push('/500');
 			}
 		}
 	};
@@ -77,8 +75,7 @@ const ProductsContextProvider = (props) => {
 			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else if (err.response) {
-				const errObj = err.response.data;
-				console.log(errObj.response);
+				props.history.push('/500');
 			}
 		}
 	};
@@ -96,8 +93,7 @@ const ProductsContextProvider = (props) => {
 			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else if (err.response) {
-				const errObj = err.response.data;
-				console.log(errObj.message);
+				props.history.push('/500');
 			}
 		}
 	};
@@ -116,8 +112,7 @@ const ProductsContextProvider = (props) => {
 			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else if (err.response) {
-				const errObj = err.response.data;
-				console.log(errObj.message);
+				props.history.push('/500');
 			}
 		}
 	};
@@ -135,8 +130,7 @@ const ProductsContextProvider = (props) => {
 			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else if (err.response) {
-				const errObj = err.response.data;
-				console.log(errObj.message);
+				props.history.push('/500');
 			}
 		}
 	};
@@ -155,8 +149,7 @@ const ProductsContextProvider = (props) => {
 			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else if (err.response) {
-				const errObj = err.response.data;
-				console.log(err.response);
+				props.history.push('/500');
 			}
 		}
 	};
@@ -174,8 +167,7 @@ const ProductsContextProvider = (props) => {
 			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else if (err.response) {
-				const errObj = err.response.data;
-				console.log(errObj.message);
+				props.history.push('/500');
 			}
 		}
 	};
@@ -194,8 +186,7 @@ const ProductsContextProvider = (props) => {
 			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else if (err.response) {
-				const errObj = err.response.data;
-				console.log(errObj.message);
+				props.history.push('/500');
 			}
 		}
 	};
@@ -226,8 +217,7 @@ const ProductsContextProvider = (props) => {
 			if (err.message === 'Network Error') {
 				props.history.push('/500');
 			} else if (err.response) {
-				const errObj = err.response.data;
-				console.log(errObj.message);
+				props.history.push('/500');
 			}
 		}
 	};
