@@ -7,4 +7,7 @@ config/config.env
 
 .env.development
 
+.env.production
+
+
 # config/database.js
