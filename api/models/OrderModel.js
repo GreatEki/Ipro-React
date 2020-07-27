@@ -27,6 +27,9 @@ const OrderSchema = new Schema({
 	deliveryStatus: {
 		type: String,
 	},
+	orderDate: {
+		type: String,
+	},
 });
 
 const Order = mongoose.model('Order', OrderSchema);

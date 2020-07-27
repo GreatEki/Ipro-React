@@ -14,12 +14,23 @@ const OrderContextProvider = (props) => {
 
 		const paymentStatus = 'processing';
 		const deliveryStatus = 'Delivering';
+
+		const dateStyle = {
+			weekday: 'short',
+			day: 'numeric',
+			month: 'short',
+			year: 'numeric',
+		};
+
+		let today = new Date();
+
 		const newOrder = {
 			userId,
 			products,
 			orderTotal,
 			paymentStatus,
 			deliveryStatus,
+			orderDate: today.toLocaleDateString('en-US', dateStyle),
 		};
 
 		placeOrder(newOrder);
@@ -40,7 +51,7 @@ const OrderContextProvider = (props) => {
 		};
 		try {
 			const res = await axios.post(
-				`${process.env.REACT_ENDPOINT}/api/orders/place-order`,
+				`${process.env.REACT_APP_ENDPOINT}/api/orders/place-order`,
 				order,
 				config
 			);
@@ -57,13 +68,14 @@ const OrderContextProvider = (props) => {
 	const getUserOrders = async (userId) => {
 		try {
 			const res = await axios.get(
-				`${process.env.REACT_ENDPOINT}/api/orders/${userId}`
+				`${process.env.REACT_APP_ENDPOINT}/api/orders/${userId}`
 			);
 
 			if (!res) {
 				setOrders([]);
 			} else {
 				setOrders(res.data.orders);
+				console.log(res.data.orders);
 			}
 		} catch (err) {
 			console.log(err.message);

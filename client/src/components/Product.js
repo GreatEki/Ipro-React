@@ -33,12 +33,12 @@ const Product = (props) => {
 				<section className='container-fluid bg-white'>
 					<div className='py-3'>
 						<Link to='/' className='site-font text-decoration-none'>
-							Home >{' '}
+							Home &gt;{' '}
 						</Link>{' '}
 						<Link
 							to={`/product/${product.title}/${product.id}`}
 							className='site-font text-decoration-none'>
-							Product >{' '}
+							Product &gt;{' '}
 						</Link>{' '}
 						<Link
 							to={`/product/${product.title}/${product.id}`}

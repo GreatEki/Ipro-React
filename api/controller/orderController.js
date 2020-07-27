@@ -11,6 +11,7 @@ exports.placeOrder = async (req, res) => {
 			orderTotal,
 			paymentStatus,
 			deliveryStatus,
+			orderDate,
 		} = req.body;
 
 		const newOrder = new Order({
@@ -19,6 +20,7 @@ exports.placeOrder = async (req, res) => {
 			orderTotal,
 			paymentStatus,
 			deliveryStatus,
+			orderDate,
 		});
 
 		const savedOrder = await Order.create(newOrder);
@@ -32,6 +34,7 @@ exports.placeOrder = async (req, res) => {
 				orderTotal: savedOrder.orderTotal,
 				paymentStatus: savedOrder.paymentStatus,
 				deliveryStatus: savedOrder.deliveryStatus,
+				orderDate: savedOrder.orderDate,
 			},
 		});
 	} catch (err) {

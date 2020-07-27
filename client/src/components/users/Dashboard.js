@@ -11,10 +11,11 @@ const Dashboard = () => {
 	const { authUser } = useContext(UserContext);
 	const { orders, getUserOrders } = useContext(OrderContext);
 
+	console.log(orders);
 	useEffect(() => {
 		getUserOrders(authUser.id);
-		console.log(authUser.id);
-		console.log(orders);
+		// console.log(authUser.id);
+		// console.log(orders);
 
 		//eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
@@ -111,7 +112,7 @@ const Dashboard = () => {
 														{' '}
 														Order Date:{' '}
 														<span className='site-font text-danger'>
-															Monday, Friday, 3rd April, 2020{' '}
+															{order.orderDate}
 														</span>
 													</p>{' '}
 												</div>
@@ -129,9 +130,11 @@ const Dashboard = () => {
 											{/*==============End 0f Card Order Header ================== */}
 
 											{/* ================== Card Order Body ======================*/}
-											{order.products.map((item) => {
+											{order.products.map((item, index) => {
 												return (
-													<section className='row card-body align-items-end'>
+													<section
+														className='row card-body align-items-end'
+														key={index}>
 														<div className='col-6'>
 															<ul className='list-group list-group-flush'>
 																<li className='list-group-item'>
